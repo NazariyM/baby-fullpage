@@ -10,15 +10,15 @@
 		+lg
 			margin-bottom: 20px
 	&__inner
-		display: flex
-		flex-wrap: wrap
-		justify-content: center
 		margin: 0 -15px
+		font-size: 0
+		text-align: center
 		+xs
 			margin: 0 -10px
 	&__item
+		display: inline-block
+		vertical-align: top
 		width: 33.333333%
-		flex-basis: 33.333333%
 		padding: 0 15px 40px
 		color: $white
 		text-align: center
@@ -26,7 +26,6 @@
 			padding: 0 15px 20px
 		+xs
 			width: 100%
-			flex-basis: 100%
 			padding: 0 10px
 		&-pic
 			display: flex

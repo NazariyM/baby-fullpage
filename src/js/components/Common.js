@@ -1,5 +1,6 @@
 import '../modules/dev/noTouch';
 import { initPreload } from './initPreload';
+import { detectIE } from './detectIE';
 import Fullpage from './Fullpage';
 import Header from './Header';
 import objectFitVideos from 'object-fit-videos';
