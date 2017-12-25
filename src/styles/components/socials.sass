@@ -1,0 +1,30 @@
+.socials
+	display: flex
+	align-items: center
+	$parent: &
+	&__link
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		text-align: center
+		background: rgba(#cde7f9, .5)
+		+vertical
+		+trs
+		&:not(:first-child)
+			margin-left: 10px
+		.no-touch &:hover
+			background: darken(#cde7f9, 8)
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: $white
+			+trs
+		.icon-vk
+			font-size: 22px
+			fill: #3d75b3
+		.icon-facebook
+			font-size: 22px
+			fill: #284ea0
+		.icon-instagram
+			fill: #ca2a96
+			font-size: 22px

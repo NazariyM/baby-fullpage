@@ -1,0 +1,29 @@
+if ask ? ask : ask = []
+if ask.title ? ask.title : ask.title = 'У вас есть вопрос?'
+if ask.subTitle ? ask.subTitle : ask.subTitle = 'Получите ответ из первых уст основателей Бэби-клуба Евгении и Юрия Белонощенко'
+
+//begin ask
++b.SECTION.ask.section(class= ask.classMod ? ask.classMod : '')
+	+e.container.container
+		+e.H2.title.title._black(data-anim-title='')= ask.title
+		+e.H5.sub-title.title._sm(data-anim-title='')= ask.subTitle
+
+		+e.inner(data-anim-slow='')
+			+e.img-wrap
+				+e.img(style='background-image: url(static/img/content/ask-img.jpg)')
+			+e.form-wrap
+				+e.FORM.form(action='#!' method='POST')
+					+e.form-row
+						+e.form-field
+							+e.INPUT.form-input.input(type='text' placeholder='Ваше имя' name='' required)
+						+e.form-field
+							+e.INPUT.form-input.input(type='text' placeholder='Ваш e-mail' name='' required)
+					+e.form-message
+						+b.TEXTAREA.textarea(placeholder='Ваше сообщение')
+					+e.form-actions
+						+e.INPUT.form-submit.btn._blue(type='submit' value='Отправить вопрос')
+						+e.P.form-agree * Оставляя свои контакты данные, вы соглашаетесь с
+							+e.A(href='#!') политикой конфиденциольности
+
+	.scroll-up
+		a(href='#!')

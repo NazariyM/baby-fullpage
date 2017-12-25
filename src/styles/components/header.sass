@@ -1,0 +1,74 @@
+.header
+	$parent: &
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+	transition: transform 1s ease
+	&.is-active
+		.nav
+			transform: translateY(-70px)
+			+sm
+				transform: none
+	
+	&__inner
+		position: relative
+		z-index: 2
+		background: $white
+		box-shadow: 0 0 10px rgba($black, .4)
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 70px
+		transition: height .8s ease
+		+md
+			height: 80px
+		+xs
+			height: 70px
+	
+	&__logo
+		flex-basis: 320px
+		transition: transform .8s ease
+		transform: translateY(13px)
+		+md
+			flex-basis: 310px
+			transform: none
+		+xs
+			position: relative
+			z-index: 103
+			flex: 0 1 220px
+		.logo__descr
+			+xs
+				display: none
+		
+.fp-viewing-12 .header
+	transform: translateY(-100%)
+	
+.fp-viewing-0
+	.header__container
+		height: 90px
+		+sm
+			height: 80px
+	
+	.header__logo
+		transform: translateY(0)
+	
+	.logo__descr
+		opacity: 1
+		visibility: visible
+		
+	.nav
+		top: 90px
+		+sm
+			top: 80px
+		
+.fp-viewing-10, .fp-viewing-9
+	.header
+		transform: translateY(-100%)
+		
+.hamburger
+	margin-top: 6px !important
+	+sm
+		display: block

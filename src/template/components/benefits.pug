@@ -1,0 +1,42 @@
+if benefits ? benefits : benefits = []
+if benefits.title ? benefits.title : benefits.title = 'Бэби-клуб - это'
+
+//begin benefits
++b.SECTION.benefits.section(class= benefits.classMod ? benefits.classMod : '')
+	+e.container.container
+		+e.H2.title.title._black(data-anim-title='')= benefits.title
+		-
+			lettersList = [{
+			picMod: 'icon-letter-f',
+			text: 'Сеть центров с 17-летним опытом развития детей'
+			}, {
+			picMod: 'icon-letter-k',
+			text: 'Занятия для дошкольников: от 8 месяцев до 7 лет'
+			}, {
+			picMod: 'icon-letter-b',
+			text: 'Маленькие группы - до 8 детей'
+			}, {
+			picMod: 'icon-letter-n',
+			text: 'Безопасное игровое пространство'
+			}, {
+			picMod: 'icon-letter-d',
+			text: 'Место, где ребёнка понимают и любят таким, какой он есть'
+			}, {
+			picMod: 'icon-letter-v',
+			text: 'Только здоровье сберегающие методики'
+			}, {
+			picMod: 'icon-letter-l',
+			text: 'Всестороннее развитие интеллектуальных, творческих и физических способностей детей'
+			}, {
+			picMod: 'icon-letter-t',
+			text: 'Подготовка детей к саду, школе и взрослой жизни'
+			}]
+
+		+e.list
+			mixin lettersItem(item)
+				+e.item(data-anim-fast='')
+					+e.item-pic-wrap
+						+e.item-pic(class= `${item.picMod}`)
+					+e.P= item.text
+			each item in lettersList
+				+lettersItem(item)

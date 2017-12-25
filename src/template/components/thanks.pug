@@ -1,0 +1,77 @@
+if thanks ? thanks : thanks = []
+if thanks.title ? thanks.title : thanks.title = '1000 спасибо'
+if thanks.allBtn ? thanks.allBtn : thanks.allBtn = 'Смотреть все спасибо'
+
+//begin thanks
++b.SECTION.thanks.section(class= thanks.classMod ? thanks.classMod : '')
+	+e.container.container
+		+e.H2.title.title(data-anim-title='')= thanks.title
+
+		//begin tabs
+		+b.c-tabs
+			+e.tabs-nav
+				-
+					tabsList = ['ДЕТИ', 'РОДИТЕЛИ', 'СОТРУДНИКИ', 'ВЛАДЕЛЬЦЫ КЛУБОВ']
+				-activeIndex = 0
+				for tabsText, index in tabsList
+					+e.BUTTON.tabs-el.btn(data-anim-fast='' class= index === activeIndex ? 'is-active' : '' type='button')= tabsText
+			+e.tabs-for(data-anim-slow='')
+				+e.tab
+					+e.inner
+						+e.video-item
+							+e.video-text
+								+e.H5.video-title Милана
+								+e.P посещает Бэби-клуб более 3 лет
+							+e.video-trigger.js-play-video
+							iframe(src='https://www.youtube.com/embed/DpMrNGG3S3I?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+						+e.video-item
+							+e.video-text
+								+e.H5.video-title Вероника
+								+e.P Мама Глеба и Матвея Более года в Бэби-клубе
+							+e.video-trigger.js-play-video
+							iframe(src='https://www.youtube.com/embed/3roikLviTGs?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+				+e.tab
+					+e.inner
+						+e.video-item
+							+e.video-text
+								+e.H5.video-title Милана
+								+e.P посещает Бэби-клуб более 3 лет
+							+e.video-trigger.js-play-video
+							iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+						+e.video-item
+							+e.video-text
+								+e.H5.video-title Вероника
+								+e.P Мама Глеба и Матвея Более года в Бэби-клубе
+							+e.video-trigger.js-play-video
+							iframe(src='https://www.youtube.com/embed/OhEANdHh3e0?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+				+e.tab
+					+e.inner
+						+e.video-item
+							+e.video-text
+								+e.H5.video-title Милана
+								+e.P посещает Бэби-клуб более 3 лет
+							iframe(src='https://www.youtube.com/embed/DpMrNGG3S3I?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+						+e.video-item
+							+e.video-text
+								+e.H5.video-title Вероника
+								+e.P Мама Глеба и Матвея Более года в Бэби-клубе
+							iframe(src='https://www.youtube.com/embed/3roikLviTGs?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+				+e.tab
+					+e.inner
+						+e.video-item
+							+e.video-text
+								+e.H5.video-title Милана
+								+e.P посещает Бэби-клуб более 3 лет
+							iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+						+e.video-item
+							+e.video-text
+								+e.H5.video-title Вероника
+								+e.P Мама Глеба и Матвея Более года в Бэби-клубе
+							iframe(src='https://www.youtube.com/embed/OhEANdHh3e0?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+		+e.A.all-btn.btn._yellow(href='#!')= thanks.allBtn

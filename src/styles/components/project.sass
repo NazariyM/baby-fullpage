@@ -1,0 +1,51 @@
+.project
+	padding-top: 10px!important
+	background: #24a849
+	+xs
+		padding-top: 50px !important
+	&__container
+		max-width: 1040px
+	&__title
+		margin-bottom: 50px
+		+lg
+			margin-bottom: 20px
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin: 0 -15px
+	&__item
+		width: 33.333333%
+		flex-basis: 33.333333%
+		padding: 0 15px 40px
+		color: $white
+		text-align: center
+		+lg
+			padding: 0 15px 20px
+		+xs
+			width: 100%
+			flex-basis: 100%
+		&-pic
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 200px
+			height: 200px
+			margin: 0 auto 15px
+			background: $white
+			border-radius: 50%
+			+lg
+				width: 150px
+				height: 150px
+				margin: 0 auto 10px
+				img
+					transform: scale(.7)
+		&-title
+			margin-bottom: 5px
+			+f('geo-700', 20)
+			+lg
+				line-height: 20px
+		p
+			font-size: 15px
+			+lg
+				line-height: 20px

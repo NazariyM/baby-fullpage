@@ -1,0 +1,43 @@
++b.FOOTER.footer.fp-auto-height.section
+	+e.container.container
+		+b.logo.footer__logo
+			+e.A.link(href='#!')
+				+e.IMG.img(src='static/img/logo.svg' alt='Бэби клуб')
+			+e.P.descr Бережное развитие интеллекта
+
+		+b.info-block._footer
+			-socials = {classMod: 'info-block__socials'}
+			include socials
+
+			+e.A.tel(href='#!') 8 800 100 20 24
+			+e.BUTTON.call-btn.btn._yellow(type='button') Заказать звонок
+
+			+e.row
+				+e.A.link(href='static/assets/polytics.docx' target='_blank') Политика конфиденциальности
+				+e.P.dev Сайт создан руками студии
+					+e.A(href='http://akticom.ru/' target='_blank') «Актиком»
+
+	+b.DIV.nav._footer
+		+e.UL.list.container
+			-
+				navList = [{
+				text: 'О компании'
+				}, {
+				text: 'Развитие интеллекта'
+				}, {
+				text: 'Как проходят занятия'
+				}, {
+				text: 'Выбрать клуб'
+				}, {
+				text: 'Открыть свой клуб'
+				}, {
+				text: 'Контакты'
+				}, {
+				text: 'Карьера'
+				}]
+
+			mixin navItem(item)
+				+e.LI.list-item(class= item.activeClass ? 'is-active' : '')
+					+e.A.list-link(href=`#!`)= item.text
+			each item in navList
+				+navItem(item)

@@ -1,0 +1,39 @@
+//fonts
+=font($alias, $name)
+	@font-face
+		font-family: $alias
+		src: url("../fonts/" + $name + ".eot")
+		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+
++font('Geometria', 'Geometria')
++font('Geometria-Bold', 'Geometria-Bold')
++font('Geometria-ExtraBold', 'Geometria-ExtraBold')
++font('Geometria-Light', 'Geometria-Light')
++font('Geometria-Medium', 'Geometria-Medium')
++font('Geometria-Heavy', 'Geometria-Heavy')
+
+=f($name, $font-size: null, $line-height: null, $letter-spacing: null)
+	$font-family: null
+	@if $name == "geo-400"
+		$font-family: "Geometria"
+	@if $name == "geo-700"
+		$font-family: "Geometria-Bold"
+	@if $name == "geo-900"
+		$font-family: "Geometria-ExtraBold"
+	@if $name == "geo-300"
+		$font-family: "Geometria-Light"
+	@if $name == "geo-500"
+		$font-family: "Geometria-Medium"
+	@if $name == "geo-heavy"
+		$font-family: "Geometria-Heavy"
+	font-family: $font-family, Arial, sans-serif
+	@if $font-family != null
+		font-weight: normal
+	@if $font-size != null
+		font-size: $font-size * 1px
+	@if $line-height != null
+		line-height: $line-height * 1px
+	@if $letter-spacing != null
+		letter-spacing: ($letter-spacing / 1000) * 1em

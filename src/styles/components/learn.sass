@@ -1,0 +1,120 @@
+.learn
+	background: #207bd2
+	&__container
+	&__title
+		margin-bottom: 40px
+		+lg
+			margin-bottom: 20px
+	&__list
+		+xs
+			padding-bottom: 15px
+		.slick-list
+			margin: 0 -15px
+			+xs
+				margin: 0
+		.slider-dots
+			+sm
+				bottom: auto
+				top: 115%
+			+xs
+				top: 100%
+			li.slick-active
+				background: #ffd52f
+		
+		.slider-btn
+			top: 30%
+			+sm
+				top: 110%
+			&_prev
+				left: -90px
+				+lg
+					left: -75px
+				+sm
+					left: 0
+			&_next
+				right: -90px
+				+lg
+					right: -75px
+				+sm
+					right: 0
+	&__item
+		padding: 0 15px
+		+lg
+			padding: 0 8px
+		+xs
+			padding: 0 0 15px
+		&.slick-active
+			animation: 1s bounceIn
+			+xs
+				animation: none
+		&-pic
+			margin-bottom: 20px
+			+ratio(350, 232)
+			+lg
+				margin-bottom: 10px
+				&::before
+					padding-top: 64%
+		&-img
+			+coverdiv
+			+cover
+		&-title
+			margin-bottom: 15px
+			+f('geo-900', 23)
+			color: #ffd52f
+			+lg
+				margin-bottom: 10px
+		&-list
+			+lg
+				font-size: 16px
+				line-height: 20px
+			li
+				position: relative
+				padding-left: 30px
+				color: $white
+				&::before, &::after
+					position: absolute
+					top: 4px
+					left: 0
+					width: 20px
+					height: 21px
+					content: ''
+				&::before
+					opacity: 0
+					background: url("../img/icons/berry-red.png")
+					transition: opacity .25s ease, transform .4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+					z-index: 2
+					+gpu
+					will-change: transform, opacity
+				&::after
+					z-index: 1
+					background: url("../img/icons/berry-blue.png")
+				&:not(:first-child)
+					margin-top: 5px
+				.no-touch &:hover::before
+					opacity: 1
+					transform: scale(1.3)
+					
+@keyframes bounceIn
+	from, 20%, 40%, 60%, 80%, to
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+	
+	0%
+		opacity: 0
+		transform: scale3d(0.3, 0.3, 0.3)
+	
+	20%
+		transform: scale3d(1.1, 1.1, 1.1)
+	
+	40%
+		transform: scale3d(0.9, 0.9, 0.9)
+	
+	60%
+		opacity: 1
+		transform: scale3d(1.03, 1.03, 1.03)
+	
+	80%
+		transform: scale3d(0.97, 0.97, 0.97)
+	
+	to
+		opacity: 1
+		transform: scale3d(1, 1, 1)

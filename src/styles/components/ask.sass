@@ -1,0 +1,93 @@
+.ask
+	background: #ffcc00
+	&__title
+		margin-bottom: 20px
+		+lg
+			margin-bottom: 10px
+		+sm
+			margin-bottom: 15px
+	&__sub-title
+		margin-bottom: 40px
+		color: $black
+		+lg
+			margin-bottom: 20px
+			font-size: 20px
+		+sm
+			font-size: 24px
+			line-height: 25px
+		+xs
+			margin-bottom: 25px
+			font-size: 20px
+			line-height: 21px
+	&__inner
+		display: flex
+		align-items: flex-start
+		justify-content: center
+		+sm
+			flex-wrap: wrap
+	&__img
+		+cover
+		+ratio(446, 325)
+		transition: transform 1.3s ease-in-out
+		&:hover
+			transform: scale(1.15)
+		&-wrap
+			flex: 1 0 percentage(446 / 1110)
+			width: percentage(446 / 1110)
+			overflow: hidden
+			+sm
+				flex: 0 1 60%
+				width: 60%
+				margin: 0 0 20px
+			+xs
+				flex: 0 1 100%
+	&__form
+		font-size: 0
+		&-wrap
+			flex: 0 1 auto
+			padding-left: 30px
+			+sm
+				padding-left: 0
+		&-row
+			display: flex
+			margin: 0 -7px
+			+xs
+				flex-direction: column
+				margin: 0
+		&-field
+			flex-basis: 50%
+			width: 50%
+			padding: 0 7px
+			+xs
+				flex: 1 0 auto
+				padding: 0
+				width: 100%
+				&:not(:first-child)
+					margin-top: 15px
+		&-message
+			margin: 14px 0 20px
+			+lg
+				margin: 26px 0 20px
+			+sm
+				margin: 15px 0
+		&-actions
+			display: flex
+			align-items: center
+			+xs
+				flex-direction: column
+		&-submit
+			padding: 0 40px
+		&-agree
+			flex: 0 1 328px
+			padding-left: 20px
+			font-size: 12px
+			color: $black
+			+xs
+				padding-left: 0
+				padding-top: 20px
+				flex: 1 0 auto
+			a
+				border-bottom: 1px solid currentColor
+				+trs
+				.no-touch &:hover
+					border-bottom-color: transparent

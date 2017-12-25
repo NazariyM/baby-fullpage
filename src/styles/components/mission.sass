@@ -1,0 +1,152 @@
+.mission
+	background: #2486c5
+	+xs
+		padding-bottom: 0
+	&__info
+		display: flex
+		align-items: center
+		height: 50%
+		+sm
+			height: 65%
+		+xs
+			height: auto
+			padding-bottom: 15px
+		&-container
+			display: flex
+			justify-content: space-between
+			margin: auto
+			width: 100%
+			+lg
+				margin: auto auto 20px
+			+sm
+				margin: 0 auto
+				flex-wrap: wrap
+				justify-content: center
+	&__item
+		position: relative
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		flex-basis: 248px
+		height: 248px
+		text-align: center
+		padding: 5px
+		color: $white
+		border: 6px solid #3a92cb
+		border-radius: 50%
+		+lg
+			width: 220px
+			height: 220px
+			flex-basis: 220px
+		+sm
+			margin: 25px
+		&-count
+			position: absolute
+			top: -23%
+			left: -20px
+			z-index: 1
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 120px
+			height: 120px
+			border-radius: 50%
+			+lg
+				width: 100px
+				height: 100px
+				top: -15%
+			&_yellow
+				background: #ffc000
+			&_purple
+				background: #f16eaa
+			&_orange
+				background: #fba220
+			&_green
+				background: #24a849
+			span
+				+f('geo-heavy', 26)
+				+lg
+					font-size: 23px
+		p
+			font-size: 22px
+			+lg
+				font-size: 18px
+	
+	&__content
+		position: relative
+		z-index: 1
+		height: 50%
+		background: #e6393f
+		+sm
+			height: 35%
+		+xs
+			height: auto
+			padding: 30px 0
+			margin-top: 260px
+			background: #e6393f url("../img/bg/hearts_bg.png") repeat 50% 50%
+			
+		&-container
+			display: flex
+			align-items: center
+			height: 100%
+			max-width: 1040px
+			+lg
+				position: relative
+				align-items: flex-start
+			+sm
+				align-items: center
+			+xs
+				flex-wrap: wrap
+		&-text
+			width: 50%
+			flex-basis: 50%
+			+lg
+				padding-top: 50px
+			+sm
+				padding-top: 0
+			+xs
+				flex-basis: 100%
+				width: 100%
+			p
+				padding-right: 20px
+				+f('geo-300', 25, 40)
+				color: $white
+				+lg
+					font-size: 20px
+					line-height: 28px
+				+sm
+					padding-right: 0
+					text-align: center
+		&-title
+			margin-bottom: 25px
+			text-align: left
+			+xs
+				text-align: center
+		&-pic
+			position: relative
+			margin-top: -44px
+			width: 41.6%
+			flex-basis: 41.6%
+			align-self: flex-end
+			+cover
+			+lg
+				position: absolute
+				bottom: 0
+				right: 80px
+				width: 29%
+			+sm
+				width: 40%
+			+xs
+				order: -1
+				position: relative
+				top: -30px
+				left: auto
+				right: auto
+				margin-top: -100%
+				width: 240px
+				flex-basis: 240px
+			&::after
+				display: block
+				width: 100%
+				padding-top: 120%
+				content: ''

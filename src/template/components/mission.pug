@@ -1,0 +1,43 @@
+if mission ? mission : mission = []
+if mission.title ? mission.title : mission.title = 'НАША МИССИЯ'
+if mission.descr ? mission.descr : mission.descr = 'Делать детей счастливыми, самим получать от этого радость и помогать родителям раскрывать индивидуальность ребенка.'
+
+//begin mission
++b.SECTION.mission.section(class= mission.classMod ? mission.classMod : '')
+	+e.info
+		+e.info-container.container
+			-
+				infoList = [{
+				countMod: 'yellow',
+				count: '2000',
+				text: 'год начала работы первого Бэби-клуба'
+				}, {
+				countMod: 'purple',
+				count: '75',
+				text: 'города мира'
+				}, {
+				countMod: 'orange',
+				count: '22000',
+				text: 'детей ходят к нам каждую неделю'
+				}, {
+				countMod: 'green',
+				count: '63000',
+				text: 'довольных родителей'
+				}]
+
+			mixin missionItem(item)
+				+e.item(data-anim='')
+					+e.item-count(class= `_${item.countMod}`): span(data-anim-count=``)= item.count
+					+e.P= item.text
+
+			each item in infoList
+				+missionItem(item)
+
+	+e.content
+		+e.content-container.container
+			+e.content-text
+				+e.H2.content-title.title(data-anim-title='')= mission.title
+				+e.content-descr(data-anim-fast='')
+					+e.P= mission.descr
+			+e.content-pic(style='background-image: url(static/img/bg/mission_boy.png)')
+		+b.particles#js-heart-particles

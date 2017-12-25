@@ -1,0 +1,19 @@
+if screen ? screen : screen = []
+if screen.title ? screen.title : screen.title = '238 КЛУБОВ И САДОВ'
+if screen.descr ? screen.descr : screen.descr = 'для развития детей от 8 месяцев до 7 лет'
+if screen.btn1 ? screen.btn1 : screen.btn1 = 'Выбрать клуб'
+if screen.btn2 ? screen.btn2 : screen.btn2 = 'Открыть свой Бэби-клуб'
+if screen.video ? screen.video : screen.video = 'screen_video_720'
+
+//begin screen
++b.SECTION.screen.section(class= screen.classMod ? screen.classMod : '')
+	+e.container.container
+		+e.inner
+			+e.text
+				+e.H2.title.title= screen.title
+				+e.P= screen.descr
+			+e.actions
+				+e.A.actions-btn.btn._yellow(href='#!')= screen.btn1
+				+e.A.actions-btn.btn._blue(href='#!')= screen.btn2
+	+e.video
+		+e.VIDEO(src=`static/video/${screen.video}.mp4` loop autoplay)

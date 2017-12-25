@@ -1,0 +1,96 @@
+.library
+	background: url("../img/bg/library_bg.png") no-repeat 50% 50%/cover
+	&__container
+		padding: 0 50px
+		+lg
+			padding: 20px 50px 0
+		+sm
+			padding: 20px 15px 0
+	&__title
+		margin-bottom: 40px
+		+lg
+			margin-bottom: 20px
+		+xs
+			margin-bottom: 50px
+	&__content
+		display: flex
+		align-items: center
+		+sm
+			flex-wrap: wrap
+		&-img
+			position: relative
+			flex: 1 0 358px
+			+lg
+				flex: 1 0 300px
+			+sm
+				flex: 0 1 280px
+				margin-bottom: 10px
+			img
+				width: 100%
+		&-label
+			position: absolute
+			top: -20px
+			right: -10px
+			z-index: 2
+			display: flex
+			align-items: center
+			width: 115px
+			height: 115px
+			padding: 10px
+			background: $yellow
+			color: $black
+			border-radius: 50%
+			+f('geo-700', 14, 18)
+			text-align: center
+		&-info
+			flex: 1 1 auto
+			padding-left: 24px
+			+xs
+				padding-left: 0
+		&-text
+			color: $white
+			+f('geo-300', 20, 30)
+			+sm
+				font-size: 18px
+				line-height: 24px
+			p
+				padding-right: 25px
+		&-name
+			+f('geo-700', 40, 50)
+			+lg
+				font-size: 30px
+				line-height: 40px
+		&-author
+			margin-bottom: 15px
+			+f('geo-400', 40, 50)
+			+lg
+				font-size: 30px
+				line-height: 40px
+		&-descr
+			margin: 40px 0
+			+f('geo-700', 20, 35)
+			+lg
+				margin: 20px 0
+				font-size: 18px
+				line-height: 25px
+			
+		&-actions
+			font-size: 0
+			+xs
+				text-align: center
+			
+		&-btn
+			display: inline-block
+			vertical-align: middle
+			min-width: 318px
+			padding: 0 30px
+			+md
+				min-width: 290px
+				padding: 0 15px
+			+xs
+			
+			&:not(:first-child)
+				margin-left: 20px
+				+xs
+					margin-left: 0
+					margin-top: 10px

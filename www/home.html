@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+  </head>
+  <body>
+    <!--begin preloader-->
+    <div class="preloader">
+      <img class="preloader__img" src="static/img/logo.svg" alt="Бэби клуб" title="" />
+    </div>
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-arr-top" viewBox="0 0 261.808 261.808">
+          <path d="M260.485 160.384L135.686 19.409c-2.42-2.73-6.331-2.736-8.757-.011L1.33 160.389c-2.426 2.73-1.441 4.928 2.203 4.928h79.144v72.546a6.587 6.587 0 0 0 6.592 6.587h83.267a6.59 6.59 0 0 0 6.592-6.587v-72.546h79.138c3.644 0 4.64-2.203 2.219-4.933z"
+          />
+        </symbol>
+        <symbol id="icon-facebook" viewBox="0 0 155.139 155.139">
+          <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42a3.908 3.908 0 0 0-1.417.923c-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372a3.908 3.908 0 0 0 1.417-.923c.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942a3.908 3.908 0 0 0-.923-1.417A3.886 3.886 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28a2.49 2.49 0 0 1-.92-.6c-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452a4.108 4.108 0 1 0 0 8.215 4.108 4.108 0 0 0 0-8.215zm0 6.775a2.667 2.667 0 1 1 0-5.334 2.667 2.667 0 0 1 0 5.334zm5.23-6.937a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0z"
+          />
+        </symbol>
+        <symbol id="icon-left-arrow" viewBox="0 0 405.456 405.456">
+          <path d="M341.31 74.135c-.078-4.985-2.163-9.911-5.688-13.438l-55-55C277.023 2.096 271.963 0 266.872 0s-10.151 2.096-13.75 5.697L69.841 188.978c-3.601 3.599-5.697 8.659-5.697 13.75s2.096 10.151 5.697 13.75l183.281 183.281c3.599 3.601 8.659 5.697 13.75 5.697s10.151-2.096 13.75-5.697l55-55c3.591-3.598 5.681-8.651 5.681-13.734s-2.09-10.136-5.681-13.734L221.06 202.728 335.622 88.166c3.665-3.667 5.765-8.848 5.688-14.031z"
+          />
+        </symbol>
+        <symbol id="icon-right-arrow" viewBox="0 0 405.457 405.457">
+          <path d="M64.147 331.322c.078 4.985 2.163 9.911 5.688 13.438l55 55c3.599 3.601 8.659 5.697 13.75 5.697 5.091 0 10.151-2.096 13.75-5.697l183.281-183.282c3.601-3.599 5.697-8.659 5.697-13.75s-2.096-10.151-5.697-13.75L152.335 5.697C148.736 2.096 143.676 0 138.585 0c-5.091 0-10.151 2.096-13.75 5.697l-55 55c-3.591 3.598-5.681 8.651-5.681 13.734s2.09 10.136 5.681 13.734l114.562 114.563L69.835 317.291c-3.664 3.667-5.765 8.848-5.688 14.031z"
+          />
+        </symbol>
+        <symbol id="icon-triangle-r" viewBox="0 0 415.346 415.346">
+          <path d="M41.712 415.346c-11.763 0-21.3-9.537-21.3-21.3V21.299C20.412 9.536 29.949 0 41.712 0l346.122 191.697s15.975 15.975 0 31.951C371.859 239.622 41.712 415.346 41.712 415.346z" />
+        </symbol>
+        <symbol id="icon-vk" viewBox="0 0 16 16">
+          <path d="M7.828 12.526h.957s.288-.032.436-.19c.14-.147.14-.42.14-.42s-.02-1.284.58-1.473c.59-.187 1.34 1.24 2.14 1.788.61.42 1.07.33 1.07.33l2.14-.03s1.12-.07.59-.95c-.04-.07-.3-.65-1.58-1.84-1.34-1.24-1.16-1.04.45-3.19.98-1.31 1.38-2.11 1.25-2.45-.11-.32-.84-.24-.84-.24l-2.4.02s-.18-.02-.31.06-.21.26-.21.26-.38 1.02-.89 1.88C10.27 7.9 9.84 8 9.67 7.88c-.403-.26-.3-1.053-.3-1.62 0-1.76.27-2.5-.52-2.69-.26-.06-.454-.1-1.123-.11-.86-.01-1.585.006-1.996.207-.27.135-.48.434-.36.45.16.02.52.098.71.358.25.337.24 1.09.24 1.09s.14 2.077-.33 2.335c-.33.174-.77-.187-1.73-1.837-.49-.84-.86-1.78-.86-1.78s-.07-.17-.2-.27c-.15-.11-.37-.15-.37-.15l-2.29.02s-.34.01-.46.16c-.11.13-.01.41-.01.41s1.79 4.19 3.82 6.3c1.86 1.935 3.97 1.81 3.97 1.81z"
+          />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <div class="js-fullpage">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__container container">
+            <div class="logo header__logo">
+              <a class="logo__link" href="#!">
+                <img class="logo__img" src="static/img/logo.svg" alt="Бэби клуб" title="" />
+              </a>
+              <p class="logo__descr">Бережное развитие интеллекта</p>
+            </div>
+            <div class="info-block info-block_header">
+              <!--begin socials-->
+              <div class="socials info-block__socials">
+                <a class="socials__link" href="#!" target="_blank">
+                  <svg class="icon icon-vk">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use>
+                  </svg>
+                </a>
+                <a class="socials__link" href="#!" target="_blank">
+                  <svg class="icon icon-facebook">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+                  </svg>
+                </a>
+                <a class="socials__link" href="#!" target="_blank">
+                  <svg class="icon icon-instagram">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use>
+                  </svg>
+                </a>
+              </div>
+              <a class="info-block__tel" href="#!">8 800 100 20 24</a>
+              <button class="info-block__call-btn btn btn_yellow" type="button">Заказать звонок</button>
+              <button class="hamburger hamburger--spring js-hamburger" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <nav class="nav js-nav">
+          <ul class="nav__list container">
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">О компании</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Развитие интеллекта</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Как проходят занятия</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Выбрать клуб</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Открыть свой клуб</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Контакты</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Карьера</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!--begin screen-->
+      <section class="screen section">
+        <div class="screen__container container">
+          <div class="screen__inner">
+            <div class="screen__text">
+              <h2 class="screen__title title">238 КЛУБОВ И САДОВ</h2>
+              <p>для развития детей от 8 месяцев до 7 лет</p>
+            </div>
+            <div class="screen__actions">
+              <a class="screen__actions-btn btn btn_yellow" href="#!">Выбрать клуб</a>
+              <a class="screen__actions-btn btn btn_blue" href="#!">Открыть свой Бэби-клуб</a>
+            </div>
+          </div>
+        </div>
+        <div class="screen__video">
+          <video src="static/video/screen_video_720.mp4" loop="loop" autoplay="autoplay"></video>
+        </div>
+      </section>
+      <!--begin mission-->
+      <section class="mission section">
+        <div class="mission__info">
+          <div class="mission__info-container container">
+            <div class="mission__item" data-anim="">
+              <div class="mission__item-count mission__item-count_yellow">
+                <span data-anim-count="">2000</span>
+              </div>
+              <p>год начала работы первого Бэби-клуба</p>
+            </div>
+            <div class="mission__item" data-anim="">
+              <div class="mission__item-count mission__item-count_purple">
+                <span data-anim-count="">75</span>
+              </div>
+              <p>города мира</p>
+            </div>
+            <div class="mission__item" data-anim="">
+              <div class="mission__item-count mission__item-count_orange">
+                <span data-anim-count="">22000</span>
+              </div>
+              <p>детей ходят к нам каждую неделю</p>
+            </div>
+            <div class="mission__item" data-anim="">
+              <div class="mission__item-count mission__item-count_green">
+                <span data-anim-count="">63000</span>
+              </div>
+              <p>довольных родителей</p>
+            </div>
+          </div>
+        </div>
+        <div class="mission__content">
+          <div class="mission__content-container container">
+            <div class="mission__content-text">
+              <h2 class="mission__content-title title" data-anim-title="">НАША МИССИЯ</h2>
+              <div class="mission__content-descr" data-anim-fast="">
+                <p>Делать детей счастливыми, самим получать от этого радость и помогать родителям раскрывать индивидуальность ребенка.</p>
+              </div>
+            </div>
+            <div class="mission__content-pic" style="background-image: url(static/img/bg/mission_boy.png);"></div>
+          </div>
+          <div class="particles" id="js-heart-particles"></div>
+        </div>
+      </section>
+      <!--begin info-->
+      <section class="info section">
+        <div class="info__text">
+          <div class="info__text-container container">
+            <h2 class="info__title title title_md" data-anim-title="">Развивающие занятия для детей</h2>
+            <div class="info__descr" data-anim-fast="">
+              <p>В Бэби-клубе бережно развивают все виды интеллекта: социальный, личностный, пространственный, вербальный, цифровой, духовный, творческий, сенсорный, физический, чувственный. Для каждого возраста мы выбираем именно те задания, которые способствуют
+                комплексному и гармоничному интеллектуальному развитию.</p>
+            </div>
+          </div>
+        </div>
+        <!--begin accordion-->
+        <div class="accordion">
+          <div class="accordion__item" data-anim-slow="">
+            <div class="accordion__title">
+              <svg class="icon icon-triangle-r">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-triangle-r"></use>
+              </svg>
+              <span>От 8 месяцев до 2 лет</span>
+            </div>
+            <div class="accordion__content">
+              <p>В Бэби-клубе бережно развивают все виды интеллекта: социальный, личностный, пространственный, вербальный, цифровой, духовный, творческий, сенсорный, физический, чувственный. Для каждого возраста мы выбираем именно те задания, которые способствуют
+                комплексному и гармоничному интеллектуальному развитию.</p>
+            </div>
+          </div>
+          <div class="accordion__item" data-anim-slow="">
+            <div class="accordion__title">
+              <svg class="icon icon-triangle-r">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-triangle-r"></use>
+              </svg>
+              <span>От 2 до 4 лет</span>
+            </div>
+            <div class="accordion__content">
+              <p>В Бэби-клубе бережно развивают все виды интеллекта: социальный, личностный, пространственный, вербальный, цифровой, духовный, творческий, сенсорный, физический, чувственный. Для каждого возраста мы выбираем именно те задания, которые способствуют
+                комплексному и гармоничному интеллектуальному развитию.</p>
+            </div>
+          </div>
+          <div class="accordion__item" data-anim-slow="">
+            <div class="accordion__title">
+              <svg class="icon icon-triangle-r">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-triangle-r"></use>
+              </svg>
+              <span>От 4 до 7 лет</span>
+            </div>
+            <div class="accordion__content">
+              <p>В Бэби-клубе бережно развивают все виды интеллекта: социальный, личностный, пространственный, вербальный, цифровой, духовный, творческий, сенсорный, физический, чувственный. Для каждого возраста мы выбираем именно те задания, которые способствуют
+                комплексному и гармоничному интеллектуальному развитию.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--begin benefits-->
+      <section class="benefits section">
+        <div class="benefits__container container">
+          <h2 class="benefits__title title title_black" data-anim-title="">Бэби-клуб - это</h2>
+          <div class="benefits__list">
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-f"></div>
+              </div>
+              <p>Сеть центров с 17-летним опытом развития детей</p>
+            </div>
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-k"></div>
+              </div>
+              <p>Занятия для дошкольников: от 8 месяцев до 7 лет</p>
+            </div>
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-b"></div>
+              </div>
+              <p>Маленькие группы - до 8 детей</p>
+            </div>
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-n"></div>
+              </div>
+              <p>Безопасное игровое пространство</p>
+            </div>
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-d"></div>
+              </div>
+              <p>Место, где ребёнка понимают и любят таким, какой он есть</p>
+            </div>
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-v"></div>
+              </div>
+              <p>Только здоровье сберегающие методики</p>
+            </div>
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-l"></div>
+              </div>
+              <p>Всестороннее развитие интеллектуальных, творческих и физических способностей детей</p>
+            </div>
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-t"></div>
+              </div>
+              <p>Подготовка детей к саду, школе и взрослой жизни</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--begin learn-->
+      <section class="learn section">
+        <div class="learn__container container">
+          <h2 class="learn__title title" data-anim-title="">Чему научится ваш РЕБЕНОК</h2>
+          <div class="learn__list js-learn-slider">
+            <div class="learn__item" data-anim-fast="">
+              <div class="learn__item-pic">
+                <div class="learn__item-img" style="background-image: url(static/img/content/learn-1.jpg);"></div>
+              </div>
+              <div class="learn__item-title">Не просто считать, но и ...</div>
+              <ul class="learn__item-list">
+                <li>Расплачиваться в магазине</li>
+                <li>Измерять свой вес и рос</li>
+                <li>Определять размер одежды</li>
+                <li>Определять время по часам</li>
+                <li>Планировать свое время</li>
+              </ul>
+            </div>
+            <div class="learn__item" data-anim-fast="">
+              <div class="learn__item-pic">
+                <div class="learn__item-img" style="background-image: url(static/img/content/learn-2.jpg);"></div>
+              </div>
+              <div class="learn__item-title">Не просто говорить, но и ...</div>
+              <ul class="learn__item-list">
+                <li>Выступать перед публикой без стеснения</li>
+                <li>Красиво и грамотно оперировать словами</li>
+                <li>Придумывать и записывать свои рассказы и истории</li>
+                <li>Подписывать поздравительные открытки для друзей</li>
+              </ul>
+            </div>
+            <div class="learn__item" data-anim-fast="">
+              <div class="learn__item-pic">
+                <div class="learn__item-img" style="background-image: url(static/img/content/learn-3.jpg);"></div>
+              </div>
+              <div class="learn__item-title">Не просто читать, но и ...</div>
+              <ul class="learn__item-list">
+                <li>Ориентироваться среди вывесок и указателей в городе</li>
+                <li>Находить любую информацию в книгах и интернете</li>
+                <li>Читать письма и СМС</li>
+                <li>Самостоятельно читать любимые сказки, когда мама устала</li>
+              </ul>
+            </div>
+            <div class="learn__item" data-anim-fast="">
+              <div class="learn__item-pic">
+                <div class="learn__item-img" style="background-image: url(static/img/content/learn-4.jpg);"></div>
+              </div>
+              <div class="learn__item-title">Не просто общаться с другими детьми, но и...</div>
+              <ul class="learn__item-list">
+                <li>Взаимодействовать в команде и чувствовать себя уверенно</li>
+                <li>Разрешать конфликты со сверстниками и предотвращать их</li>
+                <li>Отстаивать свою точку зрения, разумно подбирая аргументы</li>
+                <li>Слушать и слышать других людей</li>
+                <li>Задавать вопросы и самостоятельно делать выводы</li>
+              </ul>
+            </div>
+            <div class="learn__item" data-anim-fast="">
+              <div class="learn__item-pic">
+                <div class="learn__item-img" style="background-image: url(static/img/content/learn-5.jpg);"></div>
+              </div>
+              <div class="learn__item-title">Не просто узнает много нового, но и...</div>
+              <ul class="learn__item-list">
+                <li>Сохранит природную любознательность и будет любить учиться</li>
+                <li>Получит всестороннее интеллектуальное развитие</li>
+                <li>Будет развиваться в эмоциональном плане, различать и справляться с разными чувствами</li>
+                <li>Найдет дело себе по душе</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--begin interior-->
+      <section class="interior section">
+        <div class="interior__slider js-interior-slider">
+          <div class="interior__slider-item">
+            <h2 class="interior__title title" data-anim-title="">Интерьер</h2>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-1.jpg);"></div>
+          </div>
+          <div class="interior__slider-item">
+            <h2 class="interior__title title" data-anim-title="">Красота</h2>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-2.jpg);"></div>
+          </div>
+          <div class="interior__slider-item">
+            <h2 class="interior__title title" data-anim-title="">Чистота</h2>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-3.png);"></div>
+          </div>
+          <div class="interior__slider-item">
+            <h2 class="interior__title title" data-anim-title="">Уют</h2>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-1.jpg);"></div>
+          </div>
+          <div class="interior__slider-item">
+            <h2 class="interior__title title" data-anim-title="">Атмосфера</h2>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-2.jpg);"></div>
+          </div>
+          <div class="interior__slider-item">
+            <h2 class="interior__title title" data-anim-title="">Безопасность</h2>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-2.jpg);"></div>
+          </div>
+          <div class="interior__slider-item">
+            <h2 class="interior__title title" data-anim-title="">Удобство</h2>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-3.png);"></div>
+          </div>
+        </div>
+      </section>
+      <!--begin library-->
+      <section class="library section">
+        <div class="library__container container">
+          <h2 class="library__title title" data-anim-title="">БЭБибЛИОТЕКА</h2>
+          <div class="library__content" data-anim-slow="">
+            <div class="library__content-img">
+              <span class="library__content-label">Бестселлер на Оzon.ru</span>
+              <img src="static/img/content/library-book.png" alt="image" title="" />
+            </div>
+            <div class="library__content-info">
+              <div class="library__content-text">
+                <h4 class="library__content-name">«После трёх уже поздно»</h4>
+                <h5 class="library__content-author">Масару Ибука</h5>
+                <p>Легендарная книга расскажет о необходимости и важности раннего развития. Ведь первые три года жизни — неповторимый период в формировании интеллектуальных способностей ребенка, когда каждый день — значительный этап бурного и всестороннего
+                  развития.</p>
+                <div class="library__content-descr">
+                  <p>243 000 экземпляров</p>
+                  <p>2011 г. — Книжная премия Рунета в двух номинациях:</p>
+                  <p>«Выбор пользователей» и «Бестселлер на Озоне»</p>
+                </div>
+              </div>
+              <div class="library__content-actions">
+                <a class="library__content-btn btn btn_yellow" href="#!">Получить книгу на e-mail</a>
+                <a class="library__content-btn btn btn_purple" href="#!">Смотреть всю Бэбиблиотеку</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--begin thanks-->
+      <section class="thanks section">
+        <div class="thanks__container container">
+          <h2 class="thanks__title title" data-anim-title="">1000 спасибо</h2>
+          <!--begin tabs-->
+          <div class="c-tabs">
+            <div class="c-tabs__tabs-nav">
+              <button class="c-tabs__tabs-el btn is-active" data-anim-fast="" type="button">ДЕТИ</button>
+              <button class="c-tabs__tabs-el btn" data-anim-fast="" type="button">РОДИТЕЛИ</button>
+              <button class="c-tabs__tabs-el btn" data-anim-fast="" type="button">СОТРУДНИКИ</button>
+              <button class="c-tabs__tabs-el btn" data-anim-fast="" type="button">ВЛАДЕЛЬЦЫ КЛУБОВ</button>
+            </div>
+            <div class="c-tabs__tabs-for" data-anim-slow="">
+              <div class="c-tabs__tab">
+                <div class="c-tabs__inner">
+                  <div class="c-tabs__video-item">
+                    <div class="c-tabs__video-text">
+                      <h5 class="c-tabs__video-title">Милана</h5>
+                      <p>посещает Бэби-клуб более 3 лет</p>
+                    </div>
+                    <div class="c-tabs__video-trigger js-play-video"></div>
+                    <iframe src="https://www.youtube.com/embed/DpMrNGG3S3I?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                  </div>
+                  <div class="c-tabs__video-item">
+                    <div class="c-tabs__video-text">
+                      <h5 class="c-tabs__video-title">Вероника</h5>
+                      <p>Мама Глеба и Матвея Более года в Бэби-клубе</p>
+                    </div>
+                    <div class="c-tabs__video-trigger js-play-video"></div>
+                    <iframe src="https://www.youtube.com/embed/3roikLviTGs?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="c-tabs__tab">
+                <div class="c-tabs__inner">
+                  <div class="c-tabs__video-item">
+                    <div class="c-tabs__video-text">
+                      <h5 class="c-tabs__video-title">Милана</h5>
+                      <p>посещает Бэби-клуб более 3 лет</p>
+                    </div>
+                    <div class="c-tabs__video-trigger js-play-video"></div>
+                    <iframe src="https://www.youtube.com/embed/5zDWEog9CJE?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                  </div>
+                  <div class="c-tabs__video-item">
+                    <div class="c-tabs__video-text">
+                      <h5 class="c-tabs__video-title">Вероника</h5>
+                      <p>Мама Глеба и Матвея Более года в Бэби-клубе</p>
+                    </div>
+                    <div class="c-tabs__video-trigger js-play-video"></div>
+                    <iframe src="https://www.youtube.com/embed/OhEANdHh3e0?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="c-tabs__tab">
+                <div class="c-tabs__inner">
+                  <div class="c-tabs__video-item">
+                    <div class="c-tabs__video-text">
+                      <h5 class="c-tabs__video-title">Милана</h5>
+                      <p>посещает Бэби-клуб более 3 лет</p>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/DpMrNGG3S3I?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                  </div>
+                  <div class="c-tabs__video-item">
+                    <div class="c-tabs__video-text">
+                      <h5 class="c-tabs__video-title">Вероника</h5>
+                      <p>Мама Глеба и Матвея Более года в Бэби-клубе</p>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/3roikLviTGs?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="c-tabs__tab">
+                <div class="c-tabs__inner">
+                  <div class="c-tabs__video-item">
+                    <div class="c-tabs__video-text">
+                      <h5 class="c-tabs__video-title">Милана</h5>
+                      <p>посещает Бэби-клуб более 3 лет</p>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/5zDWEog9CJE?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                  </div>
+                  <div class="c-tabs__video-item">
+                    <div class="c-tabs__video-text">
+                      <h5 class="c-tabs__video-title">Вероника</h5>
+                      <p>Мама Глеба и Матвея Более года в Бэби-клубе</p>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/OhEANdHh3e0?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="thanks__all-btn btn btn_yellow" href="#!">Смотреть все спасибо</a>
+        </div>
+      </section>
+      <!--begin choose-->
+      <section class="choose section">
+        <div class="choose__inner">
+          <div class="choose__container container">
+            <h2 class="choose__title title" data-anim-title="">238 клубов по всему миру</h2>
+            <p data-anim-title="">Приходите в гости, чтобы увидеть всё своими глазами</p>
+          </div>
+        </div>
+        <div class="choose__map-wrap">
+          <div class="choose__map" id="choose-map"></div>
+        </div>
+        <div class="choose__actions">
+          <a class="choose__actions-btn btn btn_yellow" href="#!">Выбрать клуб</a>
+          <a class="choose__actions-btn btn btn_blue" href="#!">Открыть свой Бэби-клуб</a>
+        </div>
+      </section>
+      <!--begin news-->
+      <section class="news section">
+        <div class="news__container container">
+          <h2 class="news__title title" data-anim-title="">новости сети</h2>
+          <div class="news__inner">
+            <div class="news__item" data-anim-slow="">
+              <div class="news__item-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ohT9wvEQKaw?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+              </div>
+              <h6 class="news__item-title">Интеллектуальные игры — продолжаются!</h6>
+              <span class="news__item-date">14 сентября 2017, Москва</span>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства «Росмэн» на развитие разных видов интеллекта для детей 2-3 лет пополнилась еще пятью тетрадями для тех, кто постарше.</p>
+              <a class="news__item-btn btn btn_transp"
+                href="#!">ПОДРОБНЕЕ</a>
+            </div>
+            <div class="news__item" data-anim-slow="">
+              <div class="news__item-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ohT9wvEQKaw?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+              </div>
+              <h6 class="news__item-title">Интеллектуальные игры — продолжаются!</h6>
+              <span class="news__item-date">14 сентября 2017, Москва</span>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства «Росмэн» на развитие разных видов интеллекта для детей 2-3 лет пополнилась еще пятью тетрадями для тех, кто постарше.</p>
+              <a class="news__item-btn btn btn_transp"
+                href="#!">ПОДРОБНЕЕ</a>
+            </div>
+          </div>
+          <a class="news__all-btn btn btn_yellow" href="#!">Смотреть все новости</a>
+        </div>
+      </section>
+      <!--begin project-->
+      <section class="project section">
+        <div class="project__container container">
+          <h2 class="project__title title" data-anim-title="">Наши проекты</h2>
+          <div class="project__inner">
+            <div class="project__item" data-anim="">
+              <div class="project__item-pic">
+                <img src="static/img/content/project-1.png" alt="image" title="" />
+              </div>
+              <h6 class="project__item-title">Школа «Белая ворона»</h6>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства</p>
+            </div>
+            <div class="project__item" data-anim="">
+              <div class="project__item-pic">
+                <img src="static/img/content/project-2.png" alt="image" title="" />
+              </div>
+              <h6 class="project__item-title">KIDFriendly</h6>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства</p>
+            </div>
+            <div class="project__item" data-anim="">
+              <div class="project__item-pic">
+                <img src="static/img/content/project-3.png" alt="image" title="" />
+              </div>
+              <h6 class="project__item-title">KIDX - онлайн школа</h6>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства</p>
+            </div>
+            <div class="project__item" data-anim="">
+              <div class="project__item-pic">
+                <img src="static/img/content/project-4.png" alt="image" title="" />
+              </div>
+              <h6 class="project__item-title">Отцы и дети: инструкция по применению</h6>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства</p>
+            </div>
+            <div class="project__item" data-anim="">
+              <div class="project__item-pic"></div>
+              <h6 class="project__item-title">Арина Родионовна</h6>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--begin ask-->
+      <section class="ask section">
+        <div class="ask__container container">
+          <h2 class="ask__title title title_black" data-anim-title="">У вас есть вопрос?</h2>
+          <h5 class="ask__sub-title title title_sm" data-anim-title="">Получите ответ из первых уст основателей Бэби-клуба Евгении и Юрия Белонощенко</h5>
+          <div class="ask__inner" data-anim-slow="">
+            <div class="ask__img-wrap">
+              <div class="ask__img" style="background-image: url(static/img/content/ask-img.jpg);"></div>
+            </div>
+            <div class="ask__form-wrap">
+              <form class="ask__form" action="#!" method="POST">
+                <div class="ask__form-row">
+                  <div class="ask__form-field">
+                    <input class="ask__form-input input" type="text" placeholder="Ваше имя" name="" required="required" />
+                  </div>
+                  <div class="ask__form-field">
+                    <input class="ask__form-input input" type="text" placeholder="Ваш e-mail" name="" required="required" />
+                  </div>
+                </div>
+                <div class="ask__form-message">
+                  <textarea class="textarea" placeholder="Ваше сообщение"></textarea>
+                </div>
+                <div class="ask__form-actions">
+                  <input class="ask__form-submit btn btn_blue" type="submit" value="Отправить вопрос" />
+                  <p class="ask__form-agree">* Оставляя свои контакты данные, вы соглашаетесь с
+                    <a href="#!">политикой конфиденциольности</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-up">
+          <a href="#!"></a>
+        </div>
+      </section>
+      <footer class="footer fp-auto-height section">
+        <div class="footer__container container">
+          <div class="logo footer__logo">
+            <a class="logo__link" href="#!">
+              <img class="logo__img" src="static/img/logo.svg" alt="Бэби клуб" title="" />
+            </a>
+            <p class="logo__descr">Бережное развитие интеллекта</p>
+          </div>
+          <div class="info-block info-block_footer">
+            <!--begin socials-->
+            <div class="socials info-block__socials">
+              <a class="socials__link" href="#!" target="_blank">
+                <svg class="icon icon-vk">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+              <a class="socials__link" href="#!" target="_blank">
+                <svg class="icon icon-facebook">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+              <a class="socials__link" href="#!" target="_blank">
+                <svg class="icon icon-instagram">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </div>
+            <a class="info-block__tel" href="#!">8 800 100 20 24</a>
+            <button class="info-block__call-btn btn btn_yellow" type="button">Заказать звонок</button>
+            <div class="info-block__row">
+              <a class="info-block__link" href="static/assets/polytics.docx" target="_blank">Политика конфиденциальности</a>
+              <p class="info-block__dev">Сайт создан руками студии
+                <a href="http://akticom.ru/" target="_blank">«Актиком»</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="nav nav_footer">
+          <ul class="nav__list container">
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">О компании</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Развитие интеллекта</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Как проходят занятия</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Выбрать клуб</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Открыть свой клуб</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Контакты</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#!">Карьера</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- Scripts-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="static/js/index.jquery.js"></script>
+    <script src="static/js/index.js"></script>
+  </body>
+</html>

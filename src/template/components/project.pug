@@ -1,0 +1,39 @@
+if project ? project : project = []
+if project.title ? project.title : project.title = 'Наши проекты'
+
+//begin project
++b.SECTION.project.section(class= project.classMod ? project.classMod : '')
+	+e.container.container
+		+e.H2.title.title(data-anim-title='')= project.title
+
+		+e.inner
+			-
+				projList = [{
+				img: 1,
+				title: 'Школа «Белая ворона»',
+				descr: 'Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства'
+				}, {
+				img: 2,
+				title: 'KIDFriendly',
+				descr: 'Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства'
+				}, {
+				img: 3,
+				title: 'KIDX - онлайн школа',
+				descr: 'Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства'
+				}, {
+				img: 4,
+				title: 'Отцы и дети: инструкция по применению',
+				descr: 'Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства'
+				}, {
+				title: 'Арина Родионовна',
+				descr: 'Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства'}]
+
+			mixin projItem(item)
+				+e.item(data-anim='')
+					+e.item-pic
+						if item.img
+							+e.IMG(src=`static/img/content/project-${item.img}.png` alt='image')
+					+e.H6.item-title= item.title
+					+e.P= item.descr
+			each item in projList
+				+projItem(item)

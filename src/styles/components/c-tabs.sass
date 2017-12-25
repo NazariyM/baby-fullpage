@@ -1,0 +1,148 @@
+.c-tabs
+	margin-bottom: 50px
+	text-align: left
+	$parent: &
+	+lg
+		margin-bottom: 20px
+	&__tabs-nav
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 50px
+		+lg
+			margin-bottom: 30px
+		+sm
+			flex-wrap: wrap
+		+xs
+			margin-bottom: 20px
+	&__tabs-el
+		position: relative
+		height: 62px
+		width: 100%
+		padding: 0 15px
+		min-width: 245px
+		color: $white
+		line-height: 1
+		text-transform: uppercase
+		cursor: pointer
+		border: 3px solid $white
+		+f('geo-700', 18)
+		transition: .3s ease
+		+lg
+			height: 50px
+			font-size: 16px
+			line-height: 47px
+		+sm
+			flex-basis: 50%
+		&.is-active
+			pointer-events: none
+			color: $black
+			background: $yellow
+			border-color: transparent
+			+sm
+				border-color: $white
+		&:not(:first-child)
+			margin-left: 10px
+			+sm
+				margin-left: 0
+	&__tab
+		display: none
+		&:first-child
+			display: block
+			
+	&__inner
+		display: flex
+		margin: 0 -15px
+		+sm
+			flex-wrap: wrap
+			justify-content: center
+	&__video
+		$parent: &
+		&-item
+			position: relative
+			overflow: hidden
+			width: calc(50% - 15px)
+			flex-basis: calc(50% - 15px)
+			margin: 0 15px
+			cursor: pointer
+			+sm
+				width: 69%
+				flex-basis: 69%
+				&:not(:first-child)
+					margin-top: 30px
+			+xs
+				width: 100%
+				flex-basis: 100%
+			&::before
+				display: block
+				width: 100%
+				padding-top: 56.2%
+				content: ''
+				+xs
+					display: none
+			iframe
+				+coverdiv
+				width: 100%
+				height: 100%
+				+xs
+					position: static
+					height: 210px
+			&:hover #{$parent}-text.is-float
+				transform: translateY(0%)
+				opacity: 1
+				+sm
+					opacity: 0
+					transform: translateY(100%)
+		&-text
+			pointer-events: none
+			position: absolute
+			bottom: 30px
+			left: 30px
+			max-width: 240px
+			z-index: 10
+			color: $white
+			+f('geo-700', 18)
+			transition: .4s ease
+			text-shadow: 0 0 5px rgba($black, .8)
+			+xs
+				position: static
+				pointer-events: auto
+				max-width: none
+				margin-bottom: 10px
+			p
+				font-size: 18px
+			&.is-float
+				transform: translateY(100%)
+				opacity: 0
+				
+		&-title
+			position: relative
+			padding-bottom: 20px
+			font-size: 35px
+			+xs
+				font-size: 30px
+				padding-bottom: 10px
+			&::after
+				position: absolute
+				width: 88px
+				height: 2px
+				left: 0
+				bottom: 0
+				background: $white
+				content: ''
+				
+		&-trigger
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			z-index: 5
+			font-size: 0
+			+xs
+				display: none
+			&::after
+				pointer-events: none
+				+coverdiv
+				background: rgba($black, .1)

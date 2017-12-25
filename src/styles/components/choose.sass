@@ -1,0 +1,72 @@
+.choose
+	background: #e6393f
+	+r(1599)
+		background: #e6393f url("../img/bg/hearts_bg.png") repeat 50% 50%
+	&__container
+	&__inner
+		display: flex
+		align-items: center
+		min-height: 200px
+		background: url("../img/bg/hearts_bg.png") repeat 50% 50%/cover
+		text-align: center
+		+r(1599)
+			min-height: 120px
+		+sm
+			min-height: 200px
+		+xs
+			position: relative
+			min-height: 0
+			padding-bottom: 20px
+		&::after
+			position: absolute
+			bottom: -24px
+			left: 50%
+			margin-left: -27px
+			+arr(56, 26, #e6393f, b)
+			content: ''
+			+xs
+				z-index: 2
+				bottom: -25px
+		p
+			color: $white
+			font-size: 25px
+			line-height: 40px
+			+xs
+				font-size: 20px
+				line-height: 30px
+	&__title
+		margin-bottom: 20px
+		+r(1599)
+			margin-bottom: 5px
+		+sm
+			margin-bottom: 20px
+	&__map
+		+coverdiv
+		&-wrap
+			position: relative
+			height: calc(100vh - 270px)
+			+r(1599)
+				height: calc(100vh - 190px)
+			+sm
+				height: calc(100vh - 290px)
+	&__actions
+		position: absolute
+		left: 0
+		right: 0
+		text-align: center
+		bottom: 100px
+		z-index: 10
+		+xs
+			position: static
+			padding-top: 20px
+		&-btn
+			min-width: 285px
+			padding: 0 15px
+			margin: 0 10px
+			+xs
+				&:not(:first-child)
+					margin-top: 10px
+
+.ymaps-2-1-56-map-copyrights-promo,
+.ymaps-2-1-56-copyright_logo_no
+	display: none

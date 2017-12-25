@@ -1,0 +1,45 @@
+.benefits
+	background: url("../img/bg/letters_bg.png") no-repeat 50% 50%/cover
+	&__container
+	&__title
+		margin-bottom: 50px
+		+lg
+			margin-bottom: 20px
+	&__list
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		margin: 0 -15px
+	&__item
+		$parent: &
+		width: 25%
+		flex-basis: 25%
+		padding: 0 12px 40px
+		text-align: center
+		+lg
+			padding: 0 12px 15px
+		+sm
+			width: 33.33333%
+			flex-basis: 33.33333%
+		+xs
+			width: 100%
+			flex-basis: 100%
+		
+		&:hover #{$parent}-pic
+			transform: rotate(720deg) scale(1.25)
+			+lg
+				transform: rotate(720deg) scale(1.15)
+		p
+			+f('geo-500', 20)
+			color: #231f20
+			+lg
+				font-size: 16px
+		&-pic
+			transition: 1s ease
+			&-wrap
+				height: 120px
+				margin-bottom: 20px
+				+vertical
+				+lg
+					margin-bottom: 0
+					transform: scale(.8)

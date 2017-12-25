@@ -1,0 +1,181 @@
+// basic styles
+body
+	min-width: 320px
+	+f('geo-400', 17, 25)
+	color: $black
+	&.is-locked
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 0
+		overflow: hidden
+
+.container
+	max-width: 1140px
+	margin: 0 auto
+	padding: 0 15px
+	+xs
+		padding: 0 10px
+		
+.section
+	+xs
+		padding: 50px 0
+
+// titles
+.title
+	+f('geo-900', 60, 45)
+	color: $white
+	text-transform: uppercase
+	text-align: center
+	+lg
+		font-size: 42px
+	+sm
+		margin-bottom: 35px
+	+xs
+		margin-bottom: 15px
+		font-size: 32px
+	&_md
+		font-size: 40px
+		line-height: 45px
+	&_sm
+		font-size: 30px
+		line-height: 40px
+	&_black
+		color: $black
+
+// buttons
+.btn
+	overflow: hidden
+	position: relative
+	display: inline-block
+	vertical-align: top
+	height: 62px
+	padding: 0 50px
+	border: 0
+	color: $white
+	+f('geo-700', 18, 64)
+	text-align: center
+	+trs
+	+lg
+		height: 50px
+		line-height: 52px
+	&:after
+		pointer-events: none
+		background: rgba(#fff, .3)
+		content: ""
+		height: 155px
+		left: -75px
+		position: absolute
+		top: -50px
+		-webkit-transform: rotate(35deg)
+		transform: rotate(35deg)
+		transition: .6s cubic-bezier(0.19, 1, 0.22, 1)
+		width: 50px
+		z-index: 10
+	.no-touch &:hover:after
+		left: 120%
+	.no-touch &:active
+		box-shadow: inset 0 0 5px rgba($black, .5)
+	&_yellow
+		position: relative
+		color: $black
+		background: $yellow
+	&_blue
+		background: $blue
+		color: $white
+	&_purple
+		background-color: #f16eaa
+	&_transp
+		padding: 0 28px
+		background: transparent
+		border: 2px solid $white
+		font-size: 15px
+		color: $white
+		height: 50px
+		line-height: 47px
+input.btn
+	+trs
+	.no-touch &:hover
+		box-shadow: 0 0 10px rgba($black, .4)
+
+.input
+	width: 100%
+	height: 62px
+	padding: 0 20px
+	border-radius: 28px
+	border: 0
+	+f('geo-400', 17)
+	color: $black
+	+placeholder-color(#8d8d8d)
+	+sm
+		height: 50px
+	
+.textarea
+	display: block
+	width: 100%
+	height: 100px
+	min-height: 167px
+	padding: 20px
+	border: 0
+	resize: none
+	+f('geo-400', 17)
+	+placeholder-color(#8d8d8d)
+
+.slider-btn
+	position: absolute
+	top: 50%
+	font-size: 0
+	z-index: 1
+	.no-touch &:hover .icon
+		fill: $white
+	.no-touch &:active .icon
+		transform: scale(.8)
+	.icon
+		font-size: 75px
+		fill: rgba($white, .7)
+		+trs
+		+lg
+			font-size: 55px
+	&_prev
+		left: 4%
+	&_next
+		right: 4%
+
+.slider-dots
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 55px
+	z-index: 1
+	text-align: center
+	font-size: 0
+	li
+		display: inline-block
+		width: 20px
+		height: 20px
+		background: rgba($white, .5)
+		border-radius: 50%
+		cursor: pointer
+		transition: transform .3s ease
+		&:not(:first-child)
+			margin-left: 15px
+		&.slick-active
+			background: #207bd2
+			transform: scale(1.5)
+		button
+			+hide-text
+			
+h1, h2, h3, h4, h5, h6, p, a, span, div, img, mark, ul, li
+	&::selection
+		color: $white
+		background-color: #f16eaa
+		
++selection
+	color: $white
+	background-color: #f16eaa
+	
+#fp-nav
+	+md
+		display: none
+		

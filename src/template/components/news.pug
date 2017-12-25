@@ -1,0 +1,33 @@
+if news ? news : news = []
+if news.title ? news.title : news.title = 'новости сети'
+if news.allBtn ? news.allBtn : news.allBtn = 'Смотреть все новости'
+
+//begin news
++b.SECTION.news.section(class= news.classMod ? news.classMod : '')
+	+e.container.container
+		+e.H2.title.title(data-anim-title='')= news.title
+
+		+e.inner
+
+			-
+				newsList = [{
+				title: 'Интеллектуальные игры — продолжаются!',
+				date: '14 сентября 2017, Москва',
+				descr: 'Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства «Росмэн» на развитие разных видов интеллекта для детей 2-3 лет пополнилась еще пятью тетрадями для тех, кто постарше.',
+				btn: 'ПОДРОБНЕЕ'}]
+
+			mixin newsItem(item)
+				+e.item(data-anim-slow='')
+					+e.item-video
+						iframe(width='560', height='315', src='https://www.youtube.com/embed/ohT9wvEQKaw?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+					+e.H6.item-title= item.title
+					+e.SPAN.item-date= item.date
+					+e.P= item.descr
+					+e.A.item-btn.btn._transp(href='#!')= item.btn
+
+			each item in newsList
+				+newsItem(item)
+				+newsItem(item)
+
+		+e.A.all-btn.btn._yellow(href='#!')= news.allBtn

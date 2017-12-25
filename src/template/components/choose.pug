@@ -1,0 +1,17 @@
+if choose ? choose : choose = []
+if choose.title ? choose.title : choose.title = '238 клубов по всему миру'
+if choose.descr ? choose.descr : choose.descr = 'Приходите в гости, чтобы увидеть всё своими глазами'
+
+//begin choose
++b.SECTION.choose.section(class= choose.classMod ? choose.classMod : '')
+	+e.inner
+		+e.container.container
+			+e.H2.title.title(data-anim-title='')= choose.title
+			+e.P(data-anim-title='')= choose.descr
+
+	+e.map-wrap
+		+e.map#choose-map
+
+	+e.actions
+		+e.A.actions-btn.btn._yellow(href='#!') Выбрать клуб
+		+e.A.actions-btn.btn._blue(href='#!') Открыть свой Бэби-клуб
