@@ -321,8 +321,7 @@ var svgIcon = exports.svgIcon = function svgIcon(name) {
 
 /***/ }),
 /* 1 */,
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -8291,6 +8290,7 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
+/* 3 */,
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8307,7 +8307,7 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 
 __webpack_require__(5);
 
-__webpack_require__(22);
+__webpack_require__(24);
 
 /***/ }),
 /* 5 */
@@ -8325,35 +8325,35 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 __webpack_require__(6);
 
-var _initPreload = __webpack_require__(27);
+var _initPreload = __webpack_require__(7);
 
-var _Fullpage = __webpack_require__(7);
+var _Fullpage = __webpack_require__(8);
 
 var _Fullpage2 = _interopRequireDefault(_Fullpage);
 
-var _Header = __webpack_require__(25);
+var _Header = __webpack_require__(13);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _objectFitVideos = __webpack_require__(12);
+var _objectFitVideos = __webpack_require__(14);
 
 var _objectFitVideos2 = _interopRequireDefault(_objectFitVideos);
 
-var _objectFitImages = __webpack_require__(13);
+var _objectFitImages = __webpack_require__(15);
 
 var _objectFitImages2 = _interopRequireDefault(_objectFitImages);
 
-var _initSliders = __webpack_require__(14);
+var _initSliders = __webpack_require__(16);
 
-var _initAccordion = __webpack_require__(16);
+var _initAccordion = __webpack_require__(18);
 
-var _ChooseMap = __webpack_require__(17);
+var _ChooseMap = __webpack_require__(19);
 
-var _initYouTube = __webpack_require__(18);
+var _initYouTube = __webpack_require__(20);
 
-var _initParticles = __webpack_require__(19);
+var _initParticles = __webpack_require__(21);
 
-var _cTabs = __webpack_require__(21);
+var _cTabs = __webpack_require__(23);
 
 var _cTabs2 = _interopRequireDefault(_cTabs);
 
@@ -8449,18 +8449,37 @@ exports.default = new NoTouch();
 
 
 Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.initPreload = initPreload;
+function initPreload() {
+
+    setTimeout(function () {
+
+        $('body').addClass('loaded');
+    }, 1000);
+}
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _fullpage = __webpack_require__(8);
+var _fullpage = __webpack_require__(9);
 
 var _fullpage2 = _interopRequireDefault(_fullpage);
 
-var _gsap = __webpack_require__(3);
+var _gsap = __webpack_require__(2);
 
-var _SplitText = __webpack_require__(11);
+var _SplitText = __webpack_require__(12);
 
 var _SplitText2 = _interopRequireDefault(_SplitText);
 
@@ -8601,7 +8620,7 @@ var Fullpage = function () {
 exports.default = Fullpage;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -8614,7 +8633,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 (function(global, factory) {
     'use strict';
     if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_RESULT__ = (function($) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(3)], __WEBPACK_AMD_DEFINE_RESULT__ = (function($) {
           return factory($, global, global.document, global.Math);
         }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -11466,9 +11485,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
-/* 9 */,
 /* 10 */,
-/* 11 */
+/* 11 */,
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12075,7 +12094,62 @@ var _gsScope = typeof module !== "undefined" && module.exports && typeof global 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 12 */
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _helpers = __webpack_require__(0);
+
+var _gsap = __webpack_require__(2);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Header = function () {
+  function Header() {
+    _classCallCheck(this, Header);
+
+    this.$header = _helpers.$header;
+    this.$nav = _helpers.$nav;
+    this.init();
+  }
+
+  _createClass(Header, [{
+    key: "initMobNav",
+    value: function initMobNav() {
+      var $btn = $('.js-hamburger');
+      var $navItems = _helpers.$nav.find('.nav__list-item');
+
+      $btn.on('click tap', function () {
+        $(this).toggleClass(_helpers.css.active);
+        _helpers.$nav.toggleClass(_helpers.css.active);
+
+        var tl = new _gsap.TimelineMax({ delay: 0.2 });
+
+        tl.staggerFromTo($navItems, 0.2, { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, 0.1, '-=0.1');
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.initMobNav();
+    }
+  }]);
+
+  return Header;
+}();
+
+exports.default = Header;
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports) {
 
 /**
@@ -12347,7 +12421,7 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
 
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12585,7 +12659,7 @@ module.exports = fix;
 
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12598,7 +12672,7 @@ exports.initSliders = initSliders;
 
 var _helpers = __webpack_require__(0);
 
-var _slickCarousel = __webpack_require__(15);
+var _slickCarousel = __webpack_require__(17);
 
 var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
@@ -12661,7 +12735,7 @@ function initSliders() {
 }
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -12684,7 +12758,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 ;(function(factory) {
     'use strict';
     if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -15681,7 +15755,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15692,7 +15766,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.initAccordion = initAccordion;
 
-var _gsap = __webpack_require__(3);
+var _gsap = __webpack_require__(2);
 
 var _helpers = __webpack_require__(0);
 
@@ -15743,7 +15817,7 @@ function initAccordion() {
 };
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15772,7 +15846,7 @@ function initChooseMap() {
 }
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15824,7 +15898,7 @@ function initYouTube() {
 }
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15837,7 +15911,7 @@ exports.initParticles = initParticles;
 
 var _helpers = __webpack_require__(0);
 
-var _particles = __webpack_require__(20);
+var _particles = __webpack_require__(22);
 
 var _particles2 = _interopRequireDefault(_particles);
 
@@ -15852,7 +15926,7 @@ function initParticles() {
 }
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports) {
 
 /* -----------------------------------------------
@@ -17398,7 +17472,7 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
 };
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17411,7 +17485,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // import { TweenMax } from 'gsap';
 
 
-var _gsap = __webpack_require__(3);
+var _gsap = __webpack_require__(2);
 
 var _helpers = __webpack_require__(0);
 
@@ -17502,7 +17576,7 @@ var CTabs = function () {
 exports.default = CTabs;
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17520,7 +17594,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * @module PublicAPI
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
 
-var _Timer = __webpack_require__(23);
+var _Timer = __webpack_require__(25);
 
 var _Timer2 = _interopRequireDefault(_Timer);
 
@@ -17561,7 +17635,7 @@ var PublicAPI = exports.PublicAPI = function () {
 exports.default = window.PublicAPI = PublicAPI;
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17639,82 +17713,6 @@ var Timer = exports.Timer = function Timer() {
 ;
 
 exports.default = new Timer();
-
-/***/ }),
-/* 24 */,
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _helpers = __webpack_require__(0);
-
-var _gsap = __webpack_require__(3);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Header = function () {
-  function Header() {
-    _classCallCheck(this, Header);
-
-    this.$header = _helpers.$header;
-    this.$nav = _helpers.$nav;
-    this.init();
-  }
-
-  _createClass(Header, [{
-    key: "initMobNav",
-    value: function initMobNav() {
-      var $btn = $('.js-hamburger');
-      var $navItems = _helpers.$nav.find('.nav__list-item');
-
-      $btn.on('click tap', function () {
-        $(this).toggleClass(_helpers.css.active);
-        _helpers.$nav.toggleClass(_helpers.css.active);
-
-        var tl = new _gsap.TimelineMax({ delay: 0.2 });
-
-        tl.staggerFromTo($navItems, 0.2, { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, 0.1, '-=0.1');
-      });
-    }
-  }, {
-    key: "init",
-    value: function init() {
-      this.initMobNav();
-    }
-  }]);
-
-  return Header;
-}();
-
-exports.default = Header;
-
-/***/ }),
-/* 26 */,
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.initPreload = initPreload;
-function initPreload() {
-
-    setTimeout(function () {
-
-        $('body').addClass('loaded');
-    }, 1000);
-}
 
 /***/ })
 ],[4]);
