@@ -35,6 +35,8 @@
 			line-height: 47px
 		+sm
 			flex-basis: 50%
+		+xs
+			flex-basis: 100%
 		&.is-active
 			pointer-events: none
 			color: $black
@@ -57,6 +59,8 @@
 		+sm
 			flex-wrap: wrap
 			justify-content: center
+		+xs
+			margin: 0
 	&__video
 		$parent: &
 		&-item
@@ -74,6 +78,7 @@
 			+xs
 				width: 100%
 				flex-basis: 100%
+				margin: 0
 			&::before
 				display: block
 				width: 100%
