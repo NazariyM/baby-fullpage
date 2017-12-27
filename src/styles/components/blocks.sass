@@ -478,3 +478,31 @@
 			
 .double-section
 	background: #703782
+	
+.eye-blink
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	&__item
+		position: absolute
+		&_left
+			&::after, &::before
+				content: ''
+				display: block
+			&::after
+				width: 92px
+				height: 61px
+				background: url("../img/icons/eye-closed.png") no-repeat 50% 50%/cover
+			&::before
+				animation: eyeBlink infinite
+				width: 92px
+				height: 80px
+				background: url("../img/icons/eye-opened.png") no-repeat 50% 50%/cover
+		&_right
+		
+@keyframes eyeBlink
+	0%
+		opacity: 0
+	100%
+		opacity: 1

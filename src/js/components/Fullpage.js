@@ -42,8 +42,9 @@ export default class Fullpage {
 
         initAnimation(nextSection);
         if (direction === 'up') $header.removeClass(css.active);
-        if (direction === 'down' && nextIndex !== 13) titleAnimation(nextSection);
-        if (nextIndex === 2) animateNumbers();
+        if (direction === 'down' && nextIndex === 3) titleAnimation(nextSection);
+        if (nextIndex === 2 && direction === 'down') animateNumbers();
+        if (nextIndex === 7 && direction === 'down') animateNumbers();
       }
 
     }));
@@ -95,18 +96,13 @@ export default class Fullpage {
           $header.removeClass(css.hidden);
           $nav.removeClass(css.hidden);
         }
+
         if (nextIndex === 16) {
           $header.addClass(css.hidden);
           $nav.addClass(css.hidden);
         }
 
         initAnimation(nextSection);
-
-        if (direction === 'down' && nextIndex !== 16) titleAnimation(nextSection);
-
-        // initAnimation(nextSection);
-        // if (direction === 'up') $header.removeClass(css.active);
-        // if (nextIndex === 2) animateNumbers();
       }
     }));
 
@@ -144,7 +140,7 @@ export default class Fullpage {
 
       TweenLite.set(title, {perspective: 400});
 
-      timeLine.staggerFrom(chars, 0.8, {
+      timeLine.staggerFrom(chars, 1, {
         opacity: 0,
         scale: 0,
         y: 80,
@@ -162,7 +158,7 @@ export default class Fullpage {
         let number = parseInt($this.text());
         let counter = {var: 0};
 
-        TweenMax.to(counter, 2.5, {
+        TweenMax.to(counter, 4, {
           var: number,
           onUpdate: function () {
             $this.html(Math.ceil(counter.var));

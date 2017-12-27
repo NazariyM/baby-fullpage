@@ -1,11 +1,13 @@
 if thanks ? thanks : thanks = []
-if thanks.title ? thanks.title : thanks.title = '1000 спасибо'
 if thanks.allBtn ? thanks.allBtn : thanks.allBtn = 'Смотреть все спасибо'
 
 //begin thanks
 +b.SECTION.thanks.section(class= thanks.classMod ? thanks.classMod : '')
 	+e.container.container
-		+e.H2.title.title(data-anim-title='')= thanks.title
+		+e.H2.title.title
+			+e.SPAN(data-anim-count='1000') 1000
+			=	' '
+			| спасибо
 
 		//begin tabs
 		+b.c-tabs

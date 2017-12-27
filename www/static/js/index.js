@@ -8583,8 +8583,9 @@ var Fullpage = function () {
 
           initAnimation(nextSection);
           if (direction === 'up') _helpers.$header.removeClass(_helpers.css.active);
-          if (direction === 'down' && nextIndex !== 13) titleAnimation(nextSection);
-          if (nextIndex === 2) animateNumbers();
+          if (direction === 'down' && nextIndex === 3) titleAnimation(nextSection);
+          if (nextIndex === 2 && direction === 'down') animateNumbers();
+          if (nextIndex === 7 && direction === 'down') animateNumbers();
         }
 
       }));
@@ -8636,18 +8637,13 @@ var Fullpage = function () {
             _helpers.$header.removeClass(_helpers.css.hidden);
             _helpers.$nav.removeClass(_helpers.css.hidden);
           }
+
           if (nextIndex === 16) {
             _helpers.$header.addClass(_helpers.css.hidden);
             _helpers.$nav.addClass(_helpers.css.hidden);
           }
 
           initAnimation(nextSection);
-
-          if (direction === 'down' && nextIndex !== 16) titleAnimation(nextSection);
-
-          // initAnimation(nextSection);
-          // if (direction === 'up') $header.removeClass(css.active);
-          // if (nextIndex === 2) animateNumbers();
         }
       }));
 
@@ -8681,7 +8677,7 @@ var Fullpage = function () {
 
         TweenLite.set(title, { perspective: 400 });
 
-        timeLine.staggerFrom(chars, 0.8, {
+        timeLine.staggerFrom(chars, 1, {
           opacity: 0,
           scale: 0,
           y: 80,
@@ -8699,7 +8695,7 @@ var Fullpage = function () {
           var number = parseInt($this.text());
           var counter = { var: 0 };
 
-          _gsap.TweenMax.to(counter, 2.5, {
+          _gsap.TweenMax.to(counter, 4, {
             var: number,
             onUpdate: function onUpdate() {
               $this.html(Math.ceil(counter.var));
@@ -22012,10 +22008,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function initParticles() {
   var heartParts = $('#js-heart-particles').length;
+  // const nutsParts = $('#js-nuts-particles').length;
 
   if (heartParts && _helpers.Resp.isDesk) {
     particlesJS.load('js-heart-particles', 'static/assets/heart-particles.json');
   }
+  // if (nutsParts && Resp.isDesk) {
+  //   particlesJS.load('js-nuts-particles', 'static/assets/nuts-particles.json');
+  // }
 }
 
 /***/ }),
