@@ -1,0 +1,242 @@
+.contact
+	position: relative
+	$parent: &
+	+xs
+		padding-bottom: 10px
+	&__container
+		+r(1599)
+			padding: 100px 15px 100px
+	&__title
+		font-size: 45px
+		color: #000
+		+sm
+			margin-bottom: 0
+		+xs
+			line-height: 32px
+		&:not(:last-child)
+			+xs
+				margin-bottom: 0
+	&__inner
+		margin: 28px 0 0
+		font-size: 0
+		+sm
+			display: flex
+			flex-direction: column
+		#{$parent}_section &
+			margin: 0
+	&__nav
+		display: inline-block
+		vertical-align: middle
+		width: 350px
+		padding-right: 20px
+		font-size: 17px
+		line-height: 35px
+		+sm
+			width: 100%
+			padding-right: 0
+			order: 1
+			margin-top: 25px
+		#{$parent}_section &
+			width: 420px
+			padding-right: 50px
+			vertical-align: top
+			+sm
+				width: 100%
+				padding-right: 0
+	&__city
+		margin-bottom: 15px
+		+sm
+			text-align: center
+		&-name
+			+f('geo-700', 25)
+			text-transform: uppercase
+			color: #000
+		&-current
+			display: inline-block
+			vertical-align: middle
+			min-width: 150px
+			height: 60px
+			padding: 0 10px
+			margin-right: 20px
+			background-color: #3d8af7
+			color: $white
+			+f('geo-700', 17)
+			line-height: 60px
+			text-align: center
+			+xs
+				display: block
+				margin-right: 0
+		&-change
+			vertical-align: middle
+			color: #3d8af7
+			font-size: 15px
+	&__metro
+		+sm
+			text-align: center
+		&-list
+			margin-top: 10px
+			max-width: 312px
+			font-size: 0
+			+sm
+				max-width: none
+		&-branch
+			display: inline-block
+			vertical-align: top
+			width: 25px
+			height: 25px
+			transform-origin: 61% 63%
+			transition: .3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+			color: $white
+			border-radius: 50%
+			text-align: center
+			+f('geo-700', 13, 23)
+			cursor: pointer
+			border: 2px solid transparent
+			user-select: none
+			&:not(:first-child)
+				margin-left: 6px
+				+sm
+					margin-left: 10px
+			&:nth-child(11)
+				margin-left: 0
+				+sm
+					margin-left: 10px
+			&.is-active
+				pointer-events: none
+				transform: scale(1.4)
+				border-color: $white
+				box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2)
+			&_1
+				background-color: #e42313
+			&_2
+				background-color: #4baf4f
+			&_3
+				background-color: #0572b9
+			&_4
+				background-color: #24bcef
+			&_5
+				background-color: #925233
+			&_6
+				background-color: #ef7e24
+			&_7
+				background-color: #943f90
+			&_8
+				background-color: #ffcd1e
+				color: #000
+			&_9
+				background-color: #adacac
+			&_10
+				background-color: #bed12e
+			&_11
+				border: 2px dotted #000
+				background-color: #fff
+				color: #000
+				&.is-active
+					border: 2px dotted #000
+			&_12
+				background-color: #bac8e8
+			&_13
+				background-color: #0572b9
+			&_14
+				border: 2px solid #e42518
+				background: #fff
+				color: #000
+				&.is-active
+					border: 2px solid #e42518
+			
+	&__info
+		min-height: 360px
+		margin-top: 20px
+		padding: 20px 0 0
+		border-top: 1px solid #d8dddd
+		+sm
+			min-height: 220px
+			max-width: 400px
+			margin: 20px auto 0
+		#{$parent}_section &
+			min-height: 0
+			margin-top: 0
+		&-tab
+			&:not(:first-child)
+				display: none
+		&-tab-item
+			&:not(:first-child)
+				margin-top: 5px
+		&-title
+			display: inline-block
+			+f('geo-700', 19, 22)
+			+trs
+			border-bottom: 1px solid rgba(#000, .6)
+			.no-touch &:hover
+				border-bottom-color: #000
+			&.is-active
+				pointer-events: none
+				font-size: 25px
+				color: $black
+				border-bottom-color: transparent
+		&-item
+			&:not(:first-child)
+				margin-top: 10px
+		&-details
+			display: none
+			&-field
+				line-height: 20px
+				&:first-of-type
+					margin-top: 5px
+				&:not(:first-of-type)
+					margin-top: 15px
+				#{$parent}_section &
+					a
+						display: block
+						&:not(:first-child)
+							margin-top: 10px
+		&-actions
+			margin-top: 10px
+			font-size: 0
+			a
+				color: #28b463
+				+f('geo-700', 17)
+				border-bottom: 1px solid rgba(#28b463, .85)
+				+trs
+				.no-touch &:hover
+					border-bottom-color: #28b463
+				&:not(:first-child)
+					margin-left: 15px
+		&-btn
+			padding: 0 15px
+			text-align: center
+	&__socials
+		margin-top: 30px
+		+md
+			margin-top: 15px
+		+sm
+			justify-content: center
+	&__map
+		display: inline-block
+		vertical-align: middle
+		width: calc(100% - 350px)
+		+ratio(760, 651)
+		+r(1599)
+			vertical-align: top
+		+sm
+			width: 100%
+		&::before
+			+r(1599)
+				padding-top: 60%
+			+sm
+				padding-top: 65%
+			+xs
+				padding-top: 100%
+		#{$parent}_section &
+			width: calc(100% - 420px)
+			+sm
+				width: 100%
+		&-body
+			+coverdiv
+			overflow: hidden
+			box-shadow: 0 0 7px rgba(0, 0, 0, 0.2)
+			border-radius: 15px
+			
+	.ymaps-2-1-56-map-copyrights-promo,
+	.ymaps-2-1-56-copyright_logo_no
+		display: none

@@ -1,9 +1,9 @@
 export function initPreload() {
 
-    setTimeout(function(){
+  setTimeout(function () {
 
-      $('body').addClass('loaded');
+    $('body').addClass('loaded');
 
-    }, 1000);
+  }, 1000);
 
 }

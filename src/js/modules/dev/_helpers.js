@@ -173,6 +173,10 @@ export class Resp {
   static get isMobile() {
     return window.matchMedia(`(max-width: 767px)`).matches;
   }
+
+  static get allTouch() {
+    return window.matchMedia(`(max-width: 1023px)`).matches;
+  }
 }
 
 /**

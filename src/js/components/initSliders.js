@@ -58,4 +58,10 @@ export function initSliders() {
     speed: 1000
   }));
 
+  const $expertSld = $('.js-expert-slider');
+  $expertSld.slick($.extend({}, defaultOptions, {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500
+  }));
 }

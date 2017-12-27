@@ -28,6 +28,28 @@
 		+xs
 			height: 70px
 	
+	&__menu
+		position: absolute
+		top: -50px
+		left: 0
+		right: 0
+		background: #207bd2
+		+sm
+			display: none
+		ul
+			display: flex
+			justify-content: space-between
+			align-items: center
+			height: 50px
+			max-width: 1140px
+			padding: 0 15px
+			margin: 0 auto
+		a
+			color: $white
+			font-size: 16px
+			+md
+				font-size: 15px
+	
 	&__logo
 		flex-basis: 320px
 		transition: transform .8s ease
@@ -42,7 +64,33 @@
 		.logo__descr
 			+xs
 				display: none
+				
+	&_landing
+		top: 50px
+		transition: .8s ease-in-out
+		+sm
+			top: 0
+		&.is-active
+			transform: translateY(-50px)
+			+sm
+				transform: none
 		
+		&.is-hidden
+			transform: translateY(-120px)
+	&_landing &__container
+		+md
+			height: 70px
+		+sm
+			height: 80px
+		.info-block
+			flex-basis: auto
+		.info-block__tel
+			margin-left: 25px
+	&_landing .logo__descr
+		+md
+			display: none
+
+// settings for fullpage
 .fp-viewing-12 .header
 	transform: translateY(-100%)
 	
@@ -65,7 +113,7 @@
 			top: 80px
 		
 .fp-viewing-10, .fp-viewing-9
-	.header
+	.header_home
 		transform: translateY(-100%)
 		
 .hamburger

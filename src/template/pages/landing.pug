@@ -1,0 +1,157 @@
+extends ../extend/default
+
+block variables
+	-title = 'Landing page';
+	-fullpageClass = 'js-landing-fullpage';
+	-scrollOverflow = true;
+	-headerClass = '_landing';
+	-headerSocials = false;
+	-headerCity = true;
+	-menuList = ['Главная', 'Выбрать клуб или сад', 'Открой свой Бэби-клуб', 'Развитие интеллекта', 'Бэби-библиотека', 'Мероприятия для родителей']
+	-
+		fpNavList = [{
+		anchor: 'pageThree',
+		text: 'О клубе'
+		}, {
+		anchor: 'pageNine',
+		text: 'наши занятия'
+		}, {
+		anchor: 'pageTwelve',
+		text: 'преимущества'
+		}, {
+		anchor: 'pageThirteen',
+		text: 'Отзывы'
+		}, {
+		anchor: 'pageFifteen',
+		text: 'Контакты'
+		}, {
+		anchor: '!',
+		text: 'Карьера'
+		}]
+	-navClass = '_landing';
+	-footerNavClass = '_absolute';
+	-footerSocials = false
+	-footerDevsText = true
+	-footerCity = true
+	-footerClass = ['_landing']
+
+block main
+	-screen = {classMod: '_landing', title: 'бэби-клуб', subTitle: 'в воскресенске на ленина'}
+	include ../components/screen
+
+	include ../components/subs-block
+
+	include ../components/benefits
+
+	include ../components/expert
+
+	include ../components/spec-block
+
+	include ../components/learn
+
+	include ../components/interior
+
+	+b.SECTION.excurs.section
+		+e.container.container
+			+e.H2.title.title._black(data-anim-title='') Экскурсия по клубу
+			+e.item(data-anim-slow='')
+				+e.item-figures
+				+e.item-bg(style='background-image: url(static/img/content/excurs.jpg)')
+
+
+	include ../components/lessons
+
+	include ../components/schedule
+
+	include ../components/library
+
+	include ../components/why-us
+
+	//begin thanks
+	+b.SECTION.thanks.section(data-anchor='thanks')
+		+e.container.container
+			+e.H2.title.title(data-anim-title='') 1000 спасибо
+
+			//begin tabs
+			+b.c-tabs._landing
+				+e.tabs-nav
+					-
+						tabsList = ['ДЕТИ', 'РОДИТЕЛИ']
+					-activeIndex = 0
+					for tabsText, index in tabsList
+						+e.BUTTON.tabs-el.btn(data-anim-fast='' class= index === activeIndex ? 'is-active' : '' type='button')= tabsText
+				+e.tabs-for(data-anim-slow='')
+					+e.tab
+						+e.inner
+							+e.video-item
+								+e.video-text.js-video-text
+									+e.H5.video-title Милана
+									+e.P посещает Бэби-клуб более 3 лет
+								+e.video-trigger.js-play-video
+								iframe(src='https://www.youtube.com/embed/DpMrNGG3S3I?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+							+e.video-item
+								+e.video-text.js-video-text
+									+e.H5.video-title Вероника
+									+e.P Мама Глеба и Матвея Более года в Бэби-клубе
+								+e.video-trigger.js-play-video
+								iframe(src='https://www.youtube.com/embed/3roikLviTGs?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+					+e.tab
+						+e.inner
+							+e.video-item
+								+e.video-text.js-video-text
+									+e.H5.video-title Милана
+									+e.P посещает Бэби-клуб более 3 лет
+								+e.video-trigger.js-play-video
+								iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+							+e.video-item
+								+e.video-text.js-video-text
+									+e.H5.video-title Вероника
+									+e.P Мама Глеба и Матвея Более года в Бэби-клубе
+								+e.video-trigger.js-play-video
+								iframe(src='https://www.youtube.com/embed/OhEANdHh3e0?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+			+e.A.all-btn.btn._yellow(href='#!') Смотреть все отзывы
+
+
+	+b.SECTION.double-section.section
+		//begin video-blog
+		+b.SECTION.video-blog
+			+e.container.container
+
+				+e.H2.title.title(data-anim-title='') ВИДЕО-блог
+				+e.inner(data-anim-slow='')
+					+e.video
+						+e.video-text.js-video-text
+							+e.P Как мы развиваем 10 видов интеллекта
+						+e.video-trigger.js-play-video
+						iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+					+e.video
+						+e.video-text.js-video-text
+							+e.P О главных смыслах метода Бэби-клуба
+						+e.video-trigger.js-play-video
+						iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+					+e.video
+						+e.video-text.js-video-text
+							+e.P Реалити-проект «Я уже читаю»: C группой деток от 8 месяцев
+						+e.video-trigger.js-play-video
+						iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+		//begin subs-block
+		+b.SECTION.subs-block._yellow
+			+e.container.container
+				+e.H3.title.title(data-anim-title='')= subsBlock.title
+
+				+e.FORM.form(action='#!' method='POST' data-anim-slow='')
+					+e.form-field
+						+e.INPUT.form-input.input(type='text' placeholder='Ваше имя' name='' required)
+					+e.form-field
+						+e.INPUT.form-input.input(type='text' placeholder='Ваш телефон' name='' required)
+					+e.form-field
+						+e.INPUT.form-submit.btn._blue(type='submit' value='Записаться на встречу')
+						+e.P.form-agree * Оставляя свои контакты данные, Вы соглашаетесь с
+							= ' '
+							+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциольности
+
+	include ../components/contact

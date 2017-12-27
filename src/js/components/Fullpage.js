@@ -1,18 +1,19 @@
 import fullpage from 'fullpage.js';
 import {TimelineMax, TweenMax} from 'gsap';
 import SplitText from './SplitText';
-import {$body, $window, $header, $nav, Resp, css} from '../modules/dev/_helpers';
+import {$header, $nav, Resp, css} from '../modules/dev/_helpers';
 
 export default class Fullpage {
-  constructor(el) {
-    this.$fullpage = $('.js-fullpage');
+  constructor() {
+    this.$homeFullpage = $('.js-home-fullpage');
+    this.$landFullpage = $('.js-landing-fullpage');
     this.init();
   }
 
   fullpage() {
-    this.$fullpage.fullpage({
+    const fullpageDefaults = {
+      responsiveHeight: 600,
       sectionSelector: '.section',
-      paddingTop: 70,
       scrollingSpeed: 1000,
       verticalCentered: true,
       keyboardScrolling: true,
@@ -24,10 +25,12 @@ export default class Fullpage {
       easingcss3: 'ease',
       fixedElements: '.header',
       afterRender: function () {
-        // const screen = $(this).find('.screen');
-
         initScreenVideo();
-      },
+      }
+    };
+
+    this.$homeFullpage.fullpage($.extend({}, fullpageDefaults, {
+      paddingTop: 70,
       onLeave: function (index, nextIndex, direction) {
         const nextSection = $(this).next();
 
@@ -38,15 +41,74 @@ export default class Fullpage {
         }
 
         initAnimation(nextSection);
-
         if (direction === 'up') $header.removeClass(css.active);
-
         if (direction === 'down' && nextIndex !== 13) titleAnimation(nextSection);
-
         if (nextIndex === 2) animateNumbers();
       }
 
-    });
+    }));
+
+    if (Resp.allTouch) {
+      var scrollOptions = { disablePointer: false };
+    } else {
+      var scrollOptions = { disablePointer: true };
+    }
+
+    this.$landFullpage.fullpage($.extend({}, fullpageDefaults, {
+      paddingTop: 70,
+      menu: '.js-nav',
+      anchors: ['pageOne', 'pageTwo', 'pageThree', 'pageFour', 'pageFive', 'pageSix', 'pageSeven', 'pageEight', 'pageNine', 'pageTen', 'pageEleven', 'pageTwelve', 'pageThirteen', 'pageFourteen', 'pageFifteen'],
+      scrollOverflow: true,
+      scrollOverflowOptions: scrollOptions,
+      onLeave: function (index, nextIndex, direction) {
+        const nextSection = $(this).next();
+
+        if (direction === 'up') $nav.removeClass(css.active).addClass('is-float');
+        if (direction === 'up' && nextIndex === 2) {
+          $header.addClass(css.hidden);
+          $nav.addClass(css.hidden);
+        }
+
+        if (nextIndex > 0 && direction === 'down') {
+          $header.addClass(css.active);
+          $header.removeClass(css.hidden);
+          $nav.removeClass(css.hidden);
+          $nav.addClass('is-inner');
+        }
+        if (nextIndex === 1) {
+          initScreenVideo();
+          $header.removeClass(css.active);
+          $header.removeClass(css.hidden);
+          $nav.removeClass('is-inner is-float is-hidden');
+        }
+        if (direction === 'down') $nav.removeClass('is-float');
+
+        if (nextIndex === 11 && direction === 'up') {
+          $nav.removeClass(css.hidden);
+        }
+
+        if (nextIndex === 12 && direction === 'up') {
+          $nav.addClass(css.hidden);
+        }
+
+        if (nextIndex === 15) {
+          $header.removeClass(css.hidden);
+          $nav.removeClass(css.hidden);
+        }
+        if (nextIndex === 16) {
+          $header.addClass(css.hidden);
+          $nav.addClass(css.hidden);
+        }
+
+        initAnimation(nextSection);
+
+        if (direction === 'down' && nextIndex !== 16) titleAnimation(nextSection);
+
+        // initAnimation(nextSection);
+        // if (direction === 'up') $header.removeClass(css.active);
+        // if (nextIndex === 2) animateNumbers();
+      }
+    }));
 
     function initScreenVideo() {
       const $video = $('.screen__video').find('video')[0];

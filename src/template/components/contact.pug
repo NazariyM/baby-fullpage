@@ -1,0 +1,927 @@
+if contact ? contact : contact = []
+
+//begin contact
++b.SECTION.contact.section(data-anchor='contacts' id='contact' class= contact.classMod ? contact.classMod : '')
+	+e.container.container
+		+e.H2.title.title(data-anim-title='') ПРИХОДИТЕ В ГОСТИ,
+		+e.H2.title.title(data-anim-title='') ЧТОБЫ УВИДЕТЬ ВСЁ СВОИМИ ГЛАЗАМИ
+		+e.inner(data-anim-slow='')
+			+e.nav
+				+e.city
+					+e.SPAN.city-current г. Москва
+					+e.A.city-change.underlined(href='#!' data-popup-target='change-city') Другой город
+				+e.metro
+					+e.P.metro-text Удобная для Вас ветка Метро:
+					+e.UL.metro-list.js-branch-list
+						-metroItem = 1
+						while metroItem < 15
+							+e.LI.metro-branch(class= `_${metroItem}`)= metroItem
+								-metroItem++
+
+				+e.info.js-contact-info
+					// metro branch-1
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') в Бескудниково
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-2
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') в Бескудниково
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.86515156887017, 37.47208149999991]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Часовая, д. 19, корп. 3.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79850215754') +7 985 021-57-54
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.80885206893429, 37.52147050000001]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-3
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') в Бескудниково
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-4
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') в Бескудниково
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-5
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') в Бескудниково
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-6
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Маломосковская, д. 21, к. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74957408121') +7 495 740-81-21
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.814025145176245, 37.64934758465566]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-7
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Маломосковская, д. 21, к. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74957408121') +7 495 740-81-21
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.814025145176245, 37.64934758465566]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-8
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Маломосковская, д. 21, к. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74957408121') +7 495 740-81-21
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.814025145176245, 37.64934758465566]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-9
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Астрадамской (Тимирязевская)
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Астрадамская, д. 15.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74957408121') +7 495 740-81-21
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.814481568918886, 37.56202049999994]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-10
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Беломорской
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74956649603') +7 495 664-96-03
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.86515156887017, 37.47208149999991]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-11
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Беломорской
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74956649603') +7 495 664-96-03
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.86515156887017, 37.47208149999991]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-12
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Беломорской
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74956649603') +7 495 664-96-03
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.86515156887017, 37.47208149999991]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-13
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Беломорской
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74956649603') +7 495 664-96-03
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.86515156887017, 37.47208149999991]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+					// metro branch-14
+					+e.info-tab
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Беломорской
+							+e.info-details
+								+e.info-details-field
+									+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+74956649603') +7 495 664-96-03
+								+e.info-actions
+									+b.A(href='#!' data-club-coords='[55.86515156887017, 37.47208149999991]' class='js-club-link') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Алексеевской
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.A.info-title(href='#!') на Аэропорте
+							+e.info-details
+								+e.info-details-field
+									+e.P Бескудниковский прд, д. 4, корп. 2.
+								+e.info-details-field
+									+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+								+e.info-details-field
+									+e.A(href='tel:+79154742323') +7 915 4742323
+								+e.info-actions
+									+e.A(href='#!') На карте
+									+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Астрадамской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+						+e.info-tab-item
+							+e.info-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') На карте
+										+e.A(href='#!') На страницу клуба
+
+				-socials = {classMod: 'contact__socials'}
+				include ../components/socials
+
+			+e.map
+				+e.map-body#contact-map-moscow
+
+	.scroll-up.scroll-up_yellow
+		a(href='#!')

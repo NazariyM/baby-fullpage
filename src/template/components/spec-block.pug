@@ -1,0 +1,31 @@
+if specBlock ? specBlock : specBlock = []
+if specBlock.title ? specBlock.title : specBlock.title = 'каждый специалист бэби-клуба'
+
+//begin spec-block
++b.SECTION.spec-block.section.fp-auto-height(class= specBlock.classMod ? specBlock.classMod : '')
+	+e.container.container
+		+e.H2.title.title(data-anim-title='')= specBlock.title
+
+		+e.inner
+			-
+				specList = [{
+				icon: 'c',
+				text: 'Любит детей и с радостью делится знаниями с родителями'
+				}, {
+				icon: 'o',
+				text: 'Стал одним из 30, кто прошел многоступенчатый  конкурсный отбор и доказал, что он - педагог по призванию'
+				}, {
+				icon: 'b-mod',
+				text: 'Готов к ежегодным аттестациям и познанию всего нового в мире педагогики'
+				}, {
+				icon: 'u',
+				text: 'Освоил метод бережного всестороннего развития детей на корпоративном обучении Бэби-клуба'
+				}]
+
+			mixin specItem(item)
+				+e.item(data-anim-fast='')
+					+e.item-icon-wrap
+						+e.item-icon(class=`icon-letter-${item.icon}`)
+					+e.P= item.text
+			each item in specList
+				+specItem(item)

@@ -12,6 +12,7 @@
 			opacity: 1
 
 .nav
+	$parent: &
 	position: absolute
 	top: 70px
 	left: 0
@@ -34,6 +35,8 @@
 	&.is-active
 		opacity: 1
 		visibility: visible
+	&.is-hidden
+		transform: translateY(-170px) !important
 	
 	&__list
 		display: flex
@@ -69,6 +72,10 @@
 				line-height: 20px
 			.no-touch &:hover
 				text-shadow: 0 5px 20px #fff
+			#{$parent}_landing &
+				text-transform: uppercase
+				+f('geo-500', 15)
+				
 	&_footer
 		position: relative
 		top: 1px
@@ -76,6 +83,22 @@
 		right: auto
 		+sm
 			display: none
+	&_absolute
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		.nav__list-link
+			text-transform: uppercase
+			+f('geo-500', 15)
+	&_landing
+		top: 120px
+		&.is-inner
+			transform: translateY(-100px)
+			+sm
+				transform: none
+		&.is-float
+			transform: translateY(-50px)
 
 .info-block
 	display: flex
@@ -167,9 +190,291 @@
 	&_footer &__socials
 		+xs
 			padding-bottom: 15px
-				
+	
+	&__dev-text
+		flex-basis: 100%
+		font-size: 15px
+		line-height: 20px
+		+sm
+			text-align: right
+		+xs
+			flex: 1 0 auto
+			text-align: center
+	&__city
+		display: inline-flex
+		+sm
+			display: none
+		&-item
+			&:not(:first-child)
+				padding-left: 20px
+		&-name
+			+f('geo-700', 17, 20)
+		&-link
+			color: #3d8af7
+			font-size: 15px
+			
 .particles
 	+coverdiv
 	z-index: -1
 	+xs
 		display: none
+		
+.excurs
+	+xs
+		display: none
+	&__title
+		margin-bottom: 80px
+		+r(1599)
+			margin-bottom: 60px
+		+sm
+			margin-bottom: 80px
+		+xs
+			margin-bottom: 50px
+	&__container
+		padding: 0 15px 60px
+		+r(1599)
+			max-width: 780px
+	&__item
+		padding-top: 51%
+		position: relative
+		text-align: center
+		&::after, &::before
+			position: absolute
+			transform-style: preserve-3d
+			content: ''
+		&::after
+			top: -40px
+			left: 0
+			right: 0
+			bottom: -40px
+			z-index: -1
+			transform: rotate3d(-130, 80, -6, -15deg)
+			background: #24a849
+		&::before
+			top: -7%
+			left: 0
+			right: -2%
+			height: 20%
+			z-index: -2
+			transform: rotate3d(26, -190, 10, -30deg)
+			background: #ffd737
+		&-figures
+			position: absolute
+			top: -3.5%
+			left: -0.5%
+			width: 80%
+			height: 100%
+			transform: rotate3d(-283, -180, 40, -20deg)
+			z-index: -2
+			background: #ffd737
+			&::after
+				position: absolute
+				content: ''
+				z-index: -2
+				width: 100%
+				height: 100%
+				right: -20%
+				top: 14%
+				-webkit-transform: rotate3d(-150, 280, 170, 9deg)
+				transform: rotate3d(-130, 350, 210, 7deg)
+				background: #ffd737
+		&-bg
+			+coverdiv
+			+cover
+			left: 55px
+			right: 55px
+			+r(1599)
+				left: 30px
+				right: 30px
+			
+.lessons
+	padding: 50px 0!important
+	background: #e6393f
+	+xs
+		padding: 50px 0 30px!important
+	&__title
+		+xs
+			line-height: 36px
+	&__container
+		padding: 100px 15px 200px
+		+md
+			padding: 60px 15px 100px
+		 
+	&__title
+		max-width: 960px
+		margin: 0 auto 20px
+		line-height: 70px
+		+sm
+			font-size: 36px
+			line-height: 50px
+			margin-bottom: 20px
+
+.why-us
+	background: #ffd737
+	&__title
+		margin-bottom: 30px
+		font-size: 50px
+		line-height: 52px
+		+xs
+			line-height: 40px
+	&__container
+		+r(1599)
+			padding: 80px 15px 80px
+	&__inner
+		margin: 0 -15px
+		font-size: 0
+		+xs
+			margin: 0
+			padding: 30px 0 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		padding: 0 15px 30px
+		+sm
+			width: 100%
+			padding: 0 30px 30px
+		+xs
+			display: flex
+			padding: 0 5px 30px
+			flex-direction: column
+			align-items: center
+			text-align: center
+		&:nth-child(2n)
+			padding-right: 6px
+			+sm
+				padding-right: 30px
+			+xs
+				padding-right: 5px
+		&:nth-child(2n) .why-us__item-descr
+			padding-left: 10px
+			+xs
+				padding-left: 0
+		&:hover .why-us__item-icon
+			transform: rotateY(720deg)
+		&-icon
+			transition: 1s .3s ease
+			&.icon-letter-k
+				position: relative
+				left: -30px
+				transform: scale(.72)
+				sm
+					left: auto
+			&.icon-letter-l
+				position: relative
+				left: 5px
+				transform: scale(.82)
+				+sm
+					left: -5px
+			&.icon-letter-u
+				position: relative
+				left: -10px
+				transform: scale(.76)
+				+sm
+					left: -15px
+			&.icon-letter-b-mod
+				position: relative
+				left: -12px
+				transform: scale(.67)
+				+sm
+					left: -15px
+		&-icon-wrap
+			display: inline-block
+			vertical-align: middle
+			width: 100px
+			+xs
+				margin-bottom: 10px
+		&-descr
+			width: calc(100% - 100px)
+			display: inline-block
+			vertical-align: middle
+			font-size: 16px
+			line-height: 28px
+			+sm
+				padding-left: 15px
+			+xs
+				width: 100%
+				padding-left: 0
+			
+.video-blog
+	height: calc(100vh - 370px)
+	padding: 30px 0
+	background: #703782
+	+vertical
+	+r(1599)
+		padding: 0 0 30px
+		height: auto
+	&__container
+		width: 100%
+		display: inline-block
+		vertical-align: middle
+		font-size: 0
+		max-width: 1300px
+		+r(1599)
+			max-width: 1140px
+	&__inner
+		font-size: 0
+		margin: 50px -10px 0
+		+r(1599)
+			margin: 20px -10px 0
+		+sm
+			flex-wrap: wrap
+		+xs
+			margin: 20px 0 0
+	&__video
+		display: inline-block
+		vertical-align: top
+		position: relative
+		width: calc(33.333333% - 20px)
+		margin: 0 10px
+		overflow: hidden
+		cursor: pointer
+		+sm
+			width: calc(50% - 20px)
+			margin: 0 10px 20px
+		+xs
+			width: 100%
+			margin: 0 0 20px
+		&::before
+			display: block
+			width: 100%
+			padding-top: 56.3%
+			content: ''
+		&:hover .video-blog__video-text.is-float
+			transform: translateY(0%)
+			opacity: 1
+			+sm
+				opacity: 0
+				transform: translateY(100%)
+		iframe
+			+coverdiv
+			width: 100%
+			height: 100%
+	&__video-trigger
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: 5
+		font-size: 0
+	&__video-text
+		pointer-events: none
+		position: absolute
+		bottom: 26px
+		left: 10px
+		max-width: 260px
+		z-index: 10
+		color: #fff
+		font-family: "Geometria-Bold", Arial, sans-serif
+		font-weight: normal
+		font-size: 16px
+		line-height: 20px
+		transition: .4s ease
+		text-shadow: 0 0 5px rgba(0, 0, 0, 0.8)
+		&.is-float
+			transform: translateY(100%)
+			opacity: 0
+			
+.double-section
+	background: #703782

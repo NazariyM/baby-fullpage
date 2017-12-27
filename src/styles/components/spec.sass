@@ -1,0 +1,45 @@
+.spec-block
+	background: #207bd2 url("../img/bg/nuts_bg.png") repeat 50% 50%
+	+xs
+		padding-bottom: 20px
+	&__container
+		padding: 0 15px 70px
+		max-width: 1190px
+		+xs
+			padding: 0 15px
+	&__title
+		font-size: 45px
+		+sm
+			font-size: 37px
+			margin-bottom: 0
+	&__inner
+		padding: 40px 0 0
+		margin: 0 -15px
+		font-size: 0
+		text-align: center
+	&__item
+		$parent: &
+		display: inline-block
+		vertical-align: top
+		width: 25%
+		padding: 0 15px
+		+f('geo-500', 17)
+		color: $white
+		+trs
+		+sm
+			width: 50%
+			padding: 0 15px 30px
+		+xs
+			width: 100%
+		&:hover #{$parent}-icon
+			transform: rotate(720deg) scale(1.25)
+			+lg
+				transform: rotate(720deg) scale(1.15)
+		&-icon
+			transition: 1s ease
+		&-icon-wrap
+			height: 135px
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-bottom: 15px

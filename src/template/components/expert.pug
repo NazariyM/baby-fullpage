@@ -1,0 +1,32 @@
+if expert ? expert : expert = []
+
+//begin expert
++b.SECTION.expert.section(class= expert.classMod ? expert.classMod : '')
+	+e.container.container
+		+e.H2.title.title(data-anim-title='') Знакомьтесь, специалисты бэби-клуба в Черемушках
+		+e.H5.sub-title.title._sm(data-anim-title='') Родители каждый день доверяют им своих детей!
+
+		+e.content.js-expert-slider(data-anim-slow='')
+			-count = 0
+			while count < 2
+				+e.content-item
+					+e.content-inner
+						+e.content-img
+							+e.img(style=`background-image: url(static/img/content/expert-1.jpg)`)
+
+						+e.content-text
+							+e.info
+								+e.name Лариса Коновалова
+								+e.pos Старший специалист по работе с детьми
+							+e.former
+								+e.P Самарский государственный университет
+								+e.P Специализация: педагог — психолог
+								+e.P Работает в Бэби-клубе с 2010 года
+							+e.quote
+								+e.P Каждый ребёнок - личность и задача педагога - развить лучшие качества каждого ребенка
+								+i('quote')
+								+i('quote')
+							+e.addition
+								+e.P Когда Лариса уходила в отпуск, малыши каждое утро спрашивали про неё.
+							+b.A.btn._yellow(href='#!') Задать вопрос специалисту
+				-count++

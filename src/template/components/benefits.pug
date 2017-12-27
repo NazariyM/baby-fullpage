@@ -2,7 +2,7 @@ if benefits ? benefits : benefits = []
 if benefits.title ? benefits.title : benefits.title = 'Бэби-клуб - это'
 
 //begin benefits
-+b.SECTION.benefits.section(class= benefits.classMod ? benefits.classMod : '')
++b.SECTION.benefits.section(data-anchor='pageThree' class= benefits.classMod ? benefits.classMod : '')
 	+e.container.container
 		+e.H2.title.title._black(data-anim-title='')= benefits.title
 		-

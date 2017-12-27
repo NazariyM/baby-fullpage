@@ -1,0 +1,132 @@
+.expert
+	background: #703782
+	&__container
+	&__title
+		max-width: 1000px
+		margin: 0 auto 20px
+		font-size: 50px
+		line-height: 55px
+		+r(1599)
+			font-size: 34px
+			line-height: 40px
+			max-width: none
+			margin: 0 0 5px
+		+r(1366)
+			font-size: 30px
+		+sm
+			margin-bottom: 0
+		+xs
+			font-size: 24px
+			line-height: 30px
+	&__sub-title
+		+r(1599)
+			font-size: 30px
+		+sm
+			font-size: 24px
+			margin-bottom: 0
+		+xs
+			font-size: 20px
+			line-height: 25px
+	&__content
+		padding: 50px 0 0 80px
+		+r(1599)
+			padding: 30px 0 0 0
+		.slider-btn
+			+sm
+				top: 20%
+			&_prev
+				left: calc(-20% - -80px)
+				+sm
+					left: 0
+			&_next
+				right: -20%
+				+r(1366)
+					right: 0
+					bottom: 0
+					top: auto
+				+sm
+					right: 0
+					top: 20%
+					bottom: auto
+		&-item
+		&-inner
+			display: flex
+			align-items: center
+			+sm
+				flex-wrap: wrap
+				justify-content: center
+		&-img
+			flex: 1 0 percentage(444/1030)
+			+r(1599)
+				flex: 1 0 34%
+			+sm
+				margin-bottom: 10px
+				flex: 0 0 45%
+			+xs
+				flex: 1 0 auto
+		&-text
+			flex: 1 1 auto
+			padding-left: 40px
+			color: $white
+			+f('geo-300', 20, 30)
+			+sm
+				padding-left: 0
+				text-align: center
+	&__img
+		+ratio(444, 436)
+		+cover
+	&__info
+		margin-bottom: 15px
+		+f('geo-700')
+		line-height: 40px
+	&__name
+		margin-bottom: 10px
+		font-size: 35px
+		+r(1599)
+			font-size: 32px
+			margin-bottom: 0
+		+xs
+			font-size: 27px
+	
+	&__pos
+		font-size: 25px
+		+r(1599)
+			font-size: 22px
+			line-height: 25px
+		+xs
+			font-size: 20px
+	&__former
+		margin-bottom: 15px
+		+f('geo-700', 20, 35)
+		+r(1599)
+			font-size: 19px
+			line-height: 30px
+		+xs
+			font-size: 14px
+	&__quote
+		position: relative
+		margin-bottom: 15px
+		padding: 0 20px 0 35px
+		+r(1599)
+			padding: 0 20px 0 25px
+			font-size: 19px
+		+xs
+			font-size: 16px
+		.icon
+			position: absolute
+			fill: $yellow
+			font-size: 16px
+			&:nth-of-type(1)
+				top: 0
+				left: 0
+				transform: rotate(-180deg)
+			&:nth-of-type(2)
+				right: 0
+				bottom: 0
+	&__addition
+		margin-bottom: 13px
+		+r(1599)
+			font-size: 19px
+			line-height: 22px
+		+xs
+			font-size: 17px

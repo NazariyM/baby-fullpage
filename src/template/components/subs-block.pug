@@ -1,0 +1,18 @@
+if subsBlock ? subsBlock : subsBlock = []
+if subsBlock.title ? subsBlock.title : subsBlock.title = 'запишитесь на презентацию клуба'
+
+//begin subs-block
++b.SECTION.subs-block.section.fp-auto-height(class= subsBlock.classMod ? subsBlock.classMod : '')
+	+e.container.container(data-anim-slow='')
+		+e.H3.title.title(data-anim-title='')= subsBlock.title
+
+		+e.FORM.form(action='#!' method='POST')
+			+e.form-field
+				+e.INPUT.form-input.input(type='text' placeholder='Ваше имя' name='' required)
+			+e.form-field
+				+e.INPUT.form-input.input(type='text' placeholder='Ваш телефон' name='' required)
+			+e.form-field
+				+e.INPUT.form-submit.btn._yellow(type='submit' value='Записаться на встречу')
+				+e.P.form-agree * Оставляя свои контакты данные, Вы соглашаетесь с
+					= ' '
+					+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциольности

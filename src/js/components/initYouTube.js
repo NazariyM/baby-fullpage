@@ -7,7 +7,7 @@ export function initYouTube() {
   $playFrame.on('click tap', function (e) {
     e.preventDefault();
     const $this = $(this);
-    const $videoText = $this.siblings('.c-tabs__video-text');
+    const $videoText = $this.siblings('.js-video-text');
     const frame = this.nextElementSibling;
 
     $this.fadeOut();

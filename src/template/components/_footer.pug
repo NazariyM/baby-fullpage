@@ -1,4 +1,4 @@
-+b.FOOTER.footer.fp-auto-height.section
++b.FOOTER.footer(class= footerClass ? footerClass : '').fp-auto-height.section
 	+e.container.container
 		+b.logo.footer__logo
 			+e.A.link(href='#!')
@@ -6,8 +6,22 @@
 			+e.P.descr Бережное развитие интеллекта
 
 		+b.info-block._footer
-			-socials = {classMod: 'info-block__socials'}
-			include socials
+			if footerSocials !== false
+				-socials = {classMod: 'info-block__socials'}
+				include socials
+
+			if footerDevsText
+				+e.dev-text
+					+e.P Основатели «Бэби-клуба» - Юрий и Евгения Белонощенко
+
+			if footerCity
+				+e.city
+					+e.city-item
+						+e.city-name г. Москва
+						+e.A.city-link.underlined(href='#!') Другой город
+					+e.city-item
+						+e.city-name на проспекте Мира
+						+e.A.city-link.underlined(href='#!') Другой клуб
 
 			+e.A.tel(href='#!') 8 800 100 20 24
 			+e.BUTTON.call-btn.btn._yellow(type='button') Заказать звонок
@@ -17,27 +31,16 @@
 				+e.P.dev Сайт создан руками студии
 					+e.A(href='http://akticom.ru/' target='_blank') «Актиком»
 
-	+b.DIV.nav._footer
+	+b.DIV.nav._footer(class= footerNavClass ? footerNavClass : '')
 		+e.UL.list.container
-			-
-				navList = [{
-				text: 'О компании'
-				}, {
-				text: 'Развитие интеллекта'
-				}, {
-				text: 'Как проходят занятия'
-				}, {
-				text: 'Выбрать клуб'
-				}, {
-				text: 'Открыть свой клуб'
-				}, {
-				text: 'Контакты'
-				}, {
-				text: 'Карьера'
-				}]
+			if fpNavList
+				mixin fpNavItem(fpItem)
+					+e.LI.list-item(class= fpItem.activeClass ? '' : '' data-menuanchor= `${fpItem.anchor}`)
+						+e.A.list-link(href=`#${fpItem.anchor}`)= fpItem.text
+				each fpItem in fpNavList
+					+fpNavItem(fpItem)
 
-			mixin navItem(item)
-				+e.LI.list-item(class= item.activeClass ? 'is-active' : '')
-					+e.A.list-link(href=`#!`)= item.text
-			each item in navList
-				+navItem(item)
+			if footerNavList
+				for footerNavItem in footerNavList
+					+e.LI.list-item
+						+e.A.list-link(href=`#!`)= footerNavItem

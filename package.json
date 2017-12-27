@@ -18,6 +18,7 @@
     "object-fit-images": "^3.2.3",
     "object-fit-videos": "^1.0.4",
     "particles.js": "^2.0.0",
+    "select2": "^4.0.6-rc.1",
     "slick-carousel": "^1.8.1"
   },
   "author": "NM <nazarriko@gmail.com>",

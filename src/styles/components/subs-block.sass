@@ -1,0 +1,63 @@
+.subs-block
+	$parent: &
+	background: #207bd2
+	&_yellow
+		background: $yellow
+	&_yellow &__container
+		padding: 60px 15px 60px
+		+r(1599)
+			padding: 35px 15px 40px
+	&__container
+		max-width: 970px
+		padding: 0 15px 50px
+	&__title
+		font-size: 35px
+		margin-bottom: 35px
+		+sm
+			font-size: 33px
+			margin-bottom: 20px
+		+xs
+			font-size: 30px
+			line-height: 35px
+		#{$parent}_yellow &
+			color: $black
+	&__form
+		display: flex
+		align-items: flex-start
+		margin: 0 -10px
+		+sm
+			justify-content: center
+			flex-wrap: wrap
+		+xs
+			margin: 0
+		&-input
+			+lg
+				height: 50px
+		&-field
+			width: 33.333333%
+			flex: 1 0 33.333333%
+			padding: 0 10px
+			+sm
+				width: 50%
+				flex: 0 1 50%
+				padding: 0 10px
+			+xs
+				width: 100%
+				flex: 0 1 auto
+				padding: 0
+				&:not(:first-child)
+					margin-top: 15px
+		&-submit
+			width: 100%
+			padding: 0 15px
+			margin-bottom: 8px
+			+gpu
+			+sm
+				margin: 20px 0 10px
+		&-agree
+			font-size: 12px
+			color: $white
+			line-height: 15px
+			text-align: center
+			#{$parent}_yellow &
+				color: $black

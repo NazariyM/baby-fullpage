@@ -6,14 +6,16 @@ if screen.btn2 ? screen.btn2 : screen.btn2 = 'Открыть свой Бэби-�
 if screen.video ? screen.video : screen.video = 'screen_video_720'
 
 //begin screen
-+b.SECTION.screen.section(class= screen.classMod ? screen.classMod : '')
++b.SECTION.screen(class= screen.classMod ? screen.classMod : '').section
 	+e.container.container
 		+e.inner
 			+e.text
 				+e.H2.title.title= screen.title
+				if screen.subTitle
+					+e.H2.title.title= screen.subTitle
 				+e.P= screen.descr
 			+e.actions
 				+e.A.actions-btn.btn._yellow(href='#!')= screen.btn1
 				+e.A.actions-btn.btn._blue(href='#!')= screen.btn2
 	+e.video
-		+e.VIDEO(src=`static/video/${screen.video}.mp4` loop autoplay)
+		+e.VIDEO(src=`static/video/${screen.video}.mp4` loop autoplay muted)

@@ -1,0 +1,64 @@
+.schedule
+	&__container
+		max-width: 1150px
+		+sm
+			padding: 100px 15px
+	&__title
+		margin-bottom: 70px
+		color: #474747
+		+r(1599)
+			margin-bottom: 30px
+	&__filter
+		display: flex
+		justify-content: space-between
+		margin-bottom: 30px
+		+sm
+			flex-wrap: wrap
+			justify-content: center
+			.check-box
+				margin: 10px
+		+xs
+			justify-content: space-between
+			.check-box
+				margin: 10px 22px
+	&__inner
+		display: flex
+		margin: 0 -3px
+		+sm
+			display: block
+	&__day
+		padding: 0 3px
+		flex-grow: 1
+		flex-basis: 14.285714%
+		width: 14.285714%
+		+sm
+			width: 100%
+			flex-basis: auto
+		&-name
+			margin-bottom: 5px
+			padding: 0 10px
+			height: 50px
+			+f('geo-700', 16)
+			color: #2e3056
+			text-align: center
+			line-height: 45px
+			background-color: #ffcc00
+			
+	&__event
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		min-height: 84px
+		padding: 5px
+		border: 1px solid #ebebeb
+		background-color: #f4f4f4
+		&-time
+			font-size: 15px
+			color: rgba(#000, .6)
+		&-name
+			+f('geo-700', 17)
+			color: $black
+			text-transform: uppercase
+		& + &
+			margin-top: 6px

@@ -1,0 +1,125 @@
+if schedule ? schedule : schedule = []
+if schedule.title ? schedule.title : schedule.title = 'НАШЕ РАСПИСАНИЕ'
+
+//begin schedule
++b.SECTION.schedule.section(class= schedule.classMod ? schedule.classMod : '')
+	+e.container.container
+		+e.H2.title.title(data-anim-title='')= schedule.title
+
+		+e.filter(data-anim-slow='')
+			+b.check-box
+				+e.INPUT(id='check-1' type='checkbox' name='' checked)
+				+e.LABEL(for='check-1')
+					+e.square
+						+i('check')
+					+e.SPAN 8 мес — 1,5 года
+
+			+b.check-box
+				+e.INPUT(id='check-2' type='checkbox' name='')
+				+e.LABEL(for='check-2')
+					+e.square
+						+i('check')
+					+e.SPAN 1,5— 2 года
+
+			+b.check-box
+				+e.INPUT(id='check-3' type='checkbox' name='' checked)
+				+e.LABEL(for='check-3')
+					+e.square
+						+i('check')
+					+e.SPAN 2 — 2,5 года
+
+			+b.check-box
+				+e.INPUT(id='check-4' type='checkbox' name='' checked)
+				+e.LABEL(for='check-4')
+					+e.square
+						+i('check')
+					+e.SPAN 2 — 3,5 года
+
+			+b.check-box
+				+e.INPUT(id='check-5' type='checkbox' name='')
+				+e.LABEL(for='check-5')
+					+e.square
+						+i('check')
+					+e.SPAN 3,5 — 4,5 года
+
+			+b.check-box
+				+e.INPUT(id='check-6' type='checkbox' name='' checked)
+				+e.LABEL(for='check-6')
+					+e.square
+						+i('check')
+					+e.SPAN 4,5 — 5,5 года
+
+			+b.check-box
+				+e.INPUT(id='check-7' type='checkbox' name='')
+				+e.LABEL(for='check-7')
+					+e.square
+						+i('check')
+					+e.SPAN 5,5 — 6,5 года
+
+			+b.check-box
+				+e.INPUT(id='check-8' type='checkbox' name='')
+				+e.LABEL(for='check-8')
+					+e.square
+						+i('check')
+					+e.SPAN Любой возраст
+
+		+e.inner(data-anim-slow='')
+			+e.day
+				+e.day-name Понедельник
+				+e.event
+					+e.SPAN.event-time 10:00 - 11:30
+					+e.SPAN.event-name Бэби-класс 1
+
+			+e.day
+				+e.day-name Вторник
+				+e.event
+					+e.SPAN.event-time 10:00 - 11:30
+					+e.SPAN.event-name Бэби-класс 1
+				+e.event
+					+e.SPAN.event-time 11:00 - 12:00
+					+e.SPAN.event-name Бэбик 2
+				+e.event
+					+e.SPAN.event-time 13:00 - 14:00
+					+e.SPAN.event-name Бэби-класс 2
+
+			+e.day
+				+e.day-name Среда
+				+e.event
+					+e.SPAN.event-time 10:00 - 11:30
+					+e.SPAN.event-name Бэби-класс 1
+				+e.event
+					+e.SPAN.event-time 09:00 - 13:00
+					+e.SPAN.event-name Бэби-сад
+
+			+e.day
+				+e.day-name Четверг
+				+e.event
+					+e.SPAN.event-time 09:00 - 13:00
+					+e.SPAN.event-name Бэби-сад
+
+			+e.day
+				+e.day-name Пятница
+				+e.event
+					+e.SPAN.event-time 10:00 - 11:30
+					+e.SPAN.event-name Бэбик 1
+				+e.event
+					+e.SPAN.event-time 11:00 - 12:00
+					+e.SPAN.event-name Бэбик 2
+				+e.event
+					+e.SPAN.event-time 13:00 - 14:00
+					+e.SPAN.event-name Бэби-класс 1
+
+			+e.day
+				+e.day-name Суббота
+				+e.event
+					+e.SPAN.event-time 10:00 - 11:30
+					+e.SPAN.event-name Бэби-класс 1
+				+e.event
+					+e.SPAN.event-time 09:00 - 13:00
+					+e.SPAN.event-name Бэби-сад
+
+			+e.day
+				+e.day-name Воскресенье
+				+e.event
+					+e.SPAN.event-time 10:00 - 11:30
+					+e.SPAN.event-name Бэби-класс 1

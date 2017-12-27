@@ -1,7 +1,11 @@
 extends ../extend/default
 
 block variables
-	- var title = 'Home page';
+	-title = 'Home page';
+	-fullpageClass = 'js-home-fullpage';
+	-headerClass = '_home';
+	-navList = [{text: 'О компании'}, {text: 'Развитие интеллекта'}, {text: 'Как проходят занятия'}, {text: 'Выбрать клуб'}, {text: 'Открыть свой клуб'}, {text: 'Контакты'}, {text: 'Карьера'}]
+	-footerNavList = ['О компании', 'Развитие интеллекта', 'Как проходят занятия', 'Выбрать клуб','Открыть свой клуб', 'Контакты', 'Карьера'];
 
 block main
 

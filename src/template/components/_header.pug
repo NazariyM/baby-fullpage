@@ -1,4 +1,12 @@
-+b.HEADER.header
+//begin header
++b.HEADER.header(class= headerClass ? headerClass : '')
+	if menuList
+		+e.menu
+			+e.UL.menu-list
+				for menuText in menuList
+					+e.LI
+						+e.A(href='#!')= menuText
+
 	+e.inner
 		+e.container.container
 
@@ -8,8 +16,18 @@
 				+e.P.descr Бережное развитие интеллекта
 
 			+b.info-block._header
-				-socials = {classMod: 'info-block__socials'}
-				include socials
+				if headerSocials !== false
+					-socials = {classMod: 'info-block__socials'}
+					include socials
+
+				if headerCity
+					+e.city
+						+e.city-item
+							+e.city-name г. Москва
+							+e.A.city-link.underlined(href='#!') Другой город
+						+e.city-item
+							+e.city-name на проспекте Мира
+							+e.A.city-link.underlined(href='#!') Другой клуб
 
 				+e.A.tel(href='#!') 8 800 100 20 24
 				+e.BUTTON.call-btn.btn._yellow(type='button') Заказать звонок
@@ -18,27 +36,18 @@
 					span.hamburger-box
 						span.hamburger-inner
 
-	+b.NAV.nav.js-nav
+	+b.NAV.nav(class= navClass ? navClass : '').js-nav
 		+e.UL.list.container
-			-
-				navList = [{
-				text: 'О компании'
-				}, {
-				text: 'Развитие интеллекта'
-				}, {
-				text: 'Как проходят занятия'
-				}, {
-				text: 'Выбрать клуб'
-				}, {
-				text: 'Открыть свой клуб'
-				}, {
-				text: 'Контакты'
-				}, {
-				text: 'Карьера'
-				}]
+			if fpNavList
+				mixin fpNavItem(fpItem)
+					+e.LI.list-item(class= fpItem.activeClass ? '' : '' data-menuanchor= `${fpItem.anchor}`)
+						+e.A.list-link(href=`#${fpItem.anchor}`)= fpItem.text
+				each fpItem in fpNavList
+					+fpNavItem(fpItem)
 
-			mixin navItem(item)
-				+e.LI.list-item(class= item.activeClass ? 'is-active' : '')
-					+e.A.list-link(href=`#!`)= item.text
-			each item in navList
-				+navItem(item)
+			if navList
+				mixin navItem(item)
+					+e.LI.list-item(class= item.activeClass ? 'is-active' : '')
+						+e.A.list-link(href=`#!`)= item.text
+				each item in navList
+					+navItem(item)

@@ -16,10 +16,16 @@
     </div>
     <!-- SVG-->
     <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
-      <svg xmlns="http://www.w3.org/2000/svg">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M873 7893.62l-2.84-2.63-9.2 8.94-5.18-4.91-2.78 2.6 7.96 7.39z" />
+        </defs>
         <symbol id="icon-arr-top" viewBox="0 0 261.808 261.808">
           <path d="M260.485 160.384L135.686 19.409c-2.42-2.73-6.331-2.736-8.757-.011L1.33 160.389c-2.426 2.73-1.441 4.928 2.203 4.928h79.144v72.546a6.587 6.587 0 0 0 6.592 6.587h83.267a6.59 6.59 0 0 0 6.592-6.587v-72.546h79.138c3.644 0 4.64-2.203 2.219-4.933z"
           />
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 23 18">
+          <use xlink:href="#a" transform="translate(-852 -7889)" />
         </symbol>
         <symbol id="icon-facebook" viewBox="0 0 155.139 155.139">
           <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
@@ -30,6 +36,12 @@
         </symbol>
         <symbol id="icon-left-arrow" viewBox="0 0 405.456 405.456">
           <path d="M341.31 74.135c-.078-4.985-2.163-9.911-5.688-13.438l-55-55C277.023 2.096 271.963 0 266.872 0s-10.151 2.096-13.75 5.697L69.841 188.978c-3.601 3.599-5.697 8.659-5.697 13.75s2.096 10.151 5.697 13.75l183.281 183.281c3.599 3.601 8.659 5.697 13.75 5.697s10.151-2.096 13.75-5.697l55-55c3.591-3.598 5.681-8.651 5.681-13.734s-2.09-10.136-5.681-13.734L221.06 202.728 335.622 88.166c3.665-3.667 5.765-8.848 5.688-14.031z"
+          />
+        </symbol>
+        <symbol id="icon-quote" viewBox="0 0 508.044 508.044">
+          <path d="M507.93 155.673c0-.055.006-.11.006-.165 0-66.793-54.145-120.938-120.938-120.938S266.061 88.714 266.061 155.508c0 66.794 54.15 120.938 120.938 120.938 13.727 0 26.867-2.393 39.162-6.609-27.209 156.09-148.93 256.752-36.096 173.905C515.182 351.874 508.07 159.198 507.93 155.673z"
+          />
+          <path d="M120.938 276.445c13.727 0 26.867-2.393 39.168-6.609-27.216 156.09-148.937 256.752-36.102 173.905 125.117-91.867 118.006-284.543 117.865-288.068 0-.055.006-.11.006-.165 0-66.793-54.144-120.938-120.937-120.938C54.144 34.57 0 88.714 0 155.508c0 66.794 54.15 120.937 120.938 120.937z"
           />
         </symbol>
         <symbol id="icon-right-arrow" viewBox="0 0 405.457 405.457">
@@ -49,8 +61,9 @@
     <script>
       document.createElement('picture');
     </script>
-    <div class="js-fullpage">
-      <header class="header">
+    <div class="js-home-fullpage">
+      <!--begin header-->
+      <header class="header header_home">
         <div class="header__inner">
           <div class="header__container container">
             <div class="logo header__logo">
@@ -129,7 +142,7 @@
           </div>
         </div>
         <div class="screen__video">
-          <video src="static/video/screen_video_720.mp4" loop="loop" autoplay="autoplay"></video>
+          <video src="static/video/screen_video_720.mp4" loop="loop" autoplay="autoplay" muted="muted"></video>
         </div>
       </section>
       <!--begin mission-->
@@ -227,7 +240,7 @@
         </div>
       </section>
       <!--begin benefits-->
-      <section class="benefits section">
+      <section class="benefits section" data-anchor="pageThree">
         <div class="benefits__container container">
           <h2 class="benefits__title title title_black" data-anim-title="">Бэби-клуб - это</h2>
           <div class="benefits__list">
@@ -430,7 +443,7 @@
               <div class="c-tabs__tab">
                 <div class="c-tabs__inner">
                   <div class="c-tabs__video-item">
-                    <div class="c-tabs__video-text">
+                    <div class="c-tabs__video-text js-video-text">
                       <h5 class="c-tabs__video-title">Милана</h5>
                       <p>посещает Бэби-клуб более 3 лет</p>
                     </div>
@@ -438,7 +451,7 @@
                     <iframe src="https://www.youtube.com/embed/DpMrNGG3S3I?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
                   </div>
                   <div class="c-tabs__video-item">
-                    <div class="c-tabs__video-text">
+                    <div class="c-tabs__video-text js-video-text">
                       <h5 class="c-tabs__video-title">Вероника</h5>
                       <p>Мама Глеба и Матвея Более года в Бэби-клубе</p>
                     </div>
@@ -450,7 +463,7 @@
               <div class="c-tabs__tab">
                 <div class="c-tabs__inner">
                   <div class="c-tabs__video-item">
-                    <div class="c-tabs__video-text">
+                    <div class="c-tabs__video-text js-video-text">
                       <h5 class="c-tabs__video-title">Милана</h5>
                       <p>посещает Бэби-клуб более 3 лет</p>
                     </div>
@@ -458,7 +471,7 @@
                     <iframe src="https://www.youtube.com/embed/5zDWEog9CJE?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
                   </div>
                   <div class="c-tabs__video-item">
-                    <div class="c-tabs__video-text">
+                    <div class="c-tabs__video-text js-video-text">
                       <h5 class="c-tabs__video-title">Вероника</h5>
                       <p>Мама Глеба и Матвея Более года в Бэби-клубе</p>
                     </div>
@@ -470,14 +483,14 @@
               <div class="c-tabs__tab">
                 <div class="c-tabs__inner">
                   <div class="c-tabs__video-item">
-                    <div class="c-tabs__video-text">
+                    <div class="c-tabs__video-text js-video-text">
                       <h5 class="c-tabs__video-title">Милана</h5>
                       <p>посещает Бэби-клуб более 3 лет</p>
                     </div>
                     <iframe src="https://www.youtube.com/embed/DpMrNGG3S3I?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
                   </div>
                   <div class="c-tabs__video-item">
-                    <div class="c-tabs__video-text">
+                    <div class="c-tabs__video-text js-video-text">
                       <h5 class="c-tabs__video-title">Вероника</h5>
                       <p>Мама Глеба и Матвея Более года в Бэби-клубе</p>
                     </div>
@@ -488,14 +501,14 @@
               <div class="c-tabs__tab">
                 <div class="c-tabs__inner">
                   <div class="c-tabs__video-item">
-                    <div class="c-tabs__video-text">
+                    <div class="c-tabs__video-text js-video-text">
                       <h5 class="c-tabs__video-title">Милана</h5>
                       <p>посещает Бэби-клуб более 3 лет</p>
                     </div>
                     <iframe src="https://www.youtube.com/embed/5zDWEog9CJE?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
                   </div>
                   <div class="c-tabs__video-item">
-                    <div class="c-tabs__video-text">
+                    <div class="c-tabs__video-text js-video-text">
                       <h5 class="c-tabs__video-title">Вероника</h5>
                       <p>Мама Глеба и Матвея Более года в Бэби-клубе</p>
                     </div>

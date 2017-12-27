@@ -1,0 +1,95 @@
+if lessons ? lessons : lessons = []
+if lessons.title ? lessons.title : lessons.title = 'развивающие занятия для детей'
+
+//begin lessons
++b.SECTION.lessons.section.fp-auto-height-responsive(data-anchor='lessons' class= lessons.classMod ? lessons.classMod : '')
+	+e.container.container
+		+e.H2.title.title(data-anim-title='')= lessons.title
+
+		//begin tabs
+		+b.c-tabs._lessons
+			+e.filter
+				+e.filter-col
+					+e.title Выберите одну из трёх категорий:
+					+e.tabs-nav
+						-
+							tabsList = ['Общеразвивающие занятия', 'Сад', 'Дополнительные занятия']
+						-activeIndex = 0
+						for tabsText, index in tabsList
+							+e.BUTTON.tabs-el.btn(data-anim-fast='' class= index === activeIndex ? 'is-active' : '' type='button')= tabsText
+				+e.filter-col
+					+e.filter-title._sm Выберите возраст:
+					+e.filter-select
+						+b.SELECT.js-select(name='')
+							+e.OPTION(value='') 1 год
+							+e.OPTION(value='') 2 года
+							+e.OPTION(value='') 3 года
+							+e.OPTION(value='') 4 года
+
+			+e.tabs-for(data-anim-slow='')
+				-tabCount = 0
+				while tabCount < 3
+					+e.tab
+						+e.tab-inner
+							-
+								lessonsList = [{
+								icon: 'bottle',
+								title: 'БЭБИК-I',
+								subtitle: '8 мес. — 1,5 года',
+								descr: 'Малыши учатся общаться с другими детьми, узнают новые слова, предметы и явления окружающего мира. Большой акцент делается на развитие речевого центра ребенка.',
+								btnColor: 'darkblue'
+								}, {
+								icon: 'i',
+								title: 'БЭБИК-II',
+								subtitle: '1,5 — 2,5 года',
+								descr: 'Дети приобретают социальные навыки, которые помогают им легко находить друзей, развивают координацию движений, учатся завязывать шнурки и «пробует» разразные материалы для творчества.',
+								btnColor: 'green',
+								priceDescr: false
+								}, {
+								icon: 'z',
+								title: 'БЭБИ-КЛАСС-I',
+								subtitle: '2,5 — 3,5 года',
+								descr: 'В игровых ситуациях дети развивают свою речь, приобретают первые навыки чтения, совершенствуют «послушносит» своих пальчиков и постоянно расширяют кругозор.',
+								btnColor: 'orange'
+								}, {
+								icon: 'm',
+								title: 'БЭБИ-КЛАСС-II',
+								subtitle: '3,5 — 4,5 года',
+								descr: 'Дети развивают логическое мышление, совершенствуют свои умения, приобретают практически полезные навыки для жизни и учатся бесконфликтному общению со сверстниками.',
+								btnColor: 'brown'
+								}, {
+								icon: 'r',
+								title: 'БЭБИ-КЛАСС-III',
+								subtitle: 'от 4,5 до 5,5 лет',
+								descr: 'Внимательность и умение сосредоточиться — залог успеха в начальной школе. Дети учатся концентрироваться на поставленной в игре задаче и самостоятельно находить решения.',
+								btnColor: 'gray'
+								}, {
+								icon: 'a',
+								title: 'БЭБИ-КЛАСС-IV',
+								subtitle: '5,5 — 7 лет',
+								descr: 'Старшие бэбиклубовцы бегло читают, с легкостью считают, интересны в общении. Они с радостью проявляют свою самостоятельность, так что в школе помогать с домашними заданиями им не придется.',
+								btnColor: 'white'
+								}]
+
+							mixin lessonsItem(item)
+								+e.item
+									+e.item-icon-wrap
+										+e.item-icon(class= `icon-letter-${item.icon}`)
+									+e.item-info
+										+e.item-title= item.title
+										+e.item-subtitle= item.subtitle
+									+e.item-descr
+										+e.P= item.descr
+									+e.item-price
+										+e.P ОТ
+											= ' '
+											+e.SPAN 5 200
+											= ' '
+											| РУБ. В МЕСЯЦ
+										if item.priceDescr !== false
+											+e.item-price-info
+												+e.SPAN за 8 занятий
+									+e.A.item-btn.btn(class= `_${item.btnColor}` href='#!') Подробнее
+							each item in lessonsList
+								+lessonsItem(item)
+					-tabCount++

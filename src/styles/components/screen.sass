@@ -1,14 +1,14 @@
 .screen
 	position: relative
 	z-index: -1
-	padding-top: 140px !important
+	padding-top: 120px !important
 	+sm
 		padding-top: 10px!important
 		background: #e6393f url("../img/bg/hearts_bg.png") repeat 50% 50%
 	+xs
 		height: 100vh
 		padding-top: 70px!important
-		background: url("../img/bg/screen_bg.jpg") repeat 50% 50%
+		background: url("../img/bg/screen_bg.jpg") no-repeat 50% 50%
 		z-index: auto
 	&__container
 		text-align: center
@@ -44,8 +44,13 @@
 				line-height: 34px
 	&__title
 		margin-bottom: 30px
+		line-height: 65px
+		&:not(:last-of-type)
+			margin-bottom: 5px
 		+r(1599)
 			margin-bottom: 15px
+		+lg
+			line-height: 44px
 	&__actions
 		position: relative
 		z-index: 3
@@ -68,7 +73,7 @@
 				margin-bottom: 10px
 	&__video
 		position: absolute
-		top: 140px
+		top: 120px
 		left: 0
 		right: 0
 		bottom: 0
@@ -82,3 +87,12 @@
 			width: 100%
 			height: auto
 			+cover-video
+			
+	&_landing
+		padding-top: 170px !important
+	&_landing .screen__video
+		top: 170px
+	&_landing .screen__actions
+		+r(1599)
+			bottom: 35px
+		 

@@ -11,6 +11,7 @@ export default class Header {
   initMobNav() {
     const $btn = $('.js-hamburger');
     const $navItems = $nav.find('.nav__list-item');
+    const $navLink = $nav.find('.nav__list-link');
 
     $btn.on('click tap', function () {
       $(this).toggleClass(css.active);
@@ -20,6 +21,11 @@ export default class Header {
 
       tl
         .staggerFromTo($navItems, 0.2, {y: 50, opacity: 0}, {y: 0, opacity: 1}, 0.1, '-=0.1');
+    });
+
+    $navLink.on('click tap', function () {
+      $nav.removeClass(css.active);
+      $btn.removeClass(css.active);
     });
   }
 

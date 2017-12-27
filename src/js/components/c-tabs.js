@@ -1,8 +1,7 @@
-// import { TweenMax } from 'gsap';
-import { TweenMax, CSSPlugin } from 'gsap';
-import { css } from '../modules/dev/_helpers';
+import {TweenMax} from 'gsap';
+import {css} from '../modules/dev/_helpers';
 
- export default class CTabs {
+export default class CTabs {
   constructor(el) {
 
     this.$tabNav = el.find('.c-tabs__tabs-nav').find('.c-tabs__tabs-el');
@@ -31,7 +30,7 @@ import { css } from '../modules/dev/_helpers';
   getActiveIndex() {
     let activeIndex = 0;
 
-    this.$tabNav.each(function() {
+    this.$tabNav.each(function () {
       if ($(this).hasClass(css.active)) {
         activeIndex = $(this).index();
       }
@@ -56,9 +55,9 @@ import { css } from '../modules/dev/_helpers';
       clearProps: 'transform',
       onComplete() {
         const currentHeight = _this.$tabItemContainer.outerHeight();
-        TweenMax.set(_this.$tabItemContainer, { height: currentHeight });
+        TweenMax.set(_this.$tabItemContainer, {height: currentHeight});
         $(this.target).hide();
-        TweenMax.set($nextTab, { autoAlpha: 1 });
+        TweenMax.set($nextTab, {autoAlpha: 1});
         $nextTab.show();
         TweenMax.staggerFromTo($nextTab.children().children(), speed, {
           autoAlpha: 0,
@@ -67,8 +66,8 @@ import { css } from '../modules/dev/_helpers';
           autoAlpha: 1,
           y: 0
         }, speed / 2);
-        TweenMax.set(_this.$tabItemContainer, { height: 'auto' });
-        TweenMax.from(_this.$tabItemContainer, speed, { height: currentHeight });
+        TweenMax.set(_this.$tabItemContainer, {height: 'auto'});
+        TweenMax.from(_this.$tabItemContainer, speed, {height: currentHeight});
       }
     });
   }

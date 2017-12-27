@@ -43,6 +43,12 @@ body
 		line-height: 40px
 	&_black
 		color: $black
+		
+.underlined
+	border-bottom: 1px solid currentColor
+	+trs
+	.no-touch &:hover
+		border-bottom-color: transparent
 
 // buttons
 .btn
@@ -94,6 +100,23 @@ body
 		color: $white
 		height: 50px
 		line-height: 47px
+	&_darkblue
+		background-color: #0162a7
+	&_green
+		background-color: #2ca149
+	&_orange
+		background-color: #ffbd10
+	&_brown
+		background-color: #dd6321
+	&_gray
+		background-color: #ababab
+	&_white
+		background: $white
+		border: 3px solid #231f20!important
+		color: #231f20
+		&::after
+			background: rgba(#ababab, .3)
+		
 input.btn
 	+trs
 	.no-touch &:hover
@@ -110,7 +133,40 @@ input.btn
 	+placeholder-color(#8d8d8d)
 	+sm
 		height: 50px
-	
+		
+.check-box
+	position: relative
+	label
+		display: flex
+		align-items: center
+		+f('geo-500')
+		font-size: 14px
+		color: $black
+		cursor: pointer
+	&__square
+		position: relative
+		width: 20px
+		height: 20px
+		margin-right: 8px
+		border: 2px solid #d7d7d7
+		background: $white
+		font-size: 0
+		.icon
+			opacity: 0
+			transform: scale(.6)
+			position: absolute
+			top: -4px
+			right: -8px
+			font-size: 19px
+			transition: .15s ease-in
+	span
+		user-select: none
+	input
+		display: none
+		&:checked + label .icon-check
+			opacity: 1
+			transform: scale(1)
+		
 .textarea
 	display: block
 	width: 100%
@@ -176,6 +232,17 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, img, mark, ul, li
 	background-color: #f16eaa
 	
 #fp-nav
+	transition: .8s ease
 	+md
 		display: none
+	li
+		&:nth-child(16)
+			display: none
+			
+.fp-viewing-pageOne
+	#fp-nav
+		top: 65% !important
 		
+.fp-scroller
+	transition-timing-function: ease-in-out!important
+	transition-duration: .5s!important

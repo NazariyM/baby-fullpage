@@ -1,7 +1,7 @@
-import {TweenMax} from 'gsap';
-import {css} from "../modules/dev/_helpers";
+import { TweenMax } from 'gsap';
+import { css } from '../modules/dev/_helpers';
 
-export function initAccordion () {
+export function initAccordion() {
   const $accordion = $('.accordion');
 
   $accordion.each(function () {
@@ -19,7 +19,7 @@ export function initAccordion () {
 
     $btn.on('click tap', function () {
       const $selfItem = $(this).closest($item);
-      const $selftContent = $selfItem.find($content);
+      const $selfContent = $selfItem.find($content);
 
       $item.not($selfItem).removeClass(css.active);
       $content.each(function () {
@@ -30,19 +30,19 @@ export function initAccordion () {
       $selfItem.toggleClass(css.active);
 
       if ($selfItem.hasClass(css.active)) {
-        showContent($selftContent);
+        showContent($selfContent);
       } else {
-        hideContent($selftContent);
+        hideContent($selfContent);
       }
     });
 
     function showContent(el) {
-      TweenMax.set(el, {height: 'auto', scaleY: 1});
-      TweenMax.from(el, speed, {height: 0, scaleY: 0});
+      TweenMax.set(el, { height: 'auto', scaleY: 1 });
+      TweenMax.from(el, speed, { height: 0, scaleY: 0 });
     }
 
     function hideContent(el) {
-      TweenMax.to(el, speed, {height: 0, scaleY: 0});
+      TweenMax.to(el, speed, { height: 0, scaleY: 0 });
     }
   });
 };

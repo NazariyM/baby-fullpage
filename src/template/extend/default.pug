@@ -35,7 +35,7 @@ html(lang='ru')
 				script.
 					document.createElement('picture');
 
-			.js-fullpage
+			div(class= fullpageClass ? fullpageClass : '')
 
 				block header
 					include ../components/_header
@@ -51,4 +51,6 @@ html(lang='ru')
 				if chooseMap !== false
 					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type='text/javascript')
 				script(src='static/js/index.jquery' + suffix + '.js')
+				if scrollOverflow === true
+					script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/vendors/scrolloverflow.min.js')
 				script(src='static/js/index' + suffix + '.js')
