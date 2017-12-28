@@ -3,43 +3,78 @@
 	+xs
 		padding-bottom: 20px
 	&__container
-		padding: 0 15px 70px
+		padding: 0 15px
 		max-width: 1190px
 		+xs
 			padding: 0 15px
 	&__title
+		margin-bottom: 20px
 		font-size: 45px
+		+r(1599)
+			margin-bottom: 10px
 		+sm
 			font-size: 37px
 			margin-bottom: 0
-	&__inner
-		padding: 40px 0 0
-		margin: 0 -15px
-		font-size: 0
+		+xs
+			line-height: 35px
+	&__sub-title
+		margin-bottom: 80px
+		font-size: 30px
+		color: $white
 		text-align: center
+		+f('geo-700')
+		+r(1599)
+			margin-bottom: 50px
+		+xs
+			font-size: 22px
+			margin-bottom: 10px
+	&__image
+		position: relative
+		height: 200px
+		+r(1599)
+			height: 170px
+		+xs
+			height: auto
+			text-align: center
+		
+		.no-touch &:hover img
+			transform: translateX(-50%) rotate(42deg)
+		img
+			pointer-events: none
+			position: absolute
+			top: -110px
+			left: 50%
+			transform: translateX(-50%) rotate(25deg)
+			transition: .7s ease-out
+			+r(1599)
+				width: 390px
+				height: 360px
+			+xs
+				position: static
+				transform: none
+				
+				
+	&__inner
+		margin: 0 auto
+		padding: 40px 0 0
+		font-size: 0
+		+r(1599)
+			padding: 15px 0 0
+		+sm
+			padding: 40px 0 0
+		+xs
+			padding: 20px 0 0
 	&__item
 		$parent: &
-		display: inline-block
-		vertical-align: top
-		width: 25%
 		padding: 0 15px
-		+f('geo-500', 17)
+		text-align: left
+		+f('geo-500', 17, 22)
 		color: $white
-		+trs
-		+sm
-			width: 50%
-			padding: 0 15px 30px
 		+xs
-			width: 100%
-		&:hover #{$parent}-icon
-			transform: rotate(720deg) scale(1.25)
-			+lg
-				transform: rotate(720deg) scale(1.15)
-		&-icon
-			transition: 1s ease
-		&-icon-wrap
-			height: 135px
-			display: flex
-			align-items: center
-			justify-content: center
-			margin-bottom: 15px
+			padding: 0
+		&:not(:first-child)
+			margin-top: 20px
+			+r(1599)
+				margin-top: 10px
+			+sm
+				margin-top: 20px

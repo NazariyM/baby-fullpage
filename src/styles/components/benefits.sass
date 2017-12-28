@@ -27,9 +27,9 @@
 			padding: 0 10px 25px
 		
 		&:hover #{$parent}-pic
-			transform: rotate(720deg) scale(1.25)
+			transform: rotate(720deg)
 			+lg
-				transform: rotate(720deg) scale(1.15)
+				transform: rotate(720deg)
 		p
 			+f('geo-500', 20)
 			color: #231f20
@@ -38,7 +38,7 @@
 		&-pic
 			transition: 1s ease
 			&-wrap
-				height: 120px
+				height: 130px
 				margin-bottom: 20px
 				+vertical
 				+lg
@@ -47,3 +47,14 @@
 				+xs
 					transform: none
 					margin-bottom: 10px
+			&.icon-letter-k,
+			&.icon-letter-f,
+			&.icon-letter-n
+				position: relative
+				top: 10px
+			&.icon-letter-d
+				position: relative
+				top: -19px
+			&.icon-letter-l
+				position: relative
+				top: -15px

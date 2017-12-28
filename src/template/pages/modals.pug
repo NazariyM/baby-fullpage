@@ -1,0 +1,43 @@
+extends ../extend/default
+
+block variables
+	-title = 'Modals page';
+	-footer = false;
+
+block main
+	style(type='text/css').
+		.example {
+			max-width: 300px;
+			margin: 20px;
+			height: 40px;
+			border: 2px solid black;
+			background-color: white;
+			color: black;
+			text-align: center;
+			line-height: 40px;
+			font-size: 15px;
+			cursor: pointer;
+			transition: all .3s ease;
+			text-transform: uppercase;
+		}
+
+		.example:hover {
+			color: white;
+			background: #f16eaa;
+		}
+	main
+		.container(style='background-color: #fff; padding: 300px 0 0;')
+			.example(data-popup-target="ask-teacher") Задать вопрос педагогу
+			.example(data-popup-target="order-call") ЗАКАЗАТЬ ЗВОНОК
+			.example(data-popup-target="choose-city") ВЫБЕРИТЕ ГОРОД
+			.example(data-popup-target="lessons-more") БЭБИК-1
+			.example(data-popup-target="buy-book") Купить книгу
+
+block modals
+	include ../components/modals
+
+	+popup({name: 'ask'})
+	+popup({name: 'call'})
+	+popup({name: 'choose-city'})
+	+popup({name: 'lessons-more'})
+	+popup({name: 'buy-book'})

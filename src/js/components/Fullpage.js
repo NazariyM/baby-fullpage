@@ -49,18 +49,12 @@ export default class Fullpage {
 
     }));
 
-    if (Resp.allTouch) {
-      var scrollOptions = { disablePointer: false };
-    } else {
-      var scrollOptions = { disablePointer: true };
-    }
-
     this.$landFullpage.fullpage($.extend({}, fullpageDefaults, {
       paddingTop: 70,
       menu: '.js-nav',
       anchors: ['pageOne', 'pageTwo', 'pageThree', 'pageFour', 'pageFive', 'pageSix', 'pageSeven', 'pageEight', 'pageNine', 'pageTen', 'pageEleven', 'pageTwelve', 'pageThirteen', 'pageFourteen', 'pageFifteen'],
       scrollOverflow: true,
-      scrollOverflowOptions: scrollOptions,
+      scrollOverflowOptions: { disablePointer: true },
       onLeave: function (index, nextIndex, direction) {
         const nextSection = $(this).next();
 

@@ -43,8 +43,11 @@ html(lang='ru')
 				block main
 					main
 
-				block footer
-					include ../components/_footer
+				block modals
+
+				if footer !== false
+					block footer
+						include ../components/_footer
 
 			// Scripts
 			block scripts

@@ -1,6 +1,8 @@
 .schedule
 	&__container
 		max-width: 1150px
+		+r(1599)
+			padding: 100px 15px 200px
 		+sm
 			padding: 100px 15px
 	&__title
@@ -31,9 +33,12 @@
 		flex-grow: 1
 		flex-basis: 14.285714%
 		width: 14.285714%
+		text-align: justify
 		+sm
 			width: 100%
 			flex-basis: auto
+			&:not(:first-child)
+				margin-top: 5px
 		&-name
 			margin-bottom: 5px
 			padding: 0 10px
@@ -45,20 +50,44 @@
 			background-color: #ffcc00
 			
 	&__event
+		$parent: &
 		display: flex
 		justify-content: center
 		align-items: center
 		flex-direction: column
-		min-height: 84px
+		height: 84px
 		padding: 5px
 		border: 1px solid #ebebeb
 		background-color: #f4f4f4
+		+r(1365)
+			padding: 2px
+		+sm
+			height: 58px
+		&_half
+			display: inline-flex
+			justify-content: flex-start
+			padding: 10px 5px 5px
+			width: calc(50% - 3px)
+			text-align: center
+			+r(1365)
+				align-items: center
+				justify-content: center
+			& + &
+				margin-top: 0!important
+			.schedule__event-name
+				+r(1365)
+					font-size: 13px
 		&-time
 			font-size: 15px
 			color: rgba(#000, .6)
+			#{$parent}_half &
+				font-size: 12px
+				line-height: 16px
 		&-name
 			+f('geo-700', 17)
 			color: $black
 			text-transform: uppercase
+			#{$parent}_half &
+				font-size: 14px
 		& + &
 			margin-top: 6px

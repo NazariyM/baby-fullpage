@@ -1,0 +1,214 @@
+.popup
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	opacity: 0
+	visibility: hidden
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	z-index: 1300
+	overflow: auto
+	outline: 0
+	text-align: center
+	font-size: 0
+	transform: translate3d(0, 0, 0)
+	background-color: rgba(#000, .7)
+	transition: opacity .3s ease, transform .5s ease, visibility .5s
+	will-change: opacity, transform
+	$parent: &
+	&:after
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		width: 0
+		height: 100%
+	&.opened
+		opacity: 1
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+		visibility: visible
+	&__close
+		position: absolute
+		top: -19px
+		right: -19px
+		width: 51px
+		height: 51px
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: #ffd52f
+		+trs
+		+sm
+			top: -17px
+			right: -17px
+			width: 37px
+			height: 37px
+		+xs
+			top: -19px
+			right: 4px
+		.no-touch &:hover .icon
+			fill: $blue
+		.icon
+			fill: #000
+			margin-top: 1px
+			font-size: 20px
+			z-index: 2
+			+trs
+			+sm
+				font-size: 17px
+	
+	&__container
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		max-width: 644px
+		position: relative
+		padding: 45px 60px
+		background-color: #fff
+		margin: 30px auto
+		transition: opacity .5s ease, transform .5s ease
+		transform: translate3d(0, -100px, 0)
+		will-change: transform, opacity
+		+xs
+			padding: 30px 15px
+	&__title
+		margin: 0 0 25px
+		color: #231f20
+		font-size: 35px
+		line-height: 40px
+		+f('geo-900')
+		text-transform: uppercase
+		text-align: center
+		+xs
+			font-size: 30px
+			line-height: 32px
+			margin: 0 0 20px
+		&_margin
+			margin: 0 -10px
+		&_sm
+			font-size: 30px
+			line-height: 35px
+			+sm
+				margin-bottom: 0
+				font-size: 25px
+			+xs
+				margin-bottom: 15px
+				line-height: 30px
+	&__form
+		$parent: &
+		&-row
+			display: flex
+			justify-content: space-between
+			margin: 20px 0
+			+xs
+				flex-wrap: wrap
+				margin: 15px 0
+			& > #{$parent}-field
+				flex: 0 1 251px
+				+xs
+					flex: 1 0 auto
+					&:not(:first-child)
+						margin-top: 15px
+				
+		&-news
+			margin: 10px 0 15px
+		&-inner
+			display: flex
+			justify-content: space-between
+			+sm
+				flex-wrap: wrap
+				justify-content: center
+			& > #{$parent}-field
+				flex: 0 1 260px
+				+sm
+					margin: 20px 10px 0
+				+xs
+					margin: 0
+					flex: 1 0 auto
+					&:not(:first-child)
+						margin-top: 15px
+		&-field
+			+xs
+				width: 100%
+			& > #{$parent}-submit
+				width: 100%
+		&-input
+			border: 3px solid #ebebeb
+		&-textarea
+			margin-bottom: 20px
+			min-height: 112px
+			border: 3px solid #ebebeb
+		&-message
+		&-submit
+			background: #207bd2
+		&-agree
+			max-width: 300px
+			margin: 15px auto 0
+			font-size: 12px
+			line-height: 15px
+			text-align: center
+			&_margin
+				margin: 15px -20px 0
+	
+	&_lessons &__container
+		max-width: 982px
+		padding: 30px 70px 55px
+		+sm
+			max-width: 720px
+			padding: 25px 50px 35px
+		+xs
+			padding: 5px 15px 30px
+	&_call &__container
+		padding: 38px 60px 29px
+		+xs
+			padding: 30px 15px
+
+
+body.popup-opened
+	overflow: hidden
+
+.popup.opened .popup__container
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+
+.choose-city
+	&__popular
+		padding: 20px 0
+		text-align: left
+		font-size: 17px
+		border-bottom: 3px solid #ebebeb
+		&-title
+			margin-bottom: 5px
+			+f('geo-500')
+			color: #231f20
+		&-suggests a
+			display: inline-block
+			margin-bottom: 5px
+			color: #207bd2
+			&:not(:first-child)
+				margin-left: 20px
+	&__search
+		
+		&-results
+			padding: 20px 0 0
+			ul
+				column-count: 4
+				column-gap: 10px
+				text-align: left
+				+xs
+					column-count: 1
+					column-gap: 0
+				li
+					padding: 8px
+					line-height: 16px
+					font-size: 16px
+					&.is-active a
+						text-decoration: underline
+					a
+						
+						border: 0
+						color: #231f20
+						+f('geo-500')

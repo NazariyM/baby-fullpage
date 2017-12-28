@@ -192,11 +192,17 @@
 			padding-bottom: 15px
 	
 	&__dev-text
-		flex-basis: 100%
+		margin-bottom: 10px
+		flex-basis: auto
+		padding: 10px 28px
 		font-size: 15px
 		line-height: 20px
+		border-radius: 20px
+		background-color: #703782
+		color: $white
 		+sm
 			text-align: right
+			padding: 10px 8px
 		+xs
 			flex: 1 0 auto
 			text-align: center
@@ -223,70 +229,19 @@
 	+xs
 		display: none
 	&__title
-		margin-bottom: 80px
-		+r(1599)
-			margin-bottom: 60px
-		+sm
-			margin-bottom: 80px
-		+xs
-			margin-bottom: 50px
+		margin-bottom: 60px
 	&__container
-		padding: 0 15px 60px
+		position: relative
+		max-width: 1000px
+		padding: 0 15px
 		+r(1599)
 			max-width: 780px
 	&__item
-		padding-top: 51%
 		position: relative
-		text-align: center
-		&::after, &::before
-			position: absolute
-			transform-style: preserve-3d
-			content: ''
-		&::after
-			top: -40px
-			left: 0
-			right: 0
-			bottom: -40px
-			z-index: -1
-			transform: rotate3d(-130, 80, -6, -15deg)
-			background: #24a849
-		&::before
-			top: -7%
-			left: 0
-			right: -2%
-			height: 20%
-			z-index: -2
-			transform: rotate3d(26, -190, 10, -30deg)
-			background: #ffd737
-		&-figures
-			position: absolute
-			top: -3.5%
-			left: -0.5%
-			width: 80%
-			height: 100%
-			transform: rotate3d(-283, -180, 40, -20deg)
-			z-index: -2
-			background: #ffd737
-			&::after
-				position: absolute
-				content: ''
-				z-index: -2
-				width: 100%
-				height: 100%
-				right: -20%
-				top: 14%
-				-webkit-transform: rotate3d(-150, 280, 170, 9deg)
-				transform: rotate3d(-130, 350, 210, 7deg)
-				background: #ffd737
-		&-bg
+		padding-top: 55%
+		iframe
 			+coverdiv
-			+cover
-			left: 55px
-			right: 55px
-			+r(1599)
-				left: 30px
-				right: 30px
-			
+	
 .lessons
 	padding: 50px 0!important
 	background: #e6393f
@@ -308,6 +263,153 @@
 			font-size: 36px
 			line-height: 50px
 			margin-bottom: 20px
+			
+.lessons-more
+	color: #231f20
+	&__top
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+		+xs
+			margin-bottom: 5px
+	&__name
+		margin-left: 25px
+		text-align: left
+		+xs
+			margin-left: 5px
+	&__photos
+		display: flex
+		justify-content: space-between
+		+xs
+			flex-direction: column
+		&-item
+			flex: 0 1 260px
+			+cover-img
+			+sm
+				padding: 0 4px
+			+xs
+				padding: 0
+				flex: 0 1 auto
+				&:not(:first-child)
+					margin-top: 10px
+	&__title
+		margin-bottom: 12px
+		+f('geo-900')
+		font-size: 35px
+		color: #231f20
+		+xs
+			font-size: 23px
+			margin-bottom: 0
+	&__icon
+		+xs
+			transform: scale(.6)
+	&__descr
+		color: #25a84a
+		+f('geo-700', 15)
+		text-transform: uppercase
+	&__sub-title
+		margin-bottom: 8px
+		+f('geo-700', 16, 20)
+		text-transform: uppercase
+		span
+			color: #207bd2
+	&__details
+		margin-top: 20px
+		.lessons-more__sub-title
+			margin-bottom: 0
+	&__text
+		display: flex
+		padding: 25px 0 40px
+		margin-bottom: 40px
+		border-bottom: 3px solid #ebebeb
+		+sm
+			flex-direction: column
+			padding: 10px 0 0
+			border: 0
+			margin-bottom: 15px
+			
+		&-col
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			text-align: left
+			&:nth-child(1)
+				flex: 1 0 260px
+				+sm
+					order: 1
+					flex: 1 0 auto
+			
+			&:nth-child(2)
+				flex: 1 1 auto
+				padding: 0 30px
+				+sm
+					padding: 10px 0 15px
+					flex: 1 0 auto
+		p
+			font-size: 16px
+			line-height: 22px
+			&:not(:first-of-type)
+				margin-top: 10px
+		&-tags
+			font-size: 15px
+			span
+				white-space: nowrap
+				margin: 3px
+			strong
+				white-space: nowrap
+				margin: 3px
+				+f('geo-700')
+		
+	&__price
+		display: flex
+		align-items: center
+		+f('geo-700', 13)
+		color: #000
+		text-transform: uppercase
+		span
+			color: #207bd2
+			margin: 0 5px
+			+f('geo-heavy', 20)
+		&-details
+			text-transform: uppercase
+		&-wrap
+			+sm
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				padding: 10px 0
+				margin-top: 15px
+				border-top: 3px solid #ebebeb
+				border-bottom: 3px solid #ebebeb
+	&__form
+		&-in
+			display: flex
+			align-items: center
+			+sm
+				flex-wrap: wrap
+				justify-content: center
+			+xs
+				flex-direction: column
+				align-items: stretch
+		&-field
+			flex-basis: 33.33333%
+			+sm
+				flex: 0 0 260px
+			+xs
+				flex: 1 0 auto
+			&:not(:first-child)
+				margin-left: 30px
+				+xs
+					margin: 20px 0 0 0
+			&:nth-child(3)
+				+sm
+					margin: 20px 0 0 0
+		&-input
+			height: 45px
+	&__enroll-btn
+		width: 100%
+		padding: 0 15px
+		font-size: 16px
 
 .why-us
 	background: #ffd737
@@ -315,6 +417,8 @@
 		margin-bottom: 30px
 		font-size: 50px
 		line-height: 52px
+		&:not(:last-of-type)
+			margin-bottom: 0
 		+xs
 			line-height: 40px
 	&__container
@@ -342,46 +446,43 @@
 			text-align: center
 		&:nth-child(2n)
 			padding-right: 6px
+			padding-left: 8px
 			+sm
 				padding-right: 30px
 			+xs
 				padding-right: 5px
 		&:nth-child(2n) .why-us__item-descr
-			padding-left: 10px
+			padding-left: 18px
 			+xs
 				padding-left: 0
 		&:hover .why-us__item-icon
-			transform: rotateY(720deg)
+			transform: scale(1.2)
 		&-icon
-			transition: 1s .3s ease
-			&.icon-letter-k
-				position: relative
-				left: -30px
-				transform: scale(.72)
-				sm
-					left: auto
-			&.icon-letter-l
-				position: relative
-				left: 5px
-				transform: scale(.82)
-				+sm
-					left: -5px
-			&.icon-letter-u
-				position: relative
-				left: -10px
-				transform: scale(.76)
-				+sm
-					left: -15px
-			&.icon-letter-b-mod
-				position: relative
-				left: -12px
-				transform: scale(.67)
-				+sm
-					left: -15px
-		&-icon-wrap
 			display: inline-block
 			vertical-align: middle
-			width: 100px
+			transition: 1s .3s ease
+			&.icon-letter-8
+				position: relative
+				left: 3px
+			&.icon-letter-6
+				position: relative
+				left: 3px
+			&.icon-letter-7
+				position: relative
+				top: -3px
+				left: 2px
+			&.icon-letter-4
+				position: relative
+				top: -2px
+		&-icon-wrap
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			width: 96px
+			height: 96px
+			border-radius: 50%
+			background: $white
+			+vertical
 			+xs
 				margin-bottom: 10px
 		&-descr
@@ -390,6 +491,7 @@
 			vertical-align: middle
 			font-size: 16px
 			line-height: 28px
+			padding-left: 18px
 			+sm
 				padding-left: 15px
 			+xs
@@ -480,29 +582,59 @@
 	background: #703782
 	
 .eye-blink
-	display: none
 	position: absolute
 	top: 0
-	left: 0
 	&__item
 		position: absolute
-		&_left
-			&::after, &::before
-				content: ''
-				display: block
+		width: 60px
+		height: 60px
+		&::after, &::before
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+		&::after
+			width: 92px
+			height: 61px
+			background: url("../img/icons/eye-closed.png") no-repeat 50% 50%/cover
+			animation: eyeBlink2 infinite 3s 3s steps(1, end)
+		&::before
+			background: url("../img/icons/eye-opened.png") no-repeat 50% 50%/cover
+			width: 92px
+			height: 80px
+			animation: eyeBlink1 infinite 3s steps(1, end)
+	&_left
+		left: -15%
+		+sm
+			top: -7%
+			left: 1.5%
+		.eye-blink__item
 			&::after
-				width: 92px
-				height: 61px
-				background: url("../img/icons/eye-closed.png") no-repeat 50% 50%/cover
+				transform: rotate(-18deg)
+				top: 30px
+	&_right
+		right: -5%
+		+sm
+			top: -7%
+			right: 13%
+		.eye-blink__item
 			&::before
-				animation: eyeBlink infinite
-				width: 92px
-				height: 80px
-				background: url("../img/icons/eye-opened.png") no-repeat 50% 50%/cover
-		&_right
-		
-@keyframes eyeBlink
+				transform: scaleX(-1) rotate(-10deg)
+			&::after
+				top: 30px
+	
+@keyframes eyeBlink1
 	0%
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		opacity: 0
+		
+@keyframes eyeBlink2
+	0%
+		opacity: 1
+	50%
 		opacity: 0
 	100%
 		opacity: 1

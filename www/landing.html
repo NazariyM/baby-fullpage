@@ -27,6 +27,10 @@
         <symbol id="icon-check" viewBox="0 0 23 18">
           <use xlink:href="#a" transform="translate(-852 -7889)" />
         </symbol>
+        <symbol id="icon-close" viewBox="0 0 348.333 348.334">
+          <path d="M336.559 68.611L231.016 174.165l105.543 105.549c15.699 15.705 15.699 41.145 0 56.85-7.844 7.844-18.128 11.769-28.407 11.769-10.296 0-20.581-3.919-28.419-11.769L174.167 231.003 68.609 336.563c-7.843 7.844-18.128 11.769-28.416 11.769-10.285 0-20.563-3.919-28.413-11.769-15.699-15.698-15.699-41.139 0-56.85l105.54-105.549L11.774 68.611c-15.699-15.699-15.699-41.145 0-56.844 15.696-15.687 41.127-15.687 56.829 0l105.563 105.554L279.721 11.767c15.705-15.687 41.139-15.687 56.832 0 15.705 15.699 15.705 41.145.006 56.844z"
+          />
+        </symbol>
         <symbol id="icon-facebook" viewBox="0 0 155.139 155.139">
           <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
         </symbol>
@@ -140,17 +144,19 @@
       </header>
       <!--begin screen-->
       <section class="screen screen_landing section">
-        <div class="screen__container container">
-          <div class="screen__inner">
-            <div class="screen__text">
-              <h2 class="screen__title title">бэби-клуб</h2>
-              <h2 class="screen__title title">в воскресенске на ленина</h2>
-              <p>для развития детей от 8 месяцев до 7 лет</p>
+        <div class="screen__block">
+          <div class="screen__container container">
+            <div class="screen__inner">
+              <div class="screen__text">
+                <h2 class="screen__title title">бэби-клуб</h2>
+                <h2 class="screen__title title">в воскресенске на ленина</h2>
+                <p>для развития детей от 8 месяцев до 7 лет</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="screen__video">
-          <video src="static/video/screen_video_720.mp4" loop="loop" autoplay="autoplay"></video>
+          <div class="screen__video">
+            <video src="static/video/babyvideo.mp4" loop="loop" autoplay="autoplay" muted="muted"></video>
+          </div>
         </div>
       </section>
       <!--begin subs-block-->
@@ -172,6 +178,7 @@
             </div>
           </form>
         </div>
+        <div class="particles" id="js-buble-particles"></div>
       </section>
       <!--begin benefits-->
       <section class="benefits section" data-anchor="pageThree">
@@ -232,8 +239,7 @@
       <!--begin expert-->
       <section class="expert section">
         <div class="expert__container container">
-          <h2 class="expert__title title" data-anim-title="">Знакомьтесь, специалисты бэби-клуба в Черемушках</h2>
-          <h5 class="expert__sub-title title title_sm" data-anim-title="">Родители каждый день доверяют им своих детей!</h5>
+          <h2 class="expert__title title">Знакомьтесь, специалисты бэби-клуба в Черемушках</h2>
           <div class="expert__content js-expert-slider" data-anim-slow="">
             <div class="expert__content-item">
               <div class="expert__content-inner">
@@ -243,7 +249,6 @@
                 <div class="expert__content-text">
                   <div class="expert__info">
                     <div class="expert__name">Лариса Коновалова</div>
-                    <div class="expert__pos">Старший специалист по работе с детьми</div>
                   </div>
                   <div class="expert__former">
                     <p>Самарский государственный университет</p>
@@ -259,10 +264,7 @@
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-quote"></use>
                     </svg>
                   </div>
-                  <div class="expert__addition">
-                    <p>Когда Лариса уходила в отпуск, малыши каждое утро спрашивали про неё.</p>
-                  </div>
-                  <a class="btn btn_yellow" href="#!">Задать вопрос специалисту</a>
+                  <a class="expert__btn btn btn_yellow" href="#!">Задать вопрос специалисту</a>
                 </div>
               </div>
             </div>
@@ -274,7 +276,6 @@
                 <div class="expert__content-text">
                   <div class="expert__info">
                     <div class="expert__name">Лариса Коновалова</div>
-                    <div class="expert__pos">Старший специалист по работе с детьми</div>
                   </div>
                   <div class="expert__former">
                     <p>Самарский государственный университет</p>
@@ -290,44 +291,37 @@
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-quote"></use>
                     </svg>
                   </div>
-                  <div class="expert__addition">
-                    <p>Когда Лариса уходила в отпуск, малыши каждое утро спрашивали про неё.</p>
-                  </div>
-                  <a class="btn btn_yellow" href="#!">Задать вопрос специалисту</a>
+                  <a class="expert__btn btn btn_yellow" href="#!">Задать вопрос специалисту</a>
                 </div>
               </div>
             </div>
           </div>
+          <h5 class="expert__sub-title title title_sm" data-anim-slow="">Родители каждый день доверяют им своих детей!</h5>
         </div>
       </section>
       <!--begin spec-block-->
-      <section class="spec-block section fp-auto-height">
+      <section class="spec-block section">
         <div class="spec-block__container container">
-          <h2 class="spec-block__title title" data-anim-title="">каждый специалист бэби-клуба</h2>
+          <h2 class="spec-block__title title" data-anim-title="">Специалист Бэби-клуба 5 звёзд</h2>
+          <h6 class="spec-block__sub-title">Как рождается 5-звёздочный специалист по работе с детьми?</h6>
+          <div class="spec-block__image" data-anim-slow="">
+            <img src="static/img/bg/planets.png" alt="image" title="" />
+          </div>
           <div class="spec-block__inner">
-            <div class="spec-block__item" data-anim-fast="">
-              <div class="spec-block__item-icon-wrap">
-                <div class="spec-block__item-icon icon-letter-c"></div>
-              </div>
-              <p>Любит детей и с радостью делится знаниями с родителями</p>
+            <div class="spec-block__item" data-anim-slow="">
+              <p>1. Только 3 из 100 соискателей проходят многоступенчатый конкурсный отбор: видеорезюме, эссе, личное собеседование, тест, пробный урок, обучение, испытательный срок</p>
             </div>
-            <div class="spec-block__item" data-anim-fast="">
-              <div class="spec-block__item-icon-wrap">
-                <div class="spec-block__item-icon icon-letter-o"></div>
-              </div>
-              <p>Стал одним из 30, кто прошел многоступенчатый конкурсный отбор и доказал, что он - педагог по призванию</p>
+            <div class="spec-block__item" data-anim-slow="">
+              <p>2. Каждый утвержденный кандидат проходит 8-дневное обучение методам и подходам бережного развития детей</p>
             </div>
-            <div class="spec-block__item" data-anim-fast="">
-              <div class="spec-block__item-icon-wrap">
-                <div class="spec-block__item-icon icon-letter-b-mod"></div>
-              </div>
-              <p>Готов к ежегодным аттестациям и познанию всего нового в мире педагогики</p>
+            <div class="spec-block__item" data-anim-slow="">
+              <p>3. Работая в Бэби-клубе, каждый специалист продолжает ежемесячно повышать свою квалификацию на Тематических онлайн-семинарах и консультациях с опытными кураторами-методистами</p>
             </div>
-            <div class="spec-block__item" data-anim-fast="">
-              <div class="spec-block__item-icon-wrap">
-                <div class="spec-block__item-icon icon-letter-u"></div>
-              </div>
-              <p>Освоил метод бережного всестороннего развития детей на корпоративном обучении Бэби-клуба</p>
+            <div class="spec-block__item" data-anim-slow="">
+              <p>4. Ежегодно подтверждает свою квалификацию на Аттестации «5 звёзд» в управляющей компании сети</p>
+            </div>
+            <div class="spec-block__item" data-anim-slow="">
+              <p>5. Принимает активное участие в Ежегодном общем съезде всех специалистов сети «Бэби-клуб», делится опытом и осваивает новые методики</p>
             </div>
           </div>
         </div>
@@ -411,15 +405,15 @@
           </div>
           <div class="interior__slider-item">
             <h2 class="interior__title title" data-anim-title="">Красота</h2>
-            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-2.jpg);"></div>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/krasota_1.jpg);"></div>
           </div>
           <div class="interior__slider-item">
             <h2 class="interior__title title" data-anim-title="">Чистота</h2>
-            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-3.jpg);"></div>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/chistota.jpg);"></div>
           </div>
           <div class="interior__slider-item">
             <h2 class="interior__title title" data-anim-title="">Уют</h2>
-            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-4.jpg);"></div>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/uyut_1.jpg);"></div>
           </div>
           <div class="interior__slider-item">
             <h2 class="interior__title title" data-anim-title="">Атмосфера</h2>
@@ -427,20 +421,25 @@
           </div>
           <div class="interior__slider-item">
             <h2 class="interior__title title" data-anim-title="">Безопасность</h2>
-            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-6.png);"></div>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/bezopasnost_1.jpg);"></div>
           </div>
           <div class="interior__slider-item">
             <h2 class="interior__title title" data-anim-title="">Удобство</h2>
-            <div class="interior__slider-img" style="background-image: url(static/img/content/interior-7.jpg);"></div>
+            <div class="interior__slider-img" style="background-image: url(static/img/content/udobstvo_1.jpg);"></div>
           </div>
         </div>
       </section>
       <section class="excurs section">
         <div class="excurs__container container">
-          <h2 class="excurs__title title title_black" data-anim-title="">Экскурсия по клубу</h2>
+          <h2 class="excurs__title title title_black">Экскурсия по клубу</h2>
           <div class="excurs__item" data-anim-slow="">
-            <div class="excurs__item-figures"></div>
-            <div class="excurs__item-bg" style="background-image: url(static/img/content/excurs.jpg);"></div>
+            <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" src="https://www.google.com/maps/embed?pb=!1m0!4v1509359904998!6m8!1m7!1sCAoSLEFGMVFpcE1qU251NERLeTZzeHdYcVhBUEdlOE1RalpDSnhST2NYdVRqa1ho!2m2!1d56.80434585174958!2d60.60212430131583!3f263.33275510786723!4f24.302912106065634!5f0.7820865974627469"></iframe>
+          </div>
+          <div class="eye-blink eye-blink_left">
+            <div class="eye-blink__item"></div>
+          </div>
+          <div class="eye-blink eye-blink_right">
+            <div class="eye-blink__item"></div>
           </div>
         </div>
       </section>
@@ -918,18 +917,7 @@
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use>
                   </svg>
                 </span>
-                <span>5,5 — 6,5 года</span>
-              </label>
-            </div>
-            <div class="check-box">
-              <input id="check-8" type="checkbox" name="" />
-              <label for="check-8">
-                <span class="check-box__square">
-                  <svg class="icon icon-check">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use>
-                  </svg>
-                </span>
-                <span>Любой возраст</span>
+                <span>5,5 — 7 лет</span>
               </label>
             </div>
           </div>
@@ -940,19 +928,35 @@
                 <span class="schedule__event-time">10:00 - 11:30</span>
                 <span class="schedule__event-name">Бэби-класс 1</span>
               </div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
             </div>
             <div class="schedule__day">
               <div class="schedule__day-name">Вторник</div>
-              <div class="schedule__event">
-                <span class="schedule__event-time">10:00 - 11:30</span>
-                <span class="schedule__event-name">Бэби-класс 1</span>
+              <div class="schedule__event schedule__event_half">
+                <span class="schedule__event-time">10:00 10:45</span>
+                <span class="schedule__event-name">Бэбик 1</span>
               </div>
-              <div class="schedule__event">
-                <span class="schedule__event-time">11:00 - 12:00</span>
+              <div class="schedule__event schedule__event_half">
+                <span class="schedule__event-time">10:00 10:45</span>
                 <span class="schedule__event-name">Бэбик 2</span>
               </div>
               <div class="schedule__event">
-                <span class="schedule__event-time">13:00 - 14:00</span>
+                <span class="schedule__event-time">11:00 - 12:00</span>
+                <span class="schedule__event-name">Бэбик 3</span>
+              </div>
+              <div class="schedule__event">
+                <span class="schedule__event-time">12:00 - 13:00</span>
+                <span class="schedule__event-name">Бэби-сад</span>
+              </div>
+              <div class="schedule__event">
+                <span class="schedule__event-time">13: - 13:30</span>
+                <span class="schedule__event-name">Бэби-класс 1</span>
+              </div>
+              <div class="schedule__event">
+                <span class="schedule__event-time">13:30 - 14:00</span>
                 <span class="schedule__event-name">Бэби-класс 2</span>
               </div>
             </div>
@@ -966,6 +970,9 @@
                 <span class="schedule__event-time">09:00 - 13:00</span>
                 <span class="schedule__event-name">Бэби-сад</span>
               </div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
             </div>
             <div class="schedule__day">
               <div class="schedule__day-name">Четверг</div>
@@ -973,20 +980,32 @@
                 <span class="schedule__event-time">09:00 - 13:00</span>
                 <span class="schedule__event-name">Бэби-сад</span>
               </div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
             </div>
             <div class="schedule__day">
               <div class="schedule__day-name">Пятница</div>
               <div class="schedule__event">
-                <span class="schedule__event-time">10:00 - 11:30</span>
+                <span class="schedule__event-time">10:00 - 10:45</span>
                 <span class="schedule__event-name">Бэбик 1</span>
               </div>
               <div class="schedule__event">
                 <span class="schedule__event-time">11:00 - 12:00</span>
-                <span class="schedule__event-name">Бэбик 2</span>
+                <span class="schedule__event-name">Бэбик 3</span>
               </div>
               <div class="schedule__event">
-                <span class="schedule__event-time">13:00 - 14:00</span>
+                <span class="schedule__event-time">12:00 - 13:00</span>
+                <span class="schedule__event-name">Бэби-сад</span>
+              </div>
+              <div class="schedule__event">
+                <span class="schedule__event-time">13:00 - 13:30</span>
                 <span class="schedule__event-name">Бэби-класс 1</span>
+              </div>
+              <div class="schedule__event">
+                <span class="schedule__event-time">13:30 - 14:00</span>
+                <span class="schedule__event-name">Бэби-класс 2</span>
               </div>
             </div>
             <div class="schedule__day">
@@ -999,6 +1018,9 @@
                 <span class="schedule__event-time">09:00 - 13:00</span>
                 <span class="schedule__event-name">Бэби-сад</span>
               </div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
             </div>
             <div class="schedule__day">
               <div class="schedule__day-name">Воскресенье</div>
@@ -1006,48 +1028,80 @@
                 <span class="schedule__event-time">10:00 - 11:30</span>
                 <span class="schedule__event-name">Бэби-класс 1</span>
               </div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
+              <div class="schedule__event"></div>
             </div>
           </div>
         </div>
       </section>
       <!--begin library-->
-      <section class="library section">
+      <section class="library section" data-anim-slow="">
         <div class="library__container container">
-          <h2 class="library__title title" data-anim-title="">Бэби-библиотека</h2>
-          <div class="library__content" data-anim-slow="">
-            <div class="library__content-img">
-              <span class="library__content-label">Бестселлер на Оzon.ru</span>
-              <img src="static/img/content/library-book.png" alt="image" title="" />
-            </div>
-            <div class="library__content-info">
-              <div class="library__content-text">
-                <h4 class="library__content-name">«После трёх уже поздно»</h4>
-                <h5 class="library__content-author">Масару Ибука</h5>
-                <p>Легендарная книга расскажет о необходимости и важности раннего развития. Ведь первые три года жизни — неповторимый период в формировании интеллектуальных способностей ребенка, когда каждый день — значительный этап бурного и всестороннего
-                  развития.</p>
-                <div class="library__content-descr">
-                  <p>243 000 экземпляров</p>
-                  <p>2011 г. — Книжная премия Рунета в двух номинациях:</p>
-                  <p>«Выбор пользователей» и «Бестселлер на Озоне»</p>
+          <h2 class="library__title title">Бэби-библиотека</h2>
+          <div class="library__slider js-library-slider">
+            <div class="library__item">
+              <div class="library__content">
+                <div class="library__content-img">
+                  <span class="library__content-label">Бестселлер на Оzon.ru</span>
+                  <img src="static/img/content/library-book.png" alt="image" title="" />
+                </div>
+                <div class="library__content-info">
+                  <div class="library__content-text">
+                    <h4 class="library__content-name">«После трёх уже поздно»</h4>
+                    <h5 class="library__content-author">Масару Ибука</h5>
+                    <p>Легендарная книга расскажет о необходимости и важности раннего развития. Ведь первые три года жизни — неповторимый период в формировании интеллектуальных способностей ребенка, когда каждый день — значительный этап бурного и всестороннего
+                      развития.</p>
+                    <div class="library__content-descr">
+                      <p>243 000 экземпляров</p>
+                      <p>2011 г. — Книжная премия Рунета в двух номинациях:</p>
+                      <p>«Выбор пользователей» и «Бестселлер на Озоне»</p>
+                    </div>
+                  </div>
+                  <div class="library__content-actions">
+                    <a class="library__content-btn btn btn_yellow" href="#!">Получить книгу на e-mail</a>
+                    <a class="library__content-btn btn btn_purple" href="#!">Смотреть всю Бэбиблиотеку</a>
+                  </div>
                 </div>
               </div>
-              <div class="library__content-actions">
-                <a class="library__content-btn btn btn_yellow" href="#!">Получить книгу на e-mail</a>
-                <a class="library__content-btn btn btn_purple" href="#!">Смотреть всю Бэбиблиотеку</a>
+            </div>
+            <div class="library__item">
+              <div class="library__content">
+                <div class="library__content-img">
+                  <span class="library__content-label library__content-label_offset">Бестселлер на Оzon.ru</span>
+                  <img src="static/img/content/library-book-2.jpg" alt="image" title="" />
+                </div>
+                <div class="library__content-info">
+                  <div class="library__content-text">
+                    <h4 class="library__content-name">«Рожденные с характером»</h4>
+                    <h5 class="library__content-author">Евгения Белонощенко</h5>
+                    <p>Хотите узнать, почему ваш ребенок боится темноты, все ломает, не любит делиться игрушками или часто нюхает еду? Читайте книгу основателя Бэби-клуба, психолога Евгении Белонощенко «Рожденные с характером», и вы познакомитесь с популярным
+                      изложением теории, которая в свое время произвела эффект фейерверка в психологическом мире.</p>
+                    <div class="library__content-descr">
+                      <p>C 2013 года книгу «Рожденные с характером» скачали 35778 раз</p>
+                    </div>
+                  </div>
+                  <div class="library__content-actions">
+                    <a class="library__content-btn btn btn_yellow" href="#!">Получить книгу на e-mail</a>
+                    <a class="library__content-btn btn btn_purple" href="#!">Смотреть всю Бэбиблиотеку</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!--+b.particles#js-nuts-particles-->
+        <div class="particles" id="js-nuts-particles"></div>
       </section>
       <!--begin why-us-->
       <section class="why-us section" data-anchor="why-us">
         <div class="why-us__container container">
-          <h2 class="why-us__title title title_black" data-anim-title="">почему каждый месяц 25 000 детей приходят в бэби-клуб</h2>
+          <h2 class="why-us__title title title_black">почему каждый месяц</h2>
+          <h2 class="why-us__title title title_black">25 000 детей приходят в бэби-клуб</h2>
           <div class="why-us__inner">
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
-                <div class="why-us__item-icon icon-letter-bottle-m"></div>
+                <div class="why-us__item-icon icon-letter-1"></div>
               </div>
               <div class="why-us__item-descr">
                 <p>Мы внимательно относимся к психологическому здоровью детей. Они познают мир в комфортном для себя ритме, который зависит от особенностей восприятия и харектера каждого.</p>
@@ -1055,7 +1109,7 @@
             </div>
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
-                <div class="why-us__item-icon icon-letter-k"></div>
+                <div class="why-us__item-icon icon-letter-2"></div>
               </div>
               <div class="why-us__item-descr">
                 <p>В большинстве наших клубов уже установлено видеонаблюдение, что бы родители могли быть спокойны за своего ребенка и... первым радоваться его успехам!</p>
@@ -1063,7 +1117,7 @@
             </div>
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
-                <div class="why-us__item-icon icon-letter-e"></div>
+                <div class="why-us__item-icon icon-letter-3"></div>
               </div>
               <div class="why-us__item-descr">
                 <p>Даже самым непоседливым ребятам в Бэби-клубе комфортно — дети могут чувствовать себя свободно во время затяний и они не устают, чередуя короткие задание с увлекательными переменками.</p>
@@ -1071,7 +1125,7 @@
             </div>
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
-                <div class="why-us__item-icon icon-letter-l"></div>
+                <div class="why-us__item-icon icon-letter-4"></div>
               </div>
               <div class="why-us__item-descr">
                 <p>Зрение и осанда детей поддерживатся в первозданном виде благодаря использованию только здоровьесберегающих методик. Подвижные игры, музыкальные и танцевальные минутки помогают сохранять «в здоровом теле здоровый дух».</p>
@@ -1079,7 +1133,7 @@
             </div>
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
-                <div class="why-us__item-icon icon-letter-b"></div>
+                <div class="why-us__item-icon icon-letter-5"></div>
               </div>
               <div class="why-us__item-descr">
                 <p>Мы помогаем родителям психологически грамотно общаться со своим ребёнком, чтобы малыш вырос гармоничным человекм, способным найти своё истинное призвание.</p>
@@ -1087,7 +1141,7 @@
             </div>
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
-                <div class="why-us__item-icon icon-letter-u"></div>
+                <div class="why-us__item-icon icon-letter-6"></div>
               </div>
               <div class="why-us__item-descr">
                 <p>Что бы пребывание ребенка в клубе было комфортным и безопасным, в проведении затяния принимают участие специалист по работе с детьми и помошник.</p>
@@ -1095,7 +1149,7 @@
             </div>
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
-                <div class="why-us__item-icon icon-letter-i"></div>
+                <div class="why-us__item-icon icon-letter-7"></div>
               </div>
               <div class="why-us__item-descr">
                 <p>Мы проводим тренинги для взрослых: учим родителей понимать воих детей и принимать особенности их характеров.</p>
@@ -1103,7 +1157,7 @@
             </div>
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
-                <div class="why-us__item-icon icon-letter-b-mod"></div>
+                <div class="why-us__item-icon icon-letter-8"></div>
               </div>
               <div class="why-us__item-descr">
                 <p>Специалист по работе с детьми всегда с радостью расскажет об успехах именно вашего ребенка и ответит на все ваши вопросы о его развития.</p>
@@ -1115,7 +1169,8 @@
       <!--begin thanks-->
       <section class="thanks section" data-anchor="thanks">
         <div class="thanks__container container">
-          <h2 class="thanks__title title" data-anim-title="">1000 спасибо</h2>
+          <h2 class="thanks__title title">
+            <span data-anim-count="1000">1000</span> спасибо</h2>
           <!--begin tabs-->
           <div class="c-tabs c-tabs_landing">
             <div class="c-tabs__tabs-nav">
@@ -1173,22 +1228,22 @@
         <section class="video-blog">
           <div class="video-blog__container container">
             <h2 class="video-blog__title title" data-anim-title="">ВИДЕО-блог</h2>
-            <div class="video-blog__inner" data-anim-slow="">
-              <div class="video-blog__video">
+            <div class="video-blog__inner">
+              <div class="video-blog__video" data-anim-slow="">
                 <div class="video-blog__video-text js-video-text">
                   <p>Как мы развиваем 10 видов интеллекта</p>
                 </div>
                 <div class="video-blog__video-trigger js-play-video"></div>
                 <iframe src="https://www.youtube.com/embed/5zDWEog9CJE?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
               </div>
-              <div class="video-blog__video">
+              <div class="video-blog__video" data-anim-slow="">
                 <div class="video-blog__video-text js-video-text">
                   <p>О главных смыслах метода Бэби-клуба</p>
                 </div>
                 <div class="video-blog__video-trigger js-play-video"></div>
                 <iframe src="https://www.youtube.com/embed/5zDWEog9CJE?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
               </div>
-              <div class="video-blog__video">
+              <div class="video-blog__video" data-anim-slow="">
                 <div class="video-blog__video-text js-video-text">
                   <p>Реалити-проект «Я уже читаю»: C группой деток от 8 месяцев</p>
                 </div>
@@ -1212,7 +1267,7 @@
               <div class="subs-block__form-field">
                 <input class="subs-block__form-submit btn btn_blue" type="submit" value="Записаться на встречу" />
                 <p class="subs-block__form-agree">* Оставляя свои контакты данные, Вы соглашаетесь с
-                  <a class="underlined" href="static/assets/polytics.docx" target="_blank">политикой конфиденциольности</a>
+                  <a class="underlined" href="static/assets/polytics.docx" target="_blank">политикой конфиденциальности</a>
                 </p>
               </div>
             </form>

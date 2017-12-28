@@ -2,28 +2,50 @@ if library ? library : library = []
 if library.title ? library.title : library.title = 'Бэби-библиотека'
 
 //begin library
-+b.SECTION.library.section(class= library.classMod ? library.classMod : '')
++b.SECTION.library.section(class= library.classMod ? library.classMod : '' data-anim-slow='')
 	+e.container.container
-		+e.H2.title.title(data-anim-title='')= library.title
-		+e.content(data-anim-slow='')
+		+e.H2.title.title= library.title
+		+e.slider.js-library-slider
+			+e.item
+				+e.content
 
-			+e.content-img
-				+e.SPAN.content-label Бестселлер на Оzon.ru
-				+e.IMG(src='static/img/content/library-book.png' alt='image')
-			+e.content-info
+					+e.content-img
+						+e.SPAN.content-label Бестселлер на Оzon.ru
+						+e.IMG(src='static/img/content/library-book.png' alt='image')
+					+e.content-info
 
-				+e.content-text
-					+e.H4.content-name «После трёх уже поздно»
-					+e.H5.content-author Масару Ибука
-					+e.P Легендарная книга расскажет о необходимости и важности раннего развития. Ведь первые три года жизни — неповторимый период в формировании интеллектуальных способностей ребенка, когда каждый день — значительный этап бурного и всестороннего развития.
+						+e.content-text
+							+e.H4.content-name «После трёх уже поздно»
+							+e.H5.content-author Масару Ибука
+							+e.P Легендарная книга расскажет о необходимости и важности раннего развития. Ведь первые три года жизни — неповторимый период в формировании интеллектуальных способностей ребенка, когда каждый день — значительный этап бурного и всестороннего развития.
 
-					+e.content-descr
-						+e.P 243 000 экземпляров
-						+e.P 2011 г. — Книжная премия Рунета в двух номинациях:
-						+e.P «Выбор пользователей» и «Бестселлер на Озоне»
+							+e.content-descr
+								+e.P 243 000 экземпляров
+								+e.P 2011 г. — Книжная премия Рунета в двух номинациях:
+								+e.P «Выбор пользователей» и «Бестселлер на Озоне»
 
-				+e.content-actions
-					+e.A.content-btn.btn._yellow(href='#!') Получить книгу на e-mail
-					+e.A.content-btn.btn._purple(href='#!') Смотреть всю Бэбиблиотеку
+						+e.content-actions
+							+e.A.content-btn.btn._yellow(href='#!') Получить книгу на e-mail
+							+e.A.content-btn.btn._purple(href='#!') Смотреть всю Бэбиблиотеку
 
-	//+b.particles#js-nuts-particles
+			+e.item
+				+e.content
+
+					+e.content-img
+						+e.SPAN.content-label._offset Бестселлер на Оzon.ru
+						+e.IMG(src='static/img/content/library-book-2.jpg' alt='image')
+					+e.content-info
+
+						+e.content-text
+							+e.H4.content-name «Рожденные с характером»
+							+e.H5.content-author Евгения Белонощенко
+							+e.P Хотите узнать, почему ваш ребенок боится темноты, все ломает, не любит делиться игрушками или часто нюхает еду? Читайте книгу основателя Бэби-клуба, психолога Евгении Белонощенко «Рожденные с характером», и вы познакомитесь с популярным изложением теории, которая в свое время произвела эффект фейерверка в психологическом мире.
+
+							+e.content-descr
+								+e.P C 2013 года книгу «Рожденные с характером» скачали 35778 раз
+
+						+e.content-actions
+							+e.A.content-btn.btn._yellow(href='#!') Получить книгу на e-mail
+							+e.A.content-btn.btn._purple(href='#!') Смотреть всю Бэбиблиотеку
+
+	+b.particles#js-nuts-particles

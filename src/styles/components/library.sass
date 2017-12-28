@@ -1,5 +1,6 @@
 .library
 	position: relative
+	z-index: 1
 	background: #703782
 	+xs
 		background: url("../img/bg/library_bg.png") no-repeat 50% 50%/cover
@@ -10,14 +11,32 @@
 		+sm
 			padding: 20px 15px 0
 	&__title
-		margin-bottom: 40px
+		margin-bottom: 30px
 		+lg
 			margin-bottom: 20px
 		+xs
-			margin-bottom: 50px
+			font-size: 28px
+	
+	&__slider
+		.slider-btn
+			&_prev
+				left: -15%
+				+r(1599)
+					left: -10%
+				+xs
+					display: none!important
+			&_next
+				right: -15%
+				+r(1599)
+					right: -10%
+				+sm
+					right: 5%
+					top: 20%
+				
 	&__content
 		display: flex
 		align-items: center
+		padding-top: 30px
 		+sm
 			flex-wrap: wrap
 		&-img
@@ -45,9 +64,19 @@
 			border-radius: 50%
 			+f('geo-700', 14, 18)
 			text-align: center
+			+xs
+				width: 95px
+				height: 95px
+				right: -20px
+				top: -30px
+			&_offset
+				right: -30px
+				top: -30px
 		&-info
 			flex: 1 1 auto
-			padding-left: 24px
+			padding-left: 40px
+			+r(1365)
+				padding-left: 20px
 			+xs
 				padding-left: 0
 		&-text
@@ -56,8 +85,6 @@
 			+sm
 				font-size: 18px
 				line-height: 24px
-			p
-				padding-right: 25px
 		&-name
 			+f('geo-700', 40, 50)
 			+lg
@@ -71,7 +98,7 @@
 				line-height: 40px
 		&-descr
 			margin: 40px 0
-			+f('geo-700', 20, 35)
+			+f('geo-700', 19, 35)
 			+lg
 				margin: 20px 0
 				font-size: 18px
@@ -85,8 +112,8 @@
 		&-btn
 			display: inline-block
 			vertical-align: middle
-			min-width: 318px
-			padding: 0 30px
+			min-width: 300px
+			padding: 0 20px
 			+md
 				min-width: 290px
 				padding: 0 15px

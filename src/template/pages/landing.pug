@@ -36,9 +36,10 @@ block variables
 	-footerClass = ['_landing']
 
 block main
-	-screen = {classMod: '_landing', title: 'бэби-клуб', subTitle: 'в воскресенске на ленина', actions: false}
+	-screen = {classMod: '_landing', title: 'бэби-клуб', subTitle: 'в воскресенске на ленина', video: 'babyvideo', actions: false}
 	include ../components/screen
 
+	-subsBlock = {particles: true}
 	include ../components/subs-block
 
 	include ../components/benefits
@@ -53,10 +54,14 @@ block main
 
 	+b.SECTION.excurs.section
 		+e.container.container
-			+e.H2.title.title._black(data-anim-title='') Экскурсия по клубу
+			+e.H2.title.title._black Экскурсия по клубу
 			+e.item(data-anim-slow='')
-				+e.item-figures
-				+e.item-bg(style='background-image: url(static/img/content/excurs.jpg)')
+				iframe(width="100%" height="100%" frameborder="0" allowfullscreen="1" src='https://www.google.com/maps/embed?pb=!1m0!4v1509359904998!6m8!1m7!1sCAoSLEFGMVFpcE1qU251NERLeTZzeHdYcVhBUEdlOE1RalpDSnhST2NYdVRqa1ho!2m2!1d56.80434585174958!2d60.60212430131583!3f263.33275510786723!4f24.302912106065634!5f0.7820865974627469')
+
+			+b.eye-blink._left
+				+e.item
+			+b.eye-blink._right
+				+e.item
 
 
 	include ../components/lessons
@@ -70,7 +75,10 @@ block main
 	//begin thanks
 	+b.SECTION.thanks.section(data-anchor='thanks')
 		+e.container.container
-			+e.H2.title.title(data-anim-title='') 1000 спасибо
+			+e.H2.title.title
+				+e.SPAN(data-anim-count='1000') 1000
+				=  ' '
+				| спасибо
 
 			//begin tabs
 			+b.c-tabs._landing
@@ -121,18 +129,18 @@ block main
 			+e.container.container
 
 				+e.H2.title.title(data-anim-title='') ВИДЕО-блог
-				+e.inner(data-anim-slow='')
-					+e.video
+				+e.inner
+					+e.video(data-anim-slow='')
 						+e.video-text.js-video-text
 							+e.P Как мы развиваем 10 видов интеллекта
 						+e.video-trigger.js-play-video
 						iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
-					+e.video
+					+e.video(data-anim-slow='')
 						+e.video-text.js-video-text
 							+e.P О главных смыслах метода Бэби-клуба
 						+e.video-trigger.js-play-video
 						iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
-					+e.video
+					+e.video(data-anim-slow='')
 						+e.video-text.js-video-text
 							+e.P Реалити-проект «Я уже читаю»: C группой деток от 8 месяцев
 						+e.video-trigger.js-play-video
@@ -152,6 +160,6 @@ block main
 						+e.INPUT.form-submit.btn._blue(type='submit' value='Записаться на встречу')
 						+e.P.form-agree * Оставляя свои контакты данные, Вы соглашаетесь с
 							= ' '
-							+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциольности
+							+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциальности
 
 	include ../components/contact

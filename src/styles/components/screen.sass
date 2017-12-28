@@ -4,39 +4,40 @@
 	z-index: -1
 	padding-top: 120px !important
 	+sm
-		padding-top: 10px!important
+		padding-top: 80px!important
+		height: 100vh!important
 		background: #e6393f url("../img/bg/hearts_bg.png") repeat 50% 50%
 	+xs
 		height: 100vh
 		padding-top: 70px!important
 		background: url("../img/bg/screen_bg.jpg") no-repeat 50% 50%
 		z-index: auto
+	&__block
+		+sm
+			height: 100%
+			display: flex
+			flex-direction: column
 	&__container
 		text-align: center
 		+sm
-			display: table-footer-group
-		+xs
 			display: flex
 			align-items: center
 			justify-content: center
+			order: 1
 			height: 100%
+			
 	&__text
 		position: relative
 		z-index: 3
 		margin-bottom: 20vh
 		text-shadow: 0 0 10px rgba($black, .6)
-		+r(1599)
-			margin-top: -150px
-			margin-bottom: 0
-		+sm
-			margin-top: 160px
 		+xs
 			margin-top: 0
 		#{$parent}_landing &
 			margin-bottom: 0
 		p
 			max-width: 500px
-			margin: 0 auto
+			margin: 40px auto 0
 			color: $white
 			+f('geo-500', 45, 55)
 			+r(1599)
@@ -83,7 +84,6 @@
 		z-index: 2
 		+sm
 			position: static
-			display: table-header-group
 		+xs
 			display: none
 		video

@@ -16,3 +16,6 @@ if subsBlock.title ? subsBlock.title : subsBlock.title = 'запишитесь �
 				+e.P.form-agree * Оставляя свои контакты данные, Вы соглашаетесь с
 					= ' '
 					+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциальности
+
+	if subsBlock.particles
+		+b.particles#js-buble-particles

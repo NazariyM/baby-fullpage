@@ -1,0 +1,176 @@
+mixin popup(el)
+	case el.name
+		when 'ask'
+			// begin ask pop-up
+			+b.popup(data-popup-id='ask-teacher', tabindex='-1', role='dialog')
+				+e.container
+					+e.close: +i('close')
+
+					+e.H3.title Задать вопрос педагогу
+					+e.FORM.form(action='#!' method='POST')
+						+e.form-field
+							+e.INPUT.form-input.input(type='text' placeholder='Ваше имя' name='' required)
+						+e.form-row
+							+e.form-field
+								+e.INPUT.form-input.input(type='text' placeholder='Ваше телефон' name='' required)
+							+e.form-field
+								+e.INPUT.form-input.input(type='text' placeholder='Ваше email' name='' required)
+						+e.form-message
+							+e.TEXTAREA.form-textarea.textarea(placeholder='Ваш вопрос')
+
+						+e.INPUT.form-submit.btn._blue(type='submit' value='Отправить вопрос')
+						+e.P.form-agree * Оставляя свои контактные данные, вы соглашаетесь с
+							+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциальности
+
+		when 'call'
+			// begin ask pop-up
+			+b.popup._call(data-popup-id='order-call', tabindex='-1', role='dialog')
+				+e.container
+					+e.close: +i('close')
+
+					+e.H3.title ЗАКАЗАТЬ ЗВОНОК
+					+e.FORM.form(action='#!' method='POST')
+						+e.form-row
+							+e.form-field
+								+e.INPUT.form-input.input(type='text' placeholder='Ваше имя' name='' required)
+							+e.form-field
+								+e.INPUT.form-input.input(type='text' placeholder='Ваше телефон' name='' required)
+
+						+e.INPUT.form-submit.btn._blue(type='submit' value='Заказать звонок')
+						+e.P.form-agree * Оставляя свои контактные данные, Вы соглашаетесь с
+							+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциальности
+
+		when 'choose-city'
+			// begin choose-city pop-up
+			+b.popup(data-popup-id='choose-city', tabindex='-1', role='dialog')
+				+e.container
+					+e.close
+						+i('close')
+
+					+b.choose-city
+						+b.H3.popup__title ВЫБЕРИТЕ ГОРОД
+						+b.FORM.popup__form(action='#!' method='POST')
+							+b.popup__form-field
+								+b.INPUT.popup__form-input.input(type='text' placeholder='Введите название города' name='' required)
+
+							+b.choose-city__popular
+								+b.choose-city__popular-title Популярные города:
+								+b.choose-city__popular-suggests
+									+b.A.underlined(href='#!') Москва
+									+b.A.underlined(href='#!') Санкт-Питербург
+									+b.A.underlined(href='#!') Екатеринбург
+									+b.A.underlined(href='#!') Краснодар
+
+						+b.choose-city__search-results
+							+b.UL
+								li: a(href='#!') Абакан
+								li: a(href='#!') Архангельск
+								li: a(href='#!') Анапа
+								li: a(href='#!') Астрахань
+
+								li: a(href='#!') Абакан
+								li: a(href='#!') Архангельск
+								li: a(href='#!') Анапа
+								li: a(href='#!') Астрахань
+
+								li: a(href='#!') Абакан
+								li: a(href='#!') Архангельск
+								li: a(href='#!') Анапа
+								li: a(href='#!') Астрахань
+
+								li: a(href='#!') Абакан
+								li: a(href='#!') Архангельск
+								li: a(href='#!') Анапа
+								li: a(href='#!') Астрахань
+
+		when 'lessons-more'
+			// begin lessons-more pop-up
+			+b.popup._lessons(data-popup-id='lessons-more', tabindex='-1', role='dialog')
+				+e.container
+					+e.close
+						+i('close')
+					+b.lessons-more
+						+e.top
+							+e.icon
+								.icon-letter-bottle
+							+e.name
+								+e.title БЭБИК-1
+								+e.descr 8 мес. — 1,5 года
+
+						+e.photos
+							+e.photos-item
+								+e.IMG(src='static/img/content/babyc-1.jpg' alt='image')
+							+e.photos-item
+								+e.IMG(src='static/img/content/babyc-2.jpg' alt='image')
+							+e.photos-item
+								+e.IMG(src='static/img/content/babyc-3.jpg' alt='image')
+
+						+e.text
+							+e.text-col
+								+e.text-tags
+									+e.SPAN Социализация
+									+e.STRONG Словарный запас
+									+e.STRONG
+										+e.I Пальчиковая гимнастика
+									+e.STRONG Логоритмика
+									+e.SPAN Буквы
+									+e.SPAN Танцы
+									+e.SPAN Координация движений
+									+e.SPAN Игры
+									+e.STRONG Моторика
+									+e.SPAN Цифры
+
+								+e.price-wrap
+									+e.price ОТ
+										= ' '
+										+e.SPAN 5 200 РУБ.
+										= ' '
+										| В МЕСЯЦ
+									+e.P.price-details За 8 затяний
+
+							+e.text-col
+								+e.H5.sub-title что изучаем и развиваем?
+								+e.P Малыши учатся общаться с другими детьми, узнают новые слова, предметы и явления окружающего мира.
+								+e.P Точки на ладошках отвечают за развитие речевого центра малышей: делая пальчиковую гимнастику и развивая мелкую моторику, мы готовим детей к речи.
+								+e.P Развитие ловкости и координации движений малышей также очень важно для этого возраста.
+								+e.P В игре малыши не только приобретают коммуникативные навыки, но и начинают чувствовать себя более уверенно в новом пространстве.
+								+e.details
+									+e.H5.sub-title Продолжительность занятия:
+										= ' '
+										+e.SPAN 1,5 часа
+
+						+b.FORM.popup__form(action='#!' method='POST')
+							+b.H4.popup__title._sm запишишь на ознакомительное занятие
+							+b.popup__form-inner
+								+b.popup__form-field
+									+b.INPUT.popup__form-input.input(type='text' placeholder='Ваше имя' name='' required)
+								+b.popup__form-field
+									+b.INPUT.popup__form-input.input(type='text' placeholder='Ваш телефон' name='' required)
+								+b.popup__form-field
+									+b.INPUT.popup__form-submit.btn._blue(type='submit' value='ЗАПИСАТЬСЯ')
+									+b.P.popup__form-agree._margin * Оставляя свои контактные данные, вы соглашаетесь с
+										+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциальности
+
+		when 'buy-book'
+			// begin buy-book pop-up
+			+b.popup._call(data-popup-id='buy-book', tabindex='-1', role='dialog')
+				+e.container
+					+e.close: +i('close')
+
+					+e.H3.title._margin получить книгу на e-mail
+					+e.FORM.form(action='#!' method='POST')
+						+e.form-row
+							+e.form-field
+								+e.INPUT.form-input.input(type='text' placeholder='Ваше имя' name='' required)
+							+e.form-field
+								+e.INPUT.form-input.input(type='text' placeholder='Ваше телефон' name='' required)
+						+e.form-news
+							+b.check-box._more
+								+e.INPUT(id='check-5' type='checkbox' name='' checked)
+								+e.LABEL(for='check-5')
+									+e.square
+										+i('check')
+									+e.SPAN скачивая книгу, вы соглашаетесь получать интересные материалы о раннем развитии от Бэби-клуба.
+						+e.INPUT.form-submit.btn._blue(type='submit' value='Получить книгу')
+						+e.P.form-agree * Оставляя свои контактные данные, Вы соглашаетесь с
+							+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциальности

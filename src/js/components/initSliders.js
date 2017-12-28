@@ -64,4 +64,11 @@ export function initSliders() {
     slidesToScroll: 1,
     speed: 500
   }));
+
+  const $librarySld = $('.js-library-slider');
+  $librarySld.slick($.extend({}, defaultOptions, {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1200
+  }));
 }

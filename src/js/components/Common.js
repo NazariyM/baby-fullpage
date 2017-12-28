@@ -13,6 +13,7 @@ import { initChooseMap } from './ChooseMap';
 import { initYouTube } from './initYouTube';
 import { initParticles } from './initParticles';
 import { initContactBlock } from './initContactBlock';
+import Popup from 'vintage-popup';
 import CTabs from './c-tabs';
 
 /**
@@ -51,6 +52,13 @@ $select.select2({
   minimumResultsForSearch: -1,
   width: '100%'
 });
+
+/** popup init*/
+
+Popup.expose($);
+const $popup = $('[data-popup-target]');
+
+$popup.popup();
 
 /** Export initialized common scripts by default */
 export default Common.init();

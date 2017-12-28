@@ -1,31 +1,31 @@
 if specBlock ? specBlock : specBlock = []
-if specBlock.title ? specBlock.title : specBlock.title = 'каждый специалист бэби-клуба'
+if specBlock.title ? specBlock.title : specBlock.title = 'Специалист Бэби-клуба 5 звёзд'
 
 //begin spec-block
-+b.SECTION.spec-block.section.fp-auto-height(class= specBlock.classMod ? specBlock.classMod : '')
++b.SECTION.spec-block.section(class= specBlock.classMod ? specBlock.classMod : '')
 	+e.container.container
 		+e.H2.title.title(data-anim-title='')= specBlock.title
+		+e.H6.sub-title Как рождается 5-звёздочный специалист по работе с детьми?
 
+		+e.image(data-anim-slow='')
+			+e.IMG(src='static/img/bg/planets.png' alt='image')
 		+e.inner
 			-
 				specList = [{
-				icon: 'c',
-				text: 'Любит детей и с радостью делится знаниями с родителями'
+				text: '1. Только 3 из 100 соискателей проходят многоступенчатый конкурсный отбор: видеорезюме, эссе, личное собеседование, тест, пробный урок, обучение, испытательный срок'
 				}, {
-				icon: 'o',
-				text: 'Стал одним из 30, кто прошел многоступенчатый  конкурсный отбор и доказал, что он - педагог по призванию'
+				text: '2. Каждый утвержденный кандидат проходит 8-дневное обучение методам и подходам бережного развития детей'
 				}, {
-				icon: 'b-mod',
-				text: 'Готов к ежегодным аттестациям и познанию всего нового в мире педагогики'
+				text: '3. Работая в Бэби-клубе, каждый специалист продолжает ежемесячно повышать свою квалификацию на Тематических онлайн-семинарах и консультациях с опытными кураторами-методистами'
 				}, {
-				icon: 'u',
-				text: 'Освоил метод бережного всестороннего развития детей на корпоративном обучении Бэби-клуба'
+				text: '4. Ежегодно подтверждает свою квалификацию на Аттестации «5 звёзд» в управляющей компании сети'
+				}, {
+				text: '5. Принимает активное участие в Ежегодном общем съезде всех специалистов сети «Бэби-клуб», делится опытом и осваивает новые методики'
 				}]
 
 			mixin specItem(item)
-				+e.item(data-anim-fast='')
-					+e.item-icon-wrap
-						+e.item-icon(class=`icon-letter-${item.icon}`)
+				+e.item(data-anim-slow='')
+
 					+e.P= item.text
 			each item in specList
 				+specItem(item)
