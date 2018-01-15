@@ -58,6 +58,10 @@
 			+trs
 			+sm
 				font-size: 17px
+		&_mob-in
+			+xs
+				top: 25px!important
+				right: 15px!important
 	
 	&__container
 		display: inline-block
@@ -134,13 +138,16 @@
 				width: 100%
 			& > #{$parent}-submit
 				width: 100%
+			&_search
+				position: relative
+				input
+					padding: 0 55px 0 20px
 		&-input
 			border: 3px solid #ebebeb
 		&-textarea
 			margin-bottom: 20px
 			min-height: 112px
 			border: 3px solid #ebebeb
-		&-message
 		&-submit
 			background: #207bd2
 		&-agree
@@ -173,42 +180,3 @@ body.popup-opened
 	-webkit-transform: translate3d(0, 0, 0)
 	-moz-transform: translate3d(0, 0, 0)
 	transform: translate3d(0, 0, 0)
-
-.choose-city
-	&__popular
-		padding: 20px 0
-		text-align: left
-		font-size: 17px
-		border-bottom: 3px solid #ebebeb
-		&-title
-			margin-bottom: 5px
-			+f('geo-500')
-			color: #231f20
-		&-suggests a
-			display: inline-block
-			margin-bottom: 5px
-			color: #207bd2
-			&:not(:first-child)
-				margin-left: 20px
-	&__search
-		
-		&-results
-			padding: 20px 0 0
-			ul
-				column-count: 4
-				column-gap: 10px
-				text-align: left
-				+xs
-					column-count: 1
-					column-gap: 0
-				li
-					padding: 8px
-					line-height: 16px
-					font-size: 16px
-					&.is-active a
-						text-decoration: underline
-					a
-						
-						border: 0
-						color: #231f20
-						+f('geo-500')

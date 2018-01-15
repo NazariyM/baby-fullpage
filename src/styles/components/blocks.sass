@@ -31,7 +31,7 @@
 		background: #e6393f url("../img/bg/hearts_bg.png") repeat 50% 50%
 	+xs
 		top: 70px
-		
+	
 	&.is-active
 		opacity: 1
 		visibility: visible
@@ -50,7 +50,7 @@
 			flex-direction: column
 			height: 100%
 			justify-content: center
-			
+		
 		&-item
 			+sm
 				width: 100%
@@ -75,7 +75,7 @@
 			#{$parent}_landing &
 				text-transform: uppercase
 				+f('geo-500', 15)
-				
+	
 	&_footer
 		position: relative
 		top: 1px
@@ -152,10 +152,10 @@
 			+trs
 			.no-touch &:hover
 				border-bottom-color: transparent
-			
+	
 	&__socials
 		display: inline-flex
-		
+	
 	&_header .info-block__tel
 		+xs
 			display: none
@@ -218,13 +218,13 @@
 		&-link
 			color: #3d8af7
 			font-size: 15px
-			
+
 .particles
 	+coverdiv
 	z-index: -1
 	+xs
 		display: none
-		
+
 .excurs
 	+xs
 		display: none
@@ -241,12 +241,12 @@
 		padding-top: 55%
 		iframe
 			+coverdiv
-	
+
 .lessons
-	padding: 50px 0!important
+	padding: 50px 0 !important
 	background: #e6393f
 	+xs
-		padding: 50px 0 30px!important
+		padding: 50px 0 30px !important
 	&__title
 		+xs
 			line-height: 36px
@@ -254,7 +254,7 @@
 		padding: 100px 15px 200px
 		+md
 			padding: 60px 15px 100px
-		 
+	
 	&__title
 		max-width: 960px
 		margin: 0 auto 20px
@@ -263,7 +263,7 @@
 			font-size: 36px
 			line-height: 50px
 			margin-bottom: 20px
-			
+
 .lessons-more
 	color: #231f20
 	&__top
@@ -327,7 +327,7 @@
 			padding: 10px 0 0
 			border: 0
 			margin-bottom: 15px
-			
+		
 		&-col
 			display: flex
 			flex-direction: column
@@ -359,7 +359,7 @@
 				white-space: nowrap
 				margin: 3px
 				+f('geo-700')
-		
+	
 	&__price
 		display: flex
 		align-items: center
@@ -497,7 +497,7 @@
 			+xs
 				width: 100%
 				padding-left: 0
-			
+
 .video-blog
 	height: calc(100vh - 370px)
 	padding: 30px 0
@@ -577,10 +577,10 @@
 		&.is-float
 			transform: translateY(100%)
 			opacity: 0
-			
+
 .double-section
 	background: #703782
-	
+
 .eye-blink
 	position: absolute
 	top: 0
@@ -622,7 +622,7 @@
 				transform: scaleX(-1) rotate(-10deg)
 			&::after
 				top: 30px
-	
+
 @keyframes eyeBlink1
 	0%
 		opacity: 0
@@ -630,7 +630,7 @@
 		opacity: 1
 	100%
 		opacity: 0
-		
+
 @keyframes eyeBlink2
 	0%
 		opacity: 1
@@ -638,3 +638,235 @@
 		opacity: 0
 	100%
 		opacity: 1
+
+.choose-city
+	$parent: &
+	&_section
+		padding-top: 140px!important
+		+sm
+			padding: 130px 0 50px
+		+xs
+			padding: 100px 0 0
+		.title
+			+sm
+				margin-bottom: 0
+				font-size: 34px
+			+xs
+				font-size: 28px
+				line-height: 30px
+		.input
+			+placeholder-color(#000)
+	
+	&_section &__container
+		padding: 30px 15px 100px
+		+sm
+			padding: 0 15px
+	&__form
+		padding-top: 40px
+		+r(1599)
+			padding-top: 30px
+		+xs
+			padding: 20px 0 0
+		
+		&-inner
+			max-width: 650px
+			padding-bottom: 30px
+			margin: 0 auto
+			#{$parent}_section &
+				padding-bottom: 30px
+		&-field
+			position: relative
+		&-search-input
+			padding: 0 55px 0 20px
+			border: 3px solid #ebebeb
+		&-submit
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			z-index: 2
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 60px
+			cursor: pointer
+			input
+				display: none
+			.icon-search
+				position: relative
+				z-index: 100
+				fill: #000
+				font-size: 21px
+				+trs
+	&__popular
+		padding: 20px 0
+		text-align: left
+		font-size: 17px
+		border-bottom: 3px solid #ebebeb
+		&_modal
+			+xs
+				padding: 15px 0 0
+				border-bottom: 0
+				text-align: left
+				.choose-city__popular-title
+					margin-bottom: 15px
+		#{$parent}_section &
+			padding: 20px 0 0
+			border-bottom: 0
+		&-title
+			margin-bottom: 5px
+			+f('geo-500')
+			color: #231f20
+			#{$parent}_section &
+				+xs
+					text-align: center
+					margin-bottom: 15px
+		&-suggests
+			display: flex
+			justify-content: space-between
+			margin: 0 -10px
+			+xs
+				flex-direction: column
+				align-items: flex-start
+				text-align: left
+			a
+				display: inline-block
+				margin: 0 10px 5px
+				color: #207bd2
+				line-height: 21px
+				+xs
+					margin: 0 10px 12px
+					&:last-child
+						margin-bottom: 0
+	&__letters
+		padding: 17px 0
+		border-top: 3px solid #e9e9e9
+		border-bottom: 3px solid #e9e9e9
+		font-size: 0
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: top
+			.no-touch &:hover a
+				background-color: #ef6ea7
+				color: #fff
+			&.is-active
+				pointer-events: none
+				a
+					background-color: #24a849
+					color: #fff
+			a
+				display: inline-block
+				vertical-align: top
+				width: 40px
+				height: 40px
+				color: #000
+				+f('geo-900', 25, 42)
+				transition: .15s ease
+				#{$parent}_section &
+					+r(1599)
+						width: 36px
+						height: 36px
+						line-height: 36px
+					+md
+						margin-bottom: 5px
+		&_modal
+			padding: 17px 0 7px
+			border-top: 0
+			+xs
+				display: none
+			li a
+				margin-bottom: 10px
+				width: 26px
+				height: 26px
+				line-height: 26px
+				font-size: 16px
+				
+	&__results
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 30px
+		text-align: left
+		word-wrap: break-word
+		#{$parent}_section &
+			padding: 40px 0
+			border-bottom: 3px solid #e9e9e9
+			+r(1439)
+				padding: 25px 0
+			+sm
+				flex-wrap: wrap
+				justify-content: center
+			+xs
+				padding: 25px 0 25px 25px
+		&-col
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			flex: 0 0 auto
+			max-width: 260px
+			#{$parent}_section &
+				+md
+					max-width: 230px
+				+sm
+					flex: 0 1 50%
+					padding-left: 70px
+					max-width: none
+					&:nth-child(1)
+						order: 1
+					&:nth-child(2)
+						order: 3
+						margin-top: 20px
+					&:nth-child(3)
+						order: 2
+					&:nth-child(4)
+						order: 4
+						margin-top: 20px
+				+xs
+					flex: 1 1 100%
+					padding-left: 0
+					&:not(:first-child)
+						margin-top: 20px
+					&:nth-child(1)
+						order: 1
+					&:nth-child(2)
+						order: 2
+					&:nth-child(3)
+						order: 3
+					&:nth-child(4)
+						order: 4
+			
+			a
+				//margin: 5px 0
+				+f('geo-500', 16, 16)
+				color: #231f20
+				border: 0
+				.no-touch &:hover
+					color: #3985d5
+				#{$parent}_section &
+					&:not(:first-child)
+						margin: 20px 0 0
+					+f('geo-400', 21, 22)
+					+r(1439)
+						font-size: 19px
+					+sm
+						line-height: 22px
+			
+				&.is-active
+					color: #3985d5
+					border-bottom: 1px solid rgba(#3985d5, .8)
+					
+		&_modal
+			+xs
+				display: none
+			.choose-city__results-col
+				max-width: 120px
+				a
+					&:not(:first-child)
+						margin-top: 14px
+	
+	.popup__title
+		+xs
+			padding-right: 50px
+			font-size: 20px
+			text-align: left

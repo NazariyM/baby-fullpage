@@ -52,6 +52,10 @@
           <path d="M64.147 331.322c.078 4.985 2.163 9.911 5.688 13.438l55 55c3.599 3.601 8.659 5.697 13.75 5.697 5.091 0 10.151-2.096 13.75-5.697l183.281-183.282c3.601-3.599 5.697-8.659 5.697-13.75s-2.096-10.151-5.697-13.75L152.335 5.697C148.736 2.096 143.676 0 138.585 0c-5.091 0-10.151 2.096-13.75 5.697l-55 55c-3.591 3.598-5.681 8.651-5.681 13.734s2.09 10.136 5.681 13.734l114.562 114.563L69.835 317.291c-3.664 3.667-5.765 8.848-5.688 14.031z"
           />
         </symbol>
+        <symbol id="icon-search" viewBox="0 0 250.313 250.313">
+          <path d="M244.186 214.604l-54.379-54.378c-.289-.289-.628-.491-.93-.76 10.7-16.231 16.945-35.66 16.945-56.554C205.822 46.075 159.747 0 102.911 0S0 46.075 0 102.911c0 56.835 46.074 102.911 102.91 102.911 20.895 0 40.323-6.245 56.554-16.945.269.301.47.64.759.929l54.38 54.38c8.169 8.168 21.413 8.168 29.583 0 8.168-8.169 8.168-21.413 0-29.582zm-141.275-44.458c-37.134 0-67.236-30.102-67.236-67.235 0-37.134 30.103-67.236 67.236-67.236 37.132 0 67.235 30.103 67.235 67.236s-30.103 67.235-67.235 67.235z"
+            fill-rule="evenodd" clip-rule="evenodd" />
+        </symbol>
         <symbol id="icon-triangle-r" viewBox="0 0 415.346 415.346">
           <path d="M41.712 415.346c-11.763 0-21.3-9.537-21.3-21.3V21.299C20.412 9.536 29.949 0 41.712 0l346.122 191.697s15.975 15.975 0 31.951C371.859 239.622 41.712 415.346 41.712 415.346z" />
         </symbol>
@@ -198,7 +202,7 @@
       <!-- begin choose-city pop-up-->
       <div class="popup" data-popup-id="choose-city" tabindex="-1" role="dialog">
         <div class="popup__container">
-          <div class="popup__close">
+          <div class="popup__close popup__close_mob-in">
             <svg class="icon icon-close">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
             </svg>
@@ -206,10 +210,16 @@
           <div class="choose-city">
             <h3 class="popup__title">ВЫБЕРИТЕ ГОРОД</h3>
             <form class="popup__form" action="#!" method="POST">
-              <div class="popup__form-field">
+              <div class="popup__form-field popup__form-field_search">
                 <input class="popup__form-input input" type="text" placeholder="Введите название города" name="" required="required" />
+                <label class="choose-city__form-submit">
+                  <input class="choose-city__form-input input" type="submit" name="" />
+                  <svg class="icon icon-search">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                  </svg>
+                </label>
               </div>
-              <div class="choose-city__popular">
+              <div class="choose-city__popular choose-city__popular_modal">
                 <div class="choose-city__popular-title">Популярные города:</div>
                 <div class="choose-city__popular-suggests">
                   <a class="underlined" href="#!">Москва</a>
@@ -218,59 +228,116 @@
                   <a class="underlined" href="#!">Краснодар</a>
                 </div>
               </div>
-            </form>
-            <div class="choose-city__search-results">
-              <ul>
+              <ul class="choose-city__letters choose-city__letters_modal">
                 <li>
-                  <a href="#!">Абакан</a>
+                  <a href="#!">А</a>
                 </li>
                 <li>
-                  <a href="#!">Архангельск</a>
+                  <a href="#!">Б</a>
                 </li>
                 <li>
-                  <a href="#!">Анапа</a>
+                  <a href="#!">В</a>
                 </li>
                 <li>
-                  <a href="#!">Астрахань</a>
+                  <a href="#!">Г</a>
                 </li>
                 <li>
-                  <a href="#!">Абакан</a>
+                  <a href="#!">Д</a>
                 </li>
                 <li>
-                  <a href="#!">Архангельск</a>
+                  <a href="#!">Е</a>
                 </li>
                 <li>
-                  <a href="#!">Анапа</a>
+                  <a href="#!">Ж</a>
                 </li>
                 <li>
-                  <a href="#!">Астрахань</a>
+                  <a href="#!">З</a>
                 </li>
                 <li>
-                  <a href="#!">Абакан</a>
+                  <a href="#!">И</a>
                 </li>
                 <li>
-                  <a href="#!">Архангельск</a>
+                  <a href="#!">Й</a>
                 </li>
                 <li>
-                  <a href="#!">Анапа</a>
+                  <a href="#!">К</a>
                 </li>
                 <li>
-                  <a href="#!">Астрахань</a>
+                  <a href="#!">Л</a>
+                </li>
+                <li class="is-active">
+                  <a href="#!">М</a>
                 </li>
                 <li>
-                  <a href="#!">Абакан</a>
+                  <a href="#!">Н</a>
                 </li>
                 <li>
-                  <a href="#!">Архангельск</a>
+                  <a href="#!">О</a>
                 </li>
                 <li>
-                  <a href="#!">Анапа</a>
+                  <a href="#!">П</a>
                 </li>
                 <li>
-                  <a href="#!">Астрахань</a>
+                  <a href="#!">Р</a>
+                </li>
+                <li>
+                  <a href="#!">С</a>
+                </li>
+                <li>
+                  <a href="#!">Т</a>
+                </li>
+                <li>
+                  <a href="#!">У</a>
+                </li>
+                <li>
+                  <a href="#!">Ф</a>
+                </li>
+                <li>
+                  <a href="#!">Х</a>
+                </li>
+                <li>
+                  <a href="#!">Ч</a>
+                </li>
+                <li>
+                  <a href="#!">Ш</a>
+                </li>
+                <li>
+                  <a href="#!">Э</a>
+                </li>
+                <li>
+                  <a href="#!">Ю</a>
+                </li>
+                <li>
+                  <a href="#!">Я</a>
                 </li>
               </ul>
-            </div>
+              <div class="choose-city__results choose-city__results_modal">
+                <div class="choose-city__results-col">
+                  <a href="#!">Абакан</a>
+                  <a href="#!">Архангельск</a>
+                  <a href="#!">Анапа</a>
+                  <a href="#!">Астрахань</a>
+                </div>
+                <div class="choose-city__results-col">
+                  <a href="#!">Абакан</a>
+                  <a href="#!">Архангельск</a>
+                  <a href="#!">Анапа</a>
+                  <a href="#!">Астрахань</a>
+                </div>
+                <div class="choose-city__results-col">
+                  <a href="#!">Абакан</a>
+                  <a href="#!">Архангельск</a>
+                  <a href="#!">Анапа</a>
+                  <a href="#!">Астрахань</a>
+                </div>
+                <div class="choose-city__results-col">
+                  <a href="#!">Абакан</a>
+                  <a href="#!">Архангельск</a>
+                  <a href="#!">Анапа</a>
+                  <a href="#!">Астрахань</a>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

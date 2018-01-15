@@ -3,10 +3,10 @@ if ask.title ? ask.title : ask.title = 'У вас есть вопрос?'
 if ask.subTitle ? ask.subTitle : ask.subTitle = 'Получите ответ из первых уст основателей Бэби-клуба Евгении и Юрия Белонощенко'
 
 //begin ask
-+b.SECTION.ask.section(class= ask.classMod ? ask.classMod : '')
++b.SECTION.ask(class= ask.classMod ? ask.classMod : '').section
 	+e.container.container
-		+e.H2.title.title._black(data-anim-title='')= ask.title
-		+e.H5.sub-title.title._sm(data-anim-title='')= ask.subTitle
+		+e.H2.title.title._black= ask.title
+		+e.H5.sub-title.title._sm= ask.subTitle
 
 		+e.inner(data-anim-slow='')
 			+e.img-wrap

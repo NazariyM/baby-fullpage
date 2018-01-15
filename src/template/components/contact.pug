@@ -3,8 +3,8 @@ if contact ? contact : contact = []
 //begin contact
 +b.SECTION.contact.section(data-anchor='contacts' id='contact' class= contact.classMod ? contact.classMod : '')
 	+e.container.container
-		+e.H2.title.title(data-anim-title='') ПРИХОДИТЕ В ГОСТИ,
-		+e.H2.title.title(data-anim-title='') ЧТОБЫ УВИДЕТЬ ВСЁ СВОИМИ ГЛАЗАМИ
+		+e.H2.title.title ПРИХОДИТЕ В ГОСТИ,
+		+e.H2.title.title ЧТОБЫ УВИДЕТЬ ВСЁ СВОИМИ ГЛАЗАМИ
 		+e.inner(data-anim-slow='')
 			+e.nav
 				+e.city
@@ -15,7 +15,8 @@ if contact ? contact : contact = []
 					+e.UL.metro-list.js-branch-list
 						-metroItem = 1
 						while metroItem < 15
-							+e.LI.metro-branch(class= `_${metroItem}`)= metroItem
+							+e.LI.metro-branch(class= `_${metroItem}`)
+								+e.SPAN= metroItem
 								-metroItem++
 
 				+e.info.js-contact-info

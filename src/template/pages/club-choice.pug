@@ -1,0 +1,1110 @@
+extends ../extend/default
+
+block variables
+	-title = 'Выбор клуба';
+	-fullpageClass = 'js-choice-fullpage';
+	-scrollOverflow = true;
+	-headerClass = '_home';
+	-navList = [{text: 'О компании'}, {text: 'Развитие интеллекта'}, {text: 'Как проходят занятия'}, {text: 'Выбрать клуб'}, {text: 'Открыть свой клуб'}, {text: 'Контакты'}, {text: 'Карьера'}]
+	-footerNavList = ['О компании', 'Развитие интеллекта', 'Как проходят занятия', 'Выбрать клуб','Открыть свой клуб', 'Контакты', 'Карьера'];
+
+block main
+
+	//begin choose-city
+	+b.SECTION.choose-city._section.section
+		+e.container.container
+			+b.H3.title._black._lg найдите бэби-клуб в вашем городе
+			+e.FORM.form(action='#!' method='POST')
+				+e.form-inner
+					+e.form-field
+						+e.INPUT.form-search-input.input(type='text' placeholder='Введите название города' name='' required)
+						+e.LABEL.form-submit
+							+e.INPUT.form-input.input(type='submit' name='')
+							+i('search')
+
+					+b.choose-city__popular
+						+b.choose-city__popular-title Популярные города:
+						+b.choose-city__popular-suggests
+							+b.A.underlined(href='#!') Москва
+							+b.A.underlined(href='#!') Санкт-Питербург
+							+b.A.underlined(href='#!') Екатеринбург
+							+b.A.underlined(href='#!') Краснодар
+							+b.A.underlined(href='#!') Ростов-на-Дону
+
+				+e.UL.letters
+					li
+						a(href='#!') А
+					li
+						a(href='#!') Б
+					li
+						a(href='#!') В
+					li
+						a(href='#!') Г
+					li
+						a(href='#!') Д
+					li
+						a(href='#!') Е
+					li
+						a(href='#!') Ж
+					li
+						a(href='#!') З
+					li
+						a(href='#!') И
+					li
+						a(href='#!') Й
+					li
+						a(href='#!') К
+					li
+						a(href='#!') Л
+					li.is-active
+						a(href='#!') М
+					li
+						a(href='#!') Н
+					li
+						a(href='#!') О
+					li
+						a(href='#!') П
+					li
+						a(href='#!') Р
+					li
+						a(href='#!') С
+					li
+						a(href='#!') Т
+					li
+						a(href='#!') У
+					li
+						a(href='#!') Ф
+					li
+						a(href='#!') Х
+					li
+						a(href='#!') Ч
+					li
+						a(href='#!') Ш
+					li
+						a(href='#!') Э
+					li
+						a(href='#!') Ю
+					li
+						a(href='#!') Я
+
+				+b.choose-city__results
+					+b.choose-city__results-col
+						a(href='#!').is-active Москва
+						a(href='#!') Московская область
+						a(href='#!') Санкт-Петербург
+						a(href='#!') Ленинградская область
+						a(href='#!') Самара
+
+					+b.choose-city__results-col
+						a(href='#!') Тольятти
+						a(href='#!') Альметьевск
+						a(href='#!') Благовещенск
+						a(href='#!') Владивосток
+						a(href='#!') Владикавказ
+
+					+b.choose-city__results-col
+						a(href='#!') Волгоград
+						a(href='#!') Воронеж
+						a(href='#!') Екатеренбург
+						a(href='#!') Ижевск
+						a(href='#!') Иркутск
+
+					+b.choose-city__results-col
+						a(href='#!') Москва
+						a(href='#!') Московская область
+						a(href='#!') Санкт-Петербург
+						a(href='#!') Ленинградская область
+						a(href='#!') Самара
+
+	//begin contact
+	+b.SECTION.contact._section.section
+		+e.container.container
+			+e.inner(data-anim-slow='')
+				+e.nav
+					+e.city
+						+e.SPAN.city-current Москва
+					+e.metro
+						+e.P.metro-text Удобная для Вас ветка Метро:
+						+e.UL.metro-list.js-branch-list
+							-metroItem = 1
+							while metroItem < 15
+								+e.LI.metro-branch(class= `_${metroItem}`)
+									+e.SPAN= metroItem
+								-metroItem++
+
+					+e.info.js-contact-info
+						// metro branch-1
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') в Бескудниково
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-2
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') в Бескудниково
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Часовая, д. 19, корп. 3.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79850215754') +7 985 021-57-54
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-3
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') в Бескудниково
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-4
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') в Бескудниково
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-5
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') в Бескудниково
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-6
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Маломосковская, д. 21, к. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74957408121') +7 495 740-81-21
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-7
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Маломосковская, д. 21, к. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74957408121') +7 495 740-81-21
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-8
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Маломосковская, д. 21, к. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74957408121') +7 495 740-81-21
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-9
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Астрадамской (Тимирязевская)
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Астрадамская, д. 15.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74957408121') +7 495 740-81-21
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-10
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74956649603') +7 495 664-96-03
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-11
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74956649603') +7 495 664-96-03
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-12
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74956649603') +7 495 664-96-03
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-13
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74956649603') +7 495 664-96-03
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+						// metro branch-14
+						+e.info-tab
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Беломорской
+								+e.info-details
+									+e.info-details-field
+										+e.P ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+74956649603') +7 495 664-96-03
+									+e.info-actions
+										+b.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Алексеевской
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.A.info-title(href='#!') на Аэропорте
+								+e.info-details
+									+e.info-details-field
+										+e.P Бескудниковский прд, д. 4, корп. 2.
+									+e.info-details-field
+										+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+									+e.info-details-field
+										+e.A(href='tel:+79154742323') +7 915 4742323
+									+e.info-actions
+										+e.A(href='#!') Cтраница клуба
+										+e.A(href='#!') Развивающие занятия
+										+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Астрадамской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+							+e.info-tab-item
+								+e.info-item
+									+e.A.info-title(href='#!') на Беломорской
+									+e.info-details
+										+e.info-details-field
+											+e.P Бескудниковский прд, д. 4, корп. 2.
+										+e.info-details-field
+											+e.A(href='mailto:msk.beskudnik@babyclub.ru') msk.beskudnik@babyclub.ru
+										+e.info-details-field
+											+e.A(href='tel:+79154742323') +7 915 4742323
+										+e.info-actions
+											+e.A(href='#!') Cтраница клуба
+											+e.A(href='#!') Развивающие занятия
+											+e.A(href='#!') Расписание занятий
+
+					-socials = {classMod: 'contact__socials'}
+					include ../components/socials
+
+				+e.map
+					+e.map-body#contact-map-moscow
+
+	-ask = {classMod: '_section'};
+	include ../components/ask

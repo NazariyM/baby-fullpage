@@ -152,6 +152,10 @@ export class Resp {
     return window.matchMedia(`(min-width: 767px)`).matches;
   }
 
+  static get isNotMob() {
+    return window.matchMedia(`(min-width: 1023px)`).matches;
+  }
+
   /**
    * Detect tablet device.
    *

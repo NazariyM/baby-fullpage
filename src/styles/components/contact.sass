@@ -5,7 +5,16 @@
 		padding-bottom: 10px
 	&__container
 		+r(1599)
-			padding: 100px 15px 100px
+			padding: 100px 15px
+		#{$parent}_section &
+			+r(1900)
+				padding: 100px 15px 200px
+			+sm
+				padding: 0 15px 60px
+			//+sm
+			//	padding: 30px 15px 260px
+			//+xs
+			//	padding: 30px 15px
 	&__title
 		font-size: 45px
 		color: #000
@@ -19,11 +28,11 @@
 	&__inner
 		margin: 28px 0 0
 		font-size: 0
+		#{$parent}_section &
+			margin: 0
 		+sm
 			display: flex
 			flex-direction: column
-		#{$parent}_section &
-			margin: 0
 	&__nav
 		display: inline-block
 		vertical-align: middle
@@ -36,13 +45,6 @@
 			padding-right: 0
 			order: 1
 			margin-top: 25px
-		#{$parent}_section &
-			width: 420px
-			padding-right: 50px
-			vertical-align: top
-			+sm
-				width: 100%
-				padding-right: 0
 	&__city
 		margin-bottom: 15px
 		+sm
@@ -63,6 +65,17 @@
 			+f('geo-700', 17)
 			line-height: 60px
 			text-align: center
+			#{$parent}_section &
+				height: auto
+				min-width: 0
+				padding: 0
+				margin-right: 0
+				background: none
+				text-transform: uppercase
+				font-size: 30px
+				line-height: 35px
+				color: #000
+				+f('geo-900')
 			+xs
 				display: block
 				margin-right: 0
@@ -101,11 +114,18 @@
 				margin-left: 0
 				+sm
 					margin-left: 10px
+			span
+				+gpu
+				transition: .3s ease
+				
 			&.is-active
 				pointer-events: none
 				transform: scale(1.4)
 				border-color: $white
 				box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2)
+				span
+					display: block
+					transform: scale(.75)
 			&_1
 				background-color: #e42313
 			&_2
@@ -145,25 +165,20 @@
 					border: 2px solid #e42518
 			
 	&__info
-		min-height: 360px
 		margin-top: 20px
 		padding: 20px 0 0
 		border-top: 1px solid #d8dddd
 		+sm
-			min-height: 220px
 			max-width: 400px
 			margin: 20px auto 0
-		#{$parent}_section &
-			min-height: 0
-			margin-top: 0
 		&-tab
 			&:not(:first-child)
 				display: none
 		&-tab-item
+			line-height: 26px
 			&:not(:first-child)
-				margin-top: 5px
+				margin-top: 15px
 		&-title
-			display: inline-block
 			+f('geo-700', 19, 22)
 			+trs
 			border-bottom: 1px solid rgba(#000, .6)
@@ -171,7 +186,7 @@
 				border-bottom-color: #000
 			&.is-active
 				pointer-events: none
-				font-size: 25px
+				font-size: 24px
 				color: $black
 				border-bottom-color: transparent
 		&-item
@@ -185,11 +200,6 @@
 					margin-top: 5px
 				&:not(:first-of-type)
 					margin-top: 15px
-				#{$parent}_section &
-					a
-						display: block
-						&:not(:first-child)
-							margin-top: 10px
 		&-actions
 			margin-top: 10px
 			font-size: 0
@@ -202,6 +212,21 @@
 					border-bottom-color: #28b463
 				&:not(:first-child)
 					margin-left: 15px
+					#{$parent}_section &
+						margin-left: 0
+						margin-top: 10px
+				#{$parent}_section &
+					display: block
+					padding: 0 5px
+					max-width: 230px
+					height: 40px
+					text-align: center
+					background-color: #3d8af7
+					border: 0
+					color: #fff
+					+f('geo-400', 17, 40)
+					.no-touch &:hover
+						background: darken(#3d8af7, 12)
 		&-btn
 			padding: 0 15px
 			text-align: center
@@ -227,10 +252,8 @@
 				padding-top: 65%
 			+xs
 				padding-top: 100%
-		#{$parent}_section &
-			width: calc(100% - 420px)
-			+sm
-				width: 100%
+			#{$parent}_section &
+				padding-top: 95%
 		&-body
 			+coverdiv
 			overflow: hidden

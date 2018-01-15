@@ -44,16 +44,19 @@ mixin popup(el)
 			// begin choose-city pop-up
 			+b.popup(data-popup-id='choose-city', tabindex='-1', role='dialog')
 				+e.container
-					+e.close
+					+e.close._mob-in
 						+i('close')
 
 					+b.choose-city
 						+b.H3.popup__title ВЫБЕРИТЕ ГОРОД
 						+b.FORM.popup__form(action='#!' method='POST')
-							+b.popup__form-field
+							+b.popup__form-field._search
 								+b.INPUT.popup__form-input.input(type='text' placeholder='Введите название города' name='' required)
+								+b.LABEL.choose-city__form-submit
+									+e.INPUT.form-input.input(type='submit' name='')
+									+i('search')
 
-							+b.choose-city__popular
+							+b.choose-city__popular._modal
 								+b.choose-city__popular-title Популярные города:
 								+b.choose-city__popular-suggests
 									+b.A.underlined(href='#!') Москва
@@ -61,27 +64,86 @@ mixin popup(el)
 									+b.A.underlined(href='#!') Екатеринбург
 									+b.A.underlined(href='#!') Краснодар
 
-						+b.choose-city__search-results
-							+b.UL
-								li: a(href='#!') Абакан
-								li: a(href='#!') Архангельск
-								li: a(href='#!') Анапа
-								li: a(href='#!') Астрахань
+							+b.UL.choose-city__letters._modal
+								li
+									a(href='#!') А
+								li
+									a(href='#!') Б
+								li
+									a(href='#!') В
+								li
+									a(href='#!') Г
+								li
+									a(href='#!') Д
+								li
+									a(href='#!') Е
+								li
+									a(href='#!') Ж
+								li
+									a(href='#!') З
+								li
+									a(href='#!') И
+								li
+									a(href='#!') Й
+								li
+									a(href='#!') К
+								li
+									a(href='#!') Л
+								li.is-active
+									a(href='#!') М
+								li
+									a(href='#!') Н
+								li
+									a(href='#!') О
+								li
+									a(href='#!') П
+								li
+									a(href='#!') Р
+								li
+									a(href='#!') С
+								li
+									a(href='#!') Т
+								li
+									a(href='#!') У
+								li
+									a(href='#!') Ф
+								li
+									a(href='#!') Х
+								li
+									a(href='#!') Ч
+								li
+									a(href='#!') Ш
+								li
+									a(href='#!') Э
+								li
+									a(href='#!') Ю
+								li
+									a(href='#!') Я
 
-								li: a(href='#!') Абакан
-								li: a(href='#!') Архангельск
-								li: a(href='#!') Анапа
-								li: a(href='#!') Астрахань
+							+b.choose-city__results._modal
+								+b.choose-city__results-col
+									a(href='#!') Абакан
+									a(href='#!') Архангельск
+									a(href='#!') Анапа
+									a(href='#!') Астрахань
 
-								li: a(href='#!') Абакан
-								li: a(href='#!') Архангельск
-								li: a(href='#!') Анапа
-								li: a(href='#!') Астрахань
+								+b.choose-city__results-col
+									a(href='#!') Абакан
+									a(href='#!') Архангельск
+									a(href='#!') Анапа
+									a(href='#!') Астрахань
 
-								li: a(href='#!') Абакан
-								li: a(href='#!') Архангельск
-								li: a(href='#!') Анапа
-								li: a(href='#!') Астрахань
+								+b.choose-city__results-col
+									a(href='#!') Абакан
+									a(href='#!') Архангельск
+									a(href='#!') Анапа
+									a(href='#!') Астрахань
+
+								+b.choose-city__results-col
+									a(href='#!') Абакан
+									a(href='#!') Архангельск
+									a(href='#!') Анапа
+									a(href='#!') Астрахань
 
 		when 'lessons-more'
 			// begin lessons-more pop-up
