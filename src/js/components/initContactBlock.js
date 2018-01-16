@@ -84,8 +84,6 @@ export function initContactBlock() {
           case 14:
             objectManager.setFilter('properties.branchNumber == "14"');
             break;
-          default:
-            objectManager.setFilter('properties.branchNumber == " "');
         }
 
       });
@@ -111,6 +109,8 @@ export function initContactBlock() {
 
     $infoBtn.on('click', function (e) {
       e.preventDefault();
+
+      $.fn.fullpage.reBuild();
       const $that = $(this);
       const $thatDetails = $that.next();
 

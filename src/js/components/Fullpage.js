@@ -1,7 +1,7 @@
 import fullpage from 'fullpage.js';
 import {TimelineMax, TweenMax} from 'gsap';
 import SplitText from './SplitText';
-import {$header, $nav, Resp, css, $window} from '../modules/dev/_helpers';
+import {$header, $nav, Resp, css} from '../modules/dev/_helpers';
 
 export default class Fullpage {
   constructor() {
@@ -31,108 +31,100 @@ export default class Fullpage {
       }
     };
 
-    if (Resp.isDesk) {
-      this.$homeFullpage.fullpage($.extend({}, fullpageDefaults, {
-        paddingTop: 70,
-        onLeave: function (index, nextIndex, direction) {
-          const nextSection = $(this).next();
+    if (this.$homeFullpage.length) this.$homeFullpage.fullpage($.extend({}, fullpageDefaults, {
+      paddingTop: 70,
+      onLeave: function (index, nextIndex, direction) {
+        const nextSection = $(this).next();
 
-          if (nextIndex > 0) $header.addClass(css.active);
-          if (nextIndex === 1) {
-            initScreenVideo();
-            $header.removeClass(css.active);
-          }
-
-          initAnimation(nextSection);
-          if (direction === 'up') $header.removeClass(css.active);
-          if (direction === 'down' && nextIndex === 3) titleAnimation(nextSection);
-          if (nextIndex === 2 && direction === 'down') animateNumbers();
-          if (nextIndex === 7 && direction === 'down') animateNumbers();
+        if (nextIndex > 0) $header.addClass(css.active);
+        if (nextIndex === 1) {
+          initScreenVideo();
+          $header.removeClass(css.active);
         }
 
-      }));
-
-      var disablePointer;
-      if (Resp.allTouch) {
-        disablePointer = false;
-      } else {
-        disablePointer = true;
+        initAnimation(nextSection);
+        if (direction === 'up') $header.removeClass(css.active);
+        if (direction === 'down' && nextIndex === 3) titleAnimation(nextSection);
+        if (nextIndex === 2 && direction === 'down') animateNumbers();
+        if (nextIndex === 7 && direction === 'down') animateNumbers();
       }
 
-      this.$landFullpage.fullpage($.extend({}, fullpageDefaults, {
-        paddingTop: 70,
-        menu: '.js-nav',
-        anchors: ['pageOne', 'pageTwo', 'pageThree', 'pageFour', 'pageFive', 'pageSix', 'pageSeven', 'pageEight', 'pageNine', 'pageTen', 'pageEleven', 'pageTwelve', 'pageThirteen', 'pageFourteen', 'pageFifteen'],
-        scrollOverflow: true,
-        scrollOverflowOptions: { disablePointer: disablePointer },
-        onLeave: function (index, nextIndex, direction) {
-          const nextSection = $(this).next();
+    }));
 
-          if (direction === 'up') $nav.removeClass(css.active).addClass('is-float');
-          if (direction === 'up' && nextIndex === 2) {
-            $header.addClass(css.hidden);
-            $nav.addClass(css.hidden);
-          }
+    if (this.$landFullpage.length) this.$landFullpage.fullpage($.extend({}, fullpageDefaults, {
+      paddingTop: 70,
+      menu: '.js-nav',
+      anchors: ['pageOne', 'pageTwo', 'pageThree', 'pageFour', 'pageFive', 'pageSix', 'pageSeven', 'pageEight', 'pageNine', 'pageTen', 'pageEleven', 'pageTwelve', 'pageThirteen', 'pageFourteen', 'pageFifteen'],
+      scrollOverflow: true,
+      scrollOverflowOptions: {
+        click: false,
+        preventDefaultException: {tagName: /.*/}
+      },
+      onLeave: function (index, nextIndex, direction) {
+        const nextSection = $(this).next();
 
-          if (nextIndex > 0 && direction === 'down') {
-            $header.addClass(css.active);
-            $header.removeClass(css.hidden);
-            $nav.removeClass(css.hidden);
-            $nav.addClass('is-inner');
-          }
-          if (nextIndex === 1) {
-            initScreenVideo();
-            $header.removeClass(css.active);
-            $header.removeClass(css.hidden);
-            $nav.removeClass('is-inner is-float is-hidden');
-          }
-          if (direction === 'down') $nav.removeClass('is-float');
-
-          if (nextIndex === 11 && direction === 'up') {
-            $nav.removeClass(css.hidden);
-          }
-
-          if (nextIndex === 12 && direction === 'up') {
-            $nav.addClass(css.hidden);
-          }
-
-          if (nextIndex === 15) {
-            $header.removeClass(css.hidden);
-            $nav.removeClass(css.hidden);
-          }
-
-          if (nextIndex === 16) {
-            $header.addClass(css.hidden);
-            $nav.addClass(css.hidden);
-          }
-
-          initAnimation(nextSection);
-
-        }
-      }));
-    }
-
-    if (Resp.isNotMob) {
-      this.$choiceFullpage.fullpage($.extend({}, fullpageDefaults, {
-        paddingTop: 70,
-        scrollOverflow: true,
-        scrollOverflowOptions: { disablePointer: true, disableMouse: true, disableTouch: false },
-        normalScrollElements: '.contact__map',
-        onLeave: function (index, nextIndex, direction) {
-          const nextSection = $(this).next();
-
-          if (nextIndex > 0) $header.addClass(css.active);
-          if (nextIndex === 1) {
-            initScreenVideo();
-            $header.removeClass(css.active);
-          }
-
-          initAnimation(nextSection);
-          if (direction === 'up') $header.removeClass(css.active);
+        if (direction === 'up') $nav.removeClass(css.active).addClass('is-float');
+        if (direction === 'up' && nextIndex === 2) {
+          $header.addClass(css.hidden);
+          $nav.addClass(css.hidden);
         }
 
-      }));
-    }
+        if (nextIndex > 0 && direction === 'down') {
+          $header.addClass(css.active);
+          $header.removeClass(css.hidden);
+          $nav.removeClass(css.hidden);
+          $nav.addClass('is-inner');
+        }
+        if (nextIndex === 1) {
+          initScreenVideo();
+          $header.removeClass(css.active);
+          $header.removeClass(css.hidden);
+          $nav.removeClass('is-inner is-float is-hidden');
+        }
+        if (direction === 'down') $nav.removeClass('is-float');
+
+        if (nextIndex === 11 && direction === 'up') {
+          $nav.removeClass(css.hidden);
+        }
+
+        if (nextIndex === 12 && direction === 'up') {
+          $nav.addClass(css.hidden);
+        }
+
+        if (nextIndex === 15) {
+          $header.removeClass(css.hidden);
+          $nav.removeClass(css.hidden);
+        }
+
+        if (nextIndex === 16) {
+          $header.addClass(css.hidden);
+          $nav.addClass(css.hidden);
+        }
+
+        initAnimation(nextSection);
+
+      }
+    }));
+
+    if (this.$choiceFullpage.length) this.$choiceFullpage.fullpage($.extend({}, fullpageDefaults, {
+      paddingTop: 70,
+      scrollOverflow: true,
+      scrollOverflowOptions: {disablePointer: true, disableMouse: true, disableTouch: false},
+      normalScrollElements: '.contact__map',
+      onLeave: function (index, nextIndex, direction) {
+        const nextSection = $(this).next();
+
+        if (nextIndex > 0) $header.addClass(css.active);
+        if (nextIndex === 1) {
+          initScreenVideo();
+          $header.removeClass(css.active);
+        }
+
+        initAnimation(nextSection);
+        if (direction === 'up') $header.removeClass(css.active);
+      }
+
+    }));
 
     function initScreenVideo() {
       const $screenBlock = $('.screen');
@@ -211,8 +203,7 @@ export default class Fullpage {
   }
 
   init() {
-    // if (Resp.isDesk) this.fullpage();
-    this.fullpage();
+    if (Resp.isDesk) this.fullpage();
     this.removeVideo();
   }
 }
