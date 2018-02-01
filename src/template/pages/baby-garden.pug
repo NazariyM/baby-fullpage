@@ -1,0 +1,285 @@
+extends ../extend/default
+
+block variables
+	-title = 'Бэби-сад';
+	-fullpageClass = 'js-garden-fullpage';
+	-scrollOverflow = true;
+	-headerClass = '_landing header_garden';
+	-headerLogo = 'static/img/logo-garden.png';
+	-headerSocials = false;
+	-headerCity = true;
+	-menuList = ['Главная', 'Выбрать клуб или сад', 'Открой свой Бэби-клуб', 'Развитие интеллекта', 'Бэби-библиотека', 'Мероприятия для родителей']
+	-
+		fpNavList = [{
+		anchor: 'pageThree',
+		text: 'О клубе'
+		}, {
+		anchor: 'pageNine',
+		text: 'наши занятия'
+		}, {
+		anchor: 'pageTwelve',
+		text: 'преимущества'
+		}, {
+		anchor: 'pageThirteen',
+		text: 'Отзывы'
+		}, {
+		anchor: 'pageFifteen',
+		text: 'Контакты'
+		}, {
+		anchor: '!',
+		text: 'Карьера'}]
+	-navClass = '_landing nav_garden';
+	-footerNavClass = '_absolute';
+	-footerSocials = false
+	-footerDevsText = true
+	-footerCity = true
+	-footerClass = ['_landing']
+
+block main
+	-var screen = {title: 'бэби-сад', subTitle: 'в воскресенске на ленина', descr: 'развиваем детей от 8 месяцев до 7 лет', btn1: 'Бэби-клуб', btn2: 'Бэби-сад', video: 'babyvideo'}
+	include ../components/screen
+
+		-subsBlock = {particles: true}
+		include ../components/subs-block
+
+
+	if benefits ? benefits : benefits = []
+	//begin benefits
+	+b.SECTION.benefits.section(data-anchor='pageThree' class= benefits.classMod ? benefits.classMod : '')
+		+e.container.container
+			+e.H2.title.title._black Бэби-сад &#8212 это
+
+			+e.list
+				-
+					lettersList = [{
+					picMod: 'icon-i',
+					text: 'Сеть центров с 17-летним опытом развития детей'
+					}, {
+					picMod: 'icon-rob',
+					text: 'Всестороннее познание окружающего мира и гармоничное развитие'
+					}, {
+					picMod: 'icon-letter-c',
+					text: 'Безопасное игровое пространство'
+					}, {
+					picMod: 'icon-moroz',
+					text: 'Место, где ребёнка понимают  и любят таким, какой он есть'
+					}, {
+					picMod: 'icon-zamok',
+					text: 'Знания и навыки необходимые для взрослой жизни'
+					}, {
+					picMod: 'icon-yelka',
+					text: 'Небольшие группы детей — до 15 человек'
+					}, {
+					picMod: 'icon-yakor',
+					text: 'С детьми работают 2 старших и 1 младший специалист'
+					}, {
+					picMod: 'icon-letter-o',
+					text: 'Группы детей разного возраста с разницей до 3 лет'
+					}]
+				mixin lettersItem(item)
+					+e.item(data-anim-fast='')
+						+e.item-pic-wrap
+							+e.item-pic(class= `${item.picMod}`)
+						+e.P= item.text
+				each item in lettersList
+					+lettersItem(item)
+
+	-expert = {title: 'Знакомьтесь, наша команда', addField: true}
+	include ../components/expert
+	-specBlock = {classMod: '_garden', title: 'Специалист бэби-САДА 5 звёзд', specList: false, starsSlider: true, values: true}
+
+	include ../components/spec-block
+
+	include ../components/learn
+
+	include ../components/timing
+	-interior = {classMod: '_red'}
+	include ../components/interior
+
+	+b.SECTION.excurs.section
+		+e.container.container
+			+e.H2.title.title._black Экскурсия по Саду
+			+e.item(data-anim-slow='')
+				iframe(width="100%" height="100%" frameborder="0" allowfullscreen="1" src='https://www.google.com/maps/embed?pb=!1m0!4v1509359904998!6m8!1m7!1sCAoSLEFGMVFpcE1qU251NERLeTZzeHdYcVhBUEdlOE1RalpDSnhST2NYdVRqa1ho!2m2!1d56.80434585174958!2d60.60212430131583!3f263.33275510786723!4f24.302912106065634!5f0.7820865974627469')
+
+			+b.eye-blink._left
+				+e.item
+			+b.eye-blink._right
+				+e.item
+
+	//begin lessons
+	+b.SECTION.lessons._garden.section.fp-auto-height-responsive(data-anchor='lessons')
+		+e.container.container
+			+e.H2.title.title Наши основные занятия
+
+			.c-tabs__tab-inner
+				-
+					lessonsList = [{
+					icon: 'icon-ulitka',
+					title: 'Чтение',
+					descr: 'Знакомим с буквами, прививаем любовь к чтению',
+					btnColor: '1'
+					}, {
+					icon: 'icon-rob',
+					title: 'Развитие речи',
+					descr: 'Пополняем словарный запас и учим общаться с людьми любого возраста',
+					btnColor: '2'
+					}, {
+					icon: 'icon-letter-m',
+					title: 'МАТЕМАТИКА',
+					descr: 'Знакомим с миром чисел, которые окружают нас повсюду',
+					btnColor: '3'
+					}, {
+					icon: 'icon-letter-o',
+					title: 'Окружающий мир',
+					descr: 'Узнаём об истории вещей, обитателях мира и событиях разных стран',
+					btnColor: '4'
+					},{
+					icon: 'icon-letter-t',
+					title: 'Творчество',
+					descr: 'Работаем со всеми материалами для творчества',
+					btnColor: '5'
+					}]
+
+				mixin lessonsItem(item)
+					.c-tabs__item.c-tabs__item_garden(data-anim-fast='')
+						.c-tabs__item-icon-wrap
+							.c-tabs__item-icon(class= `${item.icon}`)
+						.c-tabs__item-info
+							.c-tabs__item-title= item.title
+						.c-tabs__item-descr
+							+e.P= item.descr
+						button.c-tabs__item-btn.btn(class= `c-tabs__item-btn_${item.btnColor}` type='button') Подробнее
+				each item in lessonsList
+					+lessonsItem(item)
+
+	//begin medical
+	+b.SECTION.medical.section
+		+e.container.container(data-anim-slow='')
+			+e.H2.title.title Медобслуживание
+
+			+e.inner
+				+e.img
+					+e.IMG(src='static/img/content/medical_img.jpg' alt='image')
+				+e.list-wrap
+					+e.list-title У нас заключён договор с медицинским центром
+					+e.UL.list.berries-list
+						+e.LI Каждую неделю в саду проводится День здоровья: педиатр проводит полный осмотр детей
+						+e.LI Ведётся медицинская карта ребёнка
+						+e.LI Ведётся «Лист здоровья»  с рекомендациями для родителей
+
+	//begin nutrition
+	+b.SECTION.nutrition.section
+		+e.container.container(data-anim-slow='')
+			+e.H2.title.title ПИТАНИЕ
+
+			+e.inner
+				+e.list-wrap
+					+e.UL.list.berries-list
+						+e.LI В детском саду работает квалифицированный повар.
+						+e.LI Пятиразовое питание разнообразно  и адаптировано под все особенности пищевых предпочтений наших маленьких клиентов.
+						+e.LI Мы обеспечиваем индивидуальное  питание для детей с пищевыми аллергиями и вегетарианцам.
+						+e.LI В меню отсутствуют все виды колбасных изделий, консервы и соки!
+				+e.img
+					+e.IMG(src='static/img/content/nutrition_img.jpg' alt='image')
+
+	include ../components/news
+
+	include ../components/schedule
+
+	include ../components/library
+
+	-whyUs = {title2: '25 000 детей приходят в бэби-сад'}
+	include ../components/why-us
+
+	begin thanks
+	+b.SECTION.thanks.section(data-anchor='thanks')
+		+e.container.container
+			+e.H2.title.title
+				+e.SPAN(data-anim-count='1000') 1000
+				=  ' '
+				| спасибо
+
+			//begin tabs
+			+b.c-tabs._landing
+				+e.tabs-nav
+					-
+						tabsList = ['ДЕТИ', 'РОДИТЕЛИ']
+					-activeIndex = 0
+					for tabsText, index in tabsList
+						+e.BUTTON.tabs-el.btn(data-anim-fast='' class= index === activeIndex ? 'is-active' : '' type='button')= tabsText
+				+e.tabs-for(data-anim-slow='')
+					+e.tab
+						+e.inner
+							+e.video-item
+								+e.video-text.js-video-text
+									+e.H5.video-title Милана
+									+e.P посещает Бэби-клуб более 3 лет
+								+e.video-trigger.js-play-video
+								iframe(src='https://www.youtube.com/embed/DpMrNGG3S3I?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+							+e.video-item
+								+e.video-text.js-video-text
+									+e.H5.video-title Вероника
+									+e.P Мама Глеба и Матвея Более года в Бэби-клубе
+								+e.video-trigger.js-play-video
+								iframe(src='https://www.youtube.com/embed/3roikLviTGs?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+					+e.tab
+						+e.inner
+							+e.video-item
+								+e.video-text.js-video-text
+									+e.H5.video-title Милана
+									+e.P посещает Бэби-клуб более 3 лет
+								+e.video-trigger.js-play-video
+								iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+							+e.video-item
+								+e.video-text.js-video-text
+									+e.H5.video-title Вероника
+									+e.P Мама Глеба и Матвея Более года в Бэби-клубе
+								+e.video-trigger.js-play-video
+								iframe(src='https://www.youtube.com/embed/OhEANdHh3e0?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+			+e.A.all-btn.btn._yellow(href='#!') Смотреть все отзывы
+
+
+	+b.SECTION.double-section.section
+		//begin video-blog
+		+b.SECTION.video-blog
+			+e.container.container
+
+				+e.H2.title.title(data-anim-title='') ВИДЕО-блог
+				+e.inner
+					+e.video(data-anim-slow='')
+						+e.video-text.js-video-text
+							+e.P Как мы развиваем 10 видов интеллекта
+						+e.video-trigger.js-play-video
+						iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+					+e.video(data-anim-slow='')
+						+e.video-text.js-video-text
+							+e.P О главных смыслах метода Бэби-клуба
+						+e.video-trigger.js-play-video
+						iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+					+e.video(data-anim-slow='')
+						+e.video-text.js-video-text
+							+e.P Реалити-проект «Я уже читаю»: C группой деток от 8 месяцев
+						+e.video-trigger.js-play-video
+						iframe(src='https://www.youtube.com/embed/5zDWEog9CJE?rel=0&controls=0&showinfo=0&enablejsapi=1', frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+
+		begin subs-block
+		+b.SECTION.subs-block._yellow
+			+e.container.container
+				+e.H3.title.title(data-anim-title='')= subsBlock.title
+
+				+e.FORM.form(action='#!' method='POST' data-anim-slow='')
+					+e.form-field
+						+e.INPUT.form-input.input(type='text' placeholder='Ваше имя' name='' required)
+					+e.form-field
+						+e.INPUT.form-input.input(type='text' placeholder='Ваш телефон' name='' required)
+					+e.form-field
+						+e.INPUT.form-submit.btn._blue(type='submit' value='Записаться на встречу')
+						+e.P.form-agree * Оставляя свои контакты данные, Вы соглашаетесь с
+							= ' '
+							+b.A.underlined(href='static/assets/polytics.docx' target='_blank') политикой конфиденциальности
+
+	include ../components/contact

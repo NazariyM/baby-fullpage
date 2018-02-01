@@ -1,80 +1,213 @@
 .spec-block
-	background: #207bd2 url("../img/bg/nuts_bg.png") repeat 50% 50%
-	+xs
-		padding-bottom: 20px
-	&__container
-		padding: 0 15px
-		max-width: 1190px
-		+xs
-			padding: 0 15px
-	&__title
-		margin-bottom: 20px
-		font-size: 45px
-		+r(1599)
-			margin-bottom: 10px
-		+sm
-			font-size: 37px
-			margin-bottom: 0
-		+xs
-			line-height: 35px
-	&__sub-title
-		margin-bottom: 80px
-		font-size: 30px
-		color: $white
-		text-align: center
-		+f('geo-700')
-		+r(1599)
-			margin-bottom: 50px
-		+xs
-			font-size: 22px
-			margin-bottom: 10px
-	&__image
-		position: relative
-		height: 200px
-		+r(1599)
-			height: 170px
-		+xs
-			height: auto
-			text-align: center
-		
-		.no-touch &:hover img
-			transform: translateX(-50%) rotate(42deg)
-		img
-			pointer-events: none
-			position: absolute
-			top: -110px
-			left: 50%
-			transform: translateX(-50%) rotate(25deg)
-			transition: .7s ease-out
-			+r(1599)
-				width: 390px
-				height: 360px
-			+xs
-				position: static
-				transform: none
-				
-				
-	&__inner
-		margin: 0 auto
-		padding: 40px 0 0
-		font-size: 0
-		+r(1599)
-			padding: 15px 0 0
-		+sm
-			padding: 40px 0 0
-		+xs
-			padding: 20px 0 0
-	&__item
-		$parent: &
-		padding: 0 15px
-		text-align: left
-		+f('geo-500', 17, 22)
-		color: $white
-		+xs
-			padding: 0
-		&:not(:first-child)
-			margin-top: 20px
-			+r(1599)
-				margin-top: 10px
-			+sm
-				margin-top: 20px
+  background: #207bd2 url("../img/bg/nuts_bg.png") repeat 50% 50%
+  +xs
+    padding-bottom: 20px
+  &__container
+    padding: 0 15px
+    max-width: 1190px
+    +xs
+      padding: 0 15px
+  &__title
+    margin-bottom: 20px
+    font-size: 45px
+    +r(1599)
+      margin-bottom: 10px
+    +sm
+      font-size: 37px
+      margin-bottom: 0
+    +xs
+      line-height: 35px
+  &__sub-title
+    margin-bottom: 80px
+    font-size: 30px
+    color: $white
+    text-align: center
+    +f('geo-700')
+    +r(1599)
+      margin-bottom: 50px
+    +xs
+      font-size: 22px
+      margin-bottom: 10px
+  &__image
+    position: relative
+    height: 200px
+    +r(1599)
+      height: 170px
+    +xs
+      height: auto
+      text-align: center
+    
+    .no-touch &:hover img
+      transform: translateX(-50%) rotate(42deg)
+    img
+      pointer-events: none
+      position: absolute
+      top: -110px
+      left: 50%
+      transform: translateX(-50%) rotate(25deg)
+      transition: .7s ease-out
+      +r(1599)
+        width: 390px
+        height: 360px
+      +xs
+        position: static
+        transform: none
+  
+  &__inner
+    margin: 0 auto
+    padding: 40px 0 0
+    font-size: 0
+    +r(1599)
+      padding: 15px 0 0
+    +sm
+      padding: 40px 0 0
+    +xs
+      padding: 20px 0 0
+  &__item
+    $parent: &
+    padding: 0 15px
+    text-align: left
+    +f('geo-500', 17, 22)
+    color: $white
+    +xs
+      padding: 0
+    &:not(:first-child)
+      margin-top: 20px
+      +r(1599)
+        margin-top: 10px
+      +sm
+        margin-top: 20px
+        
+  &__stars-slider
+  
+  &_garden
+    background: #2ea653 url("../img/bg/bubles_bg.png") repeat 50% 50%/440px
+    .spec-block__sub-title
+      margin-bottom: 25px
+    .spec-block__image
+      height: 140px
+      +xs
+        display: none
+    .spec-block__image img
+      transform: translateX(-50%) rotate(44deg)
+    .spec-block__container
+      padding: 50px 15px 150px
+      +lg
+        padding: 100px 15px 200px
+      +r(1439)
+        padding: 50px 15px 150px
+      +sm
+        padding: 50px 15px
+      +xs
+        padding: 0 10px
+
+.stars-slider
+  position: relative
+  max-width: 335px
+  margin: 0 auto 170px
+  background: #fff
+  border-radius: 50%
+  +xs
+    max-width: 300px
+    margin: 0 auto 100px
+  &__item
+    height: 335px
+    text-align: center
+    +vertical
+    +xs
+      height: 300px
+    p
+      display: inline-block
+      vertical-align: middle
+      padding: 0 45px
+      +f('geo-500', 16)
+      +xs
+        padding: 0 25px
+  &__nav
+    height: 0
+    width: 0
+    +xs
+      position: absolute
+      left: 0
+      right: 0
+      top: 105%
+      text-align: center
+      height: auto
+      width: auto
+    li
+      position: absolute
+      +xs
+        position: static
+        display: inline-block
+        vertical-align: top
+        &:not(:last-child)
+          margin-right: 15px
+      &:nth-child(1)
+        top: 4px
+        left: -105px
+      &:nth-child(2)
+        top: -16px
+        right: -101px
+      &:nth-child(3)
+        right: -130px
+        bottom: 20px
+      &:nth-child(4)
+        bottom: -115px
+        left: 118px
+      &:nth-child(5)
+        left: -150px
+        bottom: 24px
+    li.slick-active .stars-slider__nav-icon
+      fill: #ffcc00
+    button
+      position: relative
+    &-icon
+      fill: #92d4a4
+      transition: fill .6s ease
+      +xs
+        width: 40px
+        height: 40px
+    &-count
+      +vcenter
+      +f('geo-500', 20, 25)
+      +xs
+        font-size: 16px
+      
+.values-block
+  &__inner
+    padding: 50px 0 0
+    margin: 0 -15px
+    font-size: 0
+    +sm
+      padding: 20px 0 0
+      text-align: center
+    +xs
+      margin: 0 -10px
+  &__item
+    display: inline-block
+    vertical-align: top
+    width: 33.333333%
+    padding: 0 15px
+    color: #fff
+    +sm
+      width: 50%
+      padding: 0 15px 30px
+    +xs
+      padding: 0 10px 30px
+      width: 100%
+    &-img
+      margin-bottom: 7px
+    &-title
+      text-align: center
+      +f('geo-900', 25)
+    p
+      font-size: 16px
+      +f('geo-500')
+      
+.cliped-svg
+  display: block
+  margin: 0 auto
+  polygon
+    transform: translate(112px, 240px)
+.cliped-img
+  clip-path: url(#clip-path)

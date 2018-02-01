@@ -1,11 +1,13 @@
 if whyUs ? whyUs : whyUs = []
+if whyUs.title1 ? whyUs.title1 : whyUs.title1 = 'почему каждый месяц'
+if whyUs.title2 ? whyUs.title2 : whyUs.title2 = '25 000 детей приходят в бэби-клуб'
 
 //begin why-us
 +b.SECTION.why-us.section(data-anchor='why-us' class= whyUs.classMod ? whyUs.classMod : '')
 	+e.container.container
 
-		+e.H2.title.title._black почему каждый месяц
-		+e.H2.title.title._black 25 000 детей приходят в бэби-клуб
+		+e.H2.title.title._black= whyUs.title1
+		+e.H2.title.title._black= whyUs.title2
 
 		+e.inner
 			-

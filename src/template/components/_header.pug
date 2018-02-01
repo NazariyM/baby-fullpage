@@ -12,7 +12,7 @@
 
 			+b.logo.header__logo
 				+e.A.link(href='#!')
-					+e.IMG.img(src='static/img/logo.svg' alt='Бэби клуб')
+					+e.IMG.img(src= headerLogo ? headerLogo : 'static/img/logo.svg' alt='Бэби клуб')
 				+e.P.descr Бережное развитие интеллекта
 
 			+b.info-block._header

@@ -53,7 +53,6 @@
 	&__logo
 		flex-basis: 320px
 		transition: transform .8s ease
-		transform: translateY(13px)
 		+md
 			flex-basis: 310px
 			transform: none
@@ -91,9 +90,13 @@
 			display: none
 
 // settings for fullpage
-.fp-viewing-12 .header
+.fp-viewing-12 .header_home
 	transform: translateY(-100%)
-	
+.fp-viewing-13 .header_garden
+	transform: translateY(-200%)!important
+.fp-viewing-13 .nav_garden
+	transform: translateY(-170px) !important
+
 .fp-viewing-0
 	.header__container
 		height: 90px
@@ -115,6 +118,10 @@
 .fp-viewing-10, .fp-viewing-9
 	.header_home
 		transform: translateY(-100%)
+		
+.js-garden-fullpage
+	.header
+		transform: none!important
 		
 .hamburger
 	margin-top: 6px !important

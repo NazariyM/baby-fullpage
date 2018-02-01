@@ -8563,6 +8563,7 @@ var Fullpage = function () {
     this.$homeFullpage = $('.js-home-fullpage');
     this.$landFullpage = $('.js-landing-fullpage');
     this.$choiceFullpage = $('.js-choice-fullpage');
+    this.$gardenFullpage = $('.js-garden-fullpage');
 
     this.init();
   }
@@ -8680,6 +8681,60 @@ var Fullpage = function () {
           if (direction === 'up') _helpers.$header.removeClass(_helpers.css.active);
         }
 
+      }));
+
+      if (this.$gardenFullpage.length) this.$gardenFullpage.fullpage($.extend({}, fullpageDefaults, {
+        paddingTop: 70,
+        menu: '.js-nav',
+        anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '20', '21', '22', '23', '24', '25'],
+        scrollOverflow: true,
+        scrollOverflowOptions: {
+          click: false,
+          preventDefaultException: { tagName: /.*/ }
+        },
+        onLeave: function onLeave(index, nextIndex, direction) {
+          var nextSection = $(this).next();
+
+          if (direction === 'up') _helpers.$nav.removeClass(_helpers.css.active).addClass('is-float');
+          if (direction === 'up' && nextIndex === 2) {
+            _helpers.$header.addClass(_helpers.css.hidden);
+            _helpers.$nav.addClass(_helpers.css.hidden);
+          }
+
+          if (nextIndex > 0 && direction === 'down') {
+            _helpers.$header.addClass(_helpers.css.active);
+            _helpers.$header.removeClass(_helpers.css.hidden);
+            _helpers.$nav.removeClass(_helpers.css.hidden);
+            _helpers.$nav.addClass('is-inner');
+          }
+          if (nextIndex === 1) {
+            initScreenVideo();
+            _helpers.$header.removeClass(_helpers.css.active);
+            _helpers.$header.removeClass(_helpers.css.hidden);
+            _helpers.$nav.removeClass('is-inner is-float is-hidden');
+          }
+          if (direction === 'down') _helpers.$nav.removeClass('is-float');
+
+          // if (nextIndex === 11 && direction === 'up') {
+          //   $nav.removeClass(css.hidden);
+          // }
+          //
+          // if (nextIndex === 12 && direction === 'up') {
+          //   $nav.addClass(css.hidden);
+          // }
+          //
+          // if (nextIndex === 15) {
+          //   $header.removeClass(css.hidden);
+          //   $nav.removeClass(css.hidden);
+          // }
+          //
+          // if (nextIndex === 16) {
+          //   $header.addClass(css.hidden);
+          //   $nav.addClass(css.hidden);
+          // }
+
+          initAnimation(nextSection);
+        }
       }));
 
       function initScreenVideo() {
@@ -18692,6 +18747,7 @@ function initSliders() {
 
   var arrLeft = (0, _helpers.svgIcon)('left-arrow');
   var arrRight = (0, _helpers.svgIcon)('right-arrow');
+  var starIcon = '<svg class="stars-slider__nav-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93" height="88"\n     viewBox="0 0 93 88">\n    <defs>\n        <path id="icon-star" d="M991.87 3284.34a2.72 2.72 0 0 0-2.2-1.85l-28.89-4.16-12.83-25.94c-.92-1.86-3.97-1.86-4.89 0l-12.84 25.94-28.88 4.16a2.72 2.72 0 0 0-1.51 4.63l20.95 20.2-4.9 28.5a2.71 2.71 0 0 0 3.95 2.87l25.67-13.46 25.68 13.46a2.73 2.73 0 0 0 3.95-2.87l-4.9-28.5 20.95-20.2c.74-.72 1-1.8.69-2.78z"/>\n    </defs>\n    <g transform="translate(-899 -3251)">\n        <use xlink:href="#icon-star"/>\n    </g>\n</svg>';
 
   var defaultOptions = {
     slidesToShow: 1,
@@ -18707,6 +18763,20 @@ function initSliders() {
     rows: 0,
     dotsClass: 'slider-dots'
   };
+
+  var $starsSld = $('.js-stars-slider');
+  $starsSld.slick($.extend({}, defaultOptions, {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    fade: true,
+    speed: 600,
+    arrows: false,
+    dotsClass: 'stars-slider__nav',
+    customPaging: function customPaging(slider, i) {
+      return '<button type="button" class="history-timeline__nav-year">' + starIcon + '<span class="stars-slider__nav-count">' + (i + 1) + '</span></button>';
+    }
+  }));
 
   var $learnSld = $('.js-learn-slider');
   $learnSld.slick($.extend({}, defaultOptions, {

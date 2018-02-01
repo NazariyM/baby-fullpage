@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>Бэби-сад</title>
     <link href="static/css/index.css" rel="stylesheet">
     <link rel="icon" href="static/favicon.ico">
   </head>
@@ -69,9 +69,9 @@
     <script>
       document.createElement('picture');
     </script>
-    <div class="js-landing-fullpage">
+    <div class="js-garden-fullpage">
       <!--begin header-->
-      <header class="header header_landing">
+      <header class="header header_landing header header_garden">
         <div class="header__menu">
           <ul class="header__menu-list">
             <li>
@@ -98,7 +98,7 @@
           <div class="header__container container">
             <div class="logo header__logo">
               <a class="logo__link" href="#!">
-                <img class="logo__img" src="static/img/logo.svg" alt="Бэби клуб" title="" />
+                <img class="logo__img" src="static/img/logo-garden.png" alt="Бэби клуб" title="" />
               </a>
               <p class="logo__descr">Бережное развитие интеллекта</p>
             </div>
@@ -123,7 +123,7 @@
             </div>
           </div>
         </div>
-        <nav class="nav nav_landing js-nav">
+        <nav class="nav nav_landing nav nav_garden js-nav">
           <ul class="nav__list container">
             <li class="nav__list-item" data-menuanchor="pageThree">
               <a class="nav__list-link" href="#pageThree">О клубе</a>
@@ -147,95 +147,99 @@
         </nav>
       </header>
       <!--begin screen-->
-      <section class="screen screen_landing section">
+      <section class="screen section">
         <div class="screen__block">
           <div class="screen__container container">
             <div class="screen__inner">
               <div class="screen__text">
-                <h2 class="screen__title title">бэби-клуб</h2>
+                <h2 class="screen__title title">бэби-сад</h2>
                 <h2 class="screen__title title">в воскресенске на ленина</h2>
-                <p>для развития детей от 8 месяцев до 7 лет</p>
+                <p>развиваем детей от 8 месяцев до 7 лет</p>
+              </div>
+              <div class="screen__actions">
+                <a class="screen__actions-btn btn btn_yellow" href="#!">Бэби-клуб</a>
+                <a class="screen__actions-btn btn btn_blue" href="#!">Бэби-сад</a>
               </div>
             </div>
           </div>
           <div class="screen__video">
             <video src="static/video/babyvideo.mp4" loop="loop" autoplay="autoplay" muted="muted"></video>
+            <!--begin subs-block-->
+            <section class="subs-block section fp-auto-height">
+              <div class="subs-block__container container" data-anim-slow="">
+                <h3 class="subs-block__title title" data-anim-title="">запишитесь на презентацию клуба</h3>
+                <form class="subs-block__form" action="#!" method="POST">
+                  <div class="subs-block__form-field">
+                    <input class="subs-block__form-input input" type="text" placeholder="Ваше имя" name="" required="required" />
+                  </div>
+                  <div class="subs-block__form-field">
+                    <input class="subs-block__form-input input" type="text" placeholder="Ваш телефон" name="" required="required" />
+                  </div>
+                  <div class="subs-block__form-field">
+                    <input class="subs-block__form-submit btn btn_yellow" type="submit" value="Записаться на встречу" />
+                    <p class="subs-block__form-agree">* Оставляя свои контакты данные, Вы соглашаетесь с
+                      <a class="underlined" href="static/assets/polytics.docx" target="_blank">политикой конфиденциальности</a>
+                    </p>
+                  </div>
+                </form>
+              </div>
+              <div class="particles" id="js-buble-particles"></div>
+            </section>
           </div>
         </div>
-      </section>
-      <!--begin subs-block-->
-      <section class="subs-block section fp-auto-height">
-        <div class="subs-block__container container" data-anim-slow="">
-          <h3 class="subs-block__title title" data-anim-title="">запишитесь на презентацию клуба</h3>
-          <form class="subs-block__form" action="#!" method="POST">
-            <div class="subs-block__form-field">
-              <input class="subs-block__form-input input" type="text" placeholder="Ваше имя" name="" required="required" />
-            </div>
-            <div class="subs-block__form-field">
-              <input class="subs-block__form-input input" type="text" placeholder="Ваш телефон" name="" required="required" />
-            </div>
-            <div class="subs-block__form-field">
-              <input class="subs-block__form-submit btn btn_yellow" type="submit" value="Записаться на встречу" />
-              <p class="subs-block__form-agree">* Оставляя свои контакты данные, Вы соглашаетесь с
-                <a class="underlined" href="static/assets/polytics.docx" target="_blank">политикой конфиденциальности</a>
-              </p>
-            </div>
-          </form>
-        </div>
-        <div class="particles" id="js-buble-particles"></div>
       </section>
       <!--begin benefits-->
       <section class="benefits section" data-anchor="pageThree">
         <div class="benefits__container container">
-          <h2 class="benefits__title title title_black">Бэби-клуб &#8212 это</h2>
+          <h2 class="benefits__title title title_black">Бэби-сад &#8212 это</h2>
           <div class="benefits__list">
             <div class="benefits__item" data-anim-fast="">
               <div class="benefits__item-pic-wrap">
-                <div class="benefits__item-pic icon-letter-f"></div>
+                <div class="benefits__item-pic icon-i"></div>
               </div>
               <p>Сеть центров с 17-летним опытом развития детей</p>
             </div>
             <div class="benefits__item" data-anim-fast="">
               <div class="benefits__item-pic-wrap">
-                <div class="benefits__item-pic icon-letter-k"></div>
+                <div class="benefits__item-pic icon-rob"></div>
               </div>
-              <p>Занятия для дошкольников: от 8 месяцев до 7 лет</p>
+              <p>Всестороннее познание окружающего мира и гармоничное развитие</p>
             </div>
             <div class="benefits__item" data-anim-fast="">
               <div class="benefits__item-pic-wrap">
-                <div class="benefits__item-pic icon-letter-b"></div>
-              </div>
-              <p>Маленькие группы - до 8 детей</p>
-            </div>
-            <div class="benefits__item" data-anim-fast="">
-              <div class="benefits__item-pic-wrap">
-                <div class="benefits__item-pic icon-letter-n"></div>
+                <div class="benefits__item-pic icon-letter-c"></div>
               </div>
               <p>Безопасное игровое пространство</p>
             </div>
             <div class="benefits__item" data-anim-fast="">
               <div class="benefits__item-pic-wrap">
-                <div class="benefits__item-pic icon-letter-d"></div>
+                <div class="benefits__item-pic icon-moroz"></div>
               </div>
               <p>Место, где ребёнка понимают и любят таким, какой он есть</p>
             </div>
             <div class="benefits__item" data-anim-fast="">
               <div class="benefits__item-pic-wrap">
-                <div class="benefits__item-pic icon-letter-v"></div>
+                <div class="benefits__item-pic icon-zamok"></div>
               </div>
-              <p>Только здоровье сберегающие методики</p>
+              <p>Знания и навыки необходимые для взрослой жизни</p>
             </div>
             <div class="benefits__item" data-anim-fast="">
               <div class="benefits__item-pic-wrap">
-                <div class="benefits__item-pic icon-letter-l"></div>
+                <div class="benefits__item-pic icon-yelka"></div>
               </div>
-              <p>Всестороннее развитие интеллектуальных, творческих и физических способностей детей</p>
+              <p>Небольшие группы детей — до 15 человек</p>
             </div>
             <div class="benefits__item" data-anim-fast="">
               <div class="benefits__item-pic-wrap">
-                <div class="benefits__item-pic icon-letter-t"></div>
+                <div class="benefits__item-pic icon-yakor"></div>
               </div>
-              <p>Подготовка детей к саду, школе и взрослой жизни</p>
+              <p>С детьми работают 2 старших и 1 младший специалист</p>
+            </div>
+            <div class="benefits__item" data-anim-fast="">
+              <div class="benefits__item-pic-wrap">
+                <div class="benefits__item-pic icon-letter-o"></div>
+              </div>
+              <p>Группы детей разного возраста с разницей до 3 лет</p>
             </div>
           </div>
         </div>
@@ -243,7 +247,7 @@
       <!--begin expert-->
       <section class="expert section">
         <div class="expert__container container">
-          <h2 class="expert__title title">Знакомьтесь, специалисты бэби-клуба в Черемушках</h2>
+          <h2 class="expert__title title">Знакомьтесь, наша команда</h2>
           <div class="expert__content js-expert-slider" data-anim-slow="">
             <div class="expert__content-item">
               <div class="expert__content-inner">
@@ -257,6 +261,7 @@
                   <div class="expert__former">
                     <p>Самарский государственный университет</p>
                     <p>Специализация: педагог — психолог</p>
+                    <p>Должность: Владелец клуба/сада</p>
                     <p>Работает в Бэби-клубе с 2010 года</p>
                   </div>
                   <div class="expert__quote">
@@ -284,6 +289,7 @@
                   <div class="expert__former">
                     <p>Самарский государственный университет</p>
                     <p>Специализация: педагог — психолог</p>
+                    <p>Должность: Владелец клуба/сада</p>
                     <p>Работает в Бэби-клубе с 2010 года</p>
                   </div>
                   <div class="expert__quote">
@@ -304,28 +310,74 @@
         </div>
       </section>
       <!--begin spec-block-->
-      <section class="spec-block section">
+      <section class="spec-block spec-block_garden section">
         <div class="spec-block__container container" data-anim-slow="">
-          <h2 class="spec-block__title title">Специалист Бэби-клуба 5 звёзд</h2>
+          <h2 class="spec-block__title title">Специалист бэби-САДА 5 звёзд</h2>
           <h6 class="spec-block__sub-title">Как рождается 5-звёздочный специалист по работе с детьми?</h6>
           <div class="spec-block__image">
             <img src="static/img/bg/planets.png" alt="image" title="" />
           </div>
           <div class="spec-block__inner">
-            <div class="spec-block__item" data-anim-slow="">
-              <p>1. Только 3 из 100 соискателей проходят многоступенчатый конкурсный отбор: видеорезюме, эссе, личное собеседование, тест, пробный урок, обучение, испытательный срок</p>
+            <div class="stars-slider js-stars-slider spec-block__stars-slider" data-anim-slow="">
+              <div class="stars-slider__item">
+                <p>Только 3 из 100 соискателей проходят многоступенчатый конкурсный отбор: видеорезюме, эссе, личное собеседование, тест, пробный урок, обучение, испытательный срок</p>
+              </div>
+              <div class="stars-slider__item">
+                <p>Каждый утвержденный кандидат проходит 8-дневное обучение методам и подходам бережного развития детей</p>
+              </div>
+              <div class="stars-slider__item">
+                <p>Работая в Бэби-клубе, каждый специалист продолжает ежемесячно повышать свою квалификацию на Тематических онлайн-семинарах и консультациях с опытными кураторами-методистами</p>
+              </div>
+              <div class="stars-slider__item">
+                <p>Ежегодно подтверждает свою квалификацию на Аттестации «5 звёзд» в управляющей компании сети</p>
+              </div>
+              <div class="stars-slider__item">
+                <p>Принимает активное участие в Ежегодном общем съезде всех специалистов сети «Бэби-клуб», делится опытом и осваивает новые методики</p>
+              </div>
             </div>
-            <div class="spec-block__item" data-anim-slow="">
-              <p>2. Каждый утвержденный кандидат проходит 8-дневное обучение методам и подходам бережного развития детей</p>
-            </div>
-            <div class="spec-block__item" data-anim-slow="">
-              <p>3. Работая в Бэби-клубе, каждый специалист продолжает ежемесячно повышать свою квалификацию на Тематических онлайн-семинарах и консультациях с опытными кураторами-методистами</p>
-            </div>
-            <div class="spec-block__item" data-anim-slow="">
-              <p>4. Ежегодно подтверждает свою квалификацию на Аттестации «5 звёзд» в управляющей компании сети</p>
-            </div>
-            <div class="spec-block__item" data-anim-slow="">
-              <p>5. Принимает активное участие в Ежегодном общем съезде всех специалистов сети «Бэби-клуб», делится опытом и осваивает новые методики</p>
+            <div class="values-block">
+              <h2 class="values-block__title title" data-anim-slow="">Ценности Бэби-сада</h2>
+              <div class="values-block__inner">
+                <div class="values-block__item" data-anim-slow="">
+                  <div class="values-block__item-img">
+                    <svg class="cliped-svg" width="254" height="274" viewbox="0 0 254 274">
+                      <clippath id="clip-path">
+                        <circle cx="50%" cy="44%" r="122"></circle>
+                        <polygon points="4,0 34,-4 18,24"></polygon>
+                      </clippath>
+                      <image class="cliped-img" xlink:href="static/img/content/values-1.png" height="274" width="254"></image>
+                    </svg>
+                  </div>
+                  <div class="values-block__item-title">Бережность</div>
+                  <p>Даже самые непоседливые дети чувствуют себя свободно и не устают, потому что увлекательные задания чередуются с играми. Дети познают мир в комфортном для себя ритме, который зависит от особенностей характера каждого.</p>
+                </div>
+                <div class="values-block__item" data-anim-slow="">
+                  <div class="values-block__item-img">
+                    <svg class="cliped-svg" width="254" height="274" viewbox="0 0 254 274">
+                      <clippath id="clip-path">
+                        <circle cx="50%" cy="44%" r="122"></circle>
+                        <polygon points="4,0 34,-4 18,24"></polygon>
+                      </clippath>
+                      <image class="cliped-img" xlink:href="static/img/content/values-2.png" height="274" width="254"></image>
+                    </svg>
+                  </div>
+                  <div class="values-block__item-title">Здоровье</div>
+                  <p>Зрение и осанка детей поддерживаются в первозданном виде благодаря использованию только здоровьесберегающих методик. Подвижные игры, музыкальные и танцевальные минутки помогают детям сохранять «в здоровом теле здоровый дух».</p>
+                </div>
+                <div class="values-block__item" data-anim-slow="">
+                  <div class="values-block__item-img">
+                    <svg class="cliped-svg" width="254" height="274" viewbox="0 0 254 274">
+                      <clippath id="clip-path">
+                        <circle cx="50%" cy="44%" r="122"></circle>
+                        <polygon points="4,0 34,-4 18,24"></polygon>
+                      </clippath>
+                      <image class="cliped-img" xlink:href="static/img/content/values-3.png" height="274" width="254"></image>
+                    </svg>
+                  </div>
+                  <div class="values-block__item-title">Гармония</div>
+                  <p>Мы помогаем родителям психологически грамотно общаться со своим ребёнком, чтобы малыш вырос гармоничным человеком, способным найти своё истинное призвание.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -400,8 +452,70 @@
           </div>
         </div>
       </section>
+      <!--begin timing-->
+      <section class="timing section">
+        <div class="timing__img timing__img_l" data-anim-slow="">
+          <img src="static/img/bg/timing_bg-l.png" alt="image" title="" />
+        </div>
+        <div class="timing__img timing__img_r" data-anim-slow="">
+          <img src="static/img/bg/timing_bg-r.png" alt="image" title="" />
+        </div>
+        <div class="timing__container container" data-anim-slow="">
+          <h2 class="timing__title title">Расписание дня</h2>
+          <div class="timing__inner">
+            <div class="timing__item">
+              <span class="timing__hour">8:00 – 9:00</span>
+              <p class="timing__descr">встреча друзей и свободные игры</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">9:00</span>
+              <p class="timing__descr">зарядка</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">9:30</span>
+              <p class="timing__descr">завтрак</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">10:00–10:40</span>
+              <p class="timing__descr">занятия по расписанию</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">11:00–12:30</span>
+              <p class="timing__descr">прогулка</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">13:00</span>
+              <p class="timing__descr">обед</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">13:30–15:00</span>
+              <p class="timing__descr">сон</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">15:00–15:15</span>
+              <p class="timing__descr">подъем, лечебная физкультура</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">15:30</span>
+              <p class="timing__descr">полдник</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">16:00–16:40</span>
+              <p class="timing__descr">занятия по расписанию</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">17:00</span>
+              <p class="timing__descr">ужин</p>
+            </div>
+            <div class="timing__item">
+              <span class="timing__hour">17:30–19:00</span>
+              <p class="timing__descr">прогулка или свободные игры в помещении (зависит от погоды)</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <!--begin interior-->
-      <section class="interior section">
+      <section class="interior interior_red section">
         <div class="interior__slider js-interior-slider">
           <div class="interior__slider-item">
             <h2 class="interior__title title" data-anim-title="">Интерьер</h2>
@@ -435,7 +549,7 @@
       </section>
       <section class="excurs section">
         <div class="excurs__container container">
-          <h2 class="excurs__title title title_black">Экскурсия по клубу</h2>
+          <h2 class="excurs__title title title_black">Экскурсия по Саду</h2>
           <div class="excurs__item" data-anim-slow="">
             <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" src="https://www.google.com/maps/embed?pb=!1m0!4v1509359904998!6m8!1m7!1sCAoSLEFGMVFpcE1qU251NERLeTZzeHdYcVhBUEdlOE1RalpDSnhST2NYdVRqa1ho!2m2!1d56.80434585174958!2d60.60212430131583!3f263.33275510786723!4f24.302912106065634!5f0.7820865974627469"></iframe>
           </div>
@@ -448,398 +562,138 @@
         </div>
       </section>
       <!--begin lessons-->
-      <section class="lessons section fp-auto-height-responsive" data-anchor="lessons">
+      <section class="lessons lessons_garden section fp-auto-height-responsive" data-anchor="lessons">
         <div class="lessons__container container">
-          <h2 class="lessons__title title">развивающие занятия для детей</h2>
-          <!--begin tabs-->
-          <div class="c-tabs c-tabs_lessons">
-            <div class="c-tabs__filter">
-              <div class="c-tabs__filter-col">
-                <div class="c-tabs__title">Выберите одну из трёх категорий:</div>
-                <div class="c-tabs__tabs-nav">
-                  <button class="c-tabs__tabs-el btn is-active" data-anim-fast="" type="button">Общеразвивающие занятия</button>
-                  <button class="c-tabs__tabs-el btn" data-anim-fast="" type="button">Сад</button>
-                  <button class="c-tabs__tabs-el btn" data-anim-fast="" type="button">Дополнительные занятия</button>
-                </div>
+          <h2 class="lessons__title title">Наши основные занятия</h2>
+          <div class="c-tabs__tab-inner">
+            <div class="c-tabs__item c-tabs__item_garden" data-anim-fast="">
+              <div class="c-tabs__item-icon-wrap">
+                <div class="c-tabs__item-icon icon-ulitka"></div>
               </div>
-              <div class="c-tabs__filter-col">
-                <div class="c-tabs__filter-title c-tabs__filter-title_sm">Выберите возраст:</div>
-                <div class="c-tabs__filter-select">
-                  <select class="js-select" name="">
-                    <option value="">1 год</option>
-                    <option value="">2 года</option>
-                    <option value="">3 года</option>
-                    <option value="">4 года</option>
-                  </select>
-                </div>
+              <div class="c-tabs__item-info">
+                <div class="c-tabs__item-title">Чтение</div>
               </div>
+              <div class="c-tabs__item-descr">
+                <p>Знакомим с буквами, прививаем любовь к чтению</p>
+              </div>
+              <button class="c-tabs__item-btn btn c-tabs__item-btn_1" type="button">Подробнее</button>
             </div>
-            <div class="c-tabs__tabs-for" data-anim-slow="">
-              <div class="c-tabs__tab">
-                <div class="c-tabs__tab-inner">
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-bottle"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИК-I</div>
-                      <div class="c-tabs__item-subtitle">8 мес. — 1,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Малыши учатся общаться с другими детьми, узнают новые слова, предметы и явления окружающего мира. Большой акцент делается на развитие речевого центра ребенка.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_darkblue" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-i"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИК-II</div>
-                      <div class="c-tabs__item-subtitle">1,5 — 2,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Дети приобретают социальные навыки, которые помогают им легко находить друзей, развивают координацию движений, учатся завязывать шнурки и «пробует» разразные материалы для творчества.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_green" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-z"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-I</div>
-                      <div class="c-tabs__item-subtitle">2,5 — 3,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>В игровых ситуациях дети развивают свою речь, приобретают первые навыки чтения, совершенствуют «послушносит» своих пальчиков и постоянно расширяют кругозор.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_orange" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-m"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-II</div>
-                      <div class="c-tabs__item-subtitle">3,5 — 4,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Дети развивают логическое мышление, совершенствуют свои умения, приобретают практически полезные навыки для жизни и учатся бесконфликтному общению со сверстниками.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_brown" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-r"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-III</div>
-                      <div class="c-tabs__item-subtitle">от 4,5 до 5,5 лет</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Внимательность и умение сосредоточиться — залог успеха в начальной школе. Дети учатся концентрироваться на поставленной в игре задаче и самостоятельно находить решения.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_gray" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-a"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-IV</div>
-                      <div class="c-tabs__item-subtitle">5,5 — 7 лет</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Старшие бэбиклубовцы бегло читают, с легкостью считают, интересны в общении. Они с радостью проявляют свою самостоятельность, так что в школе помогать с домашними заданиями им не придется.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_white" href="#!">Подробнее</a>
-                  </div>
-                </div>
+            <div class="c-tabs__item c-tabs__item_garden" data-anim-fast="">
+              <div class="c-tabs__item-icon-wrap">
+                <div class="c-tabs__item-icon icon-rob"></div>
               </div>
-              <div class="c-tabs__tab">
-                <div class="c-tabs__tab-inner">
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-bottle"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИК-I</div>
-                      <div class="c-tabs__item-subtitle">8 мес. — 1,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Малыши учатся общаться с другими детьми, узнают новые слова, предметы и явления окружающего мира. Большой акцент делается на развитие речевого центра ребенка.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_darkblue" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-i"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИК-II</div>
-                      <div class="c-tabs__item-subtitle">1,5 — 2,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Дети приобретают социальные навыки, которые помогают им легко находить друзей, развивают координацию движений, учатся завязывать шнурки и «пробует» разразные материалы для творчества.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_green" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-z"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-I</div>
-                      <div class="c-tabs__item-subtitle">2,5 — 3,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>В игровых ситуациях дети развивают свою речь, приобретают первые навыки чтения, совершенствуют «послушносит» своих пальчиков и постоянно расширяют кругозор.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_orange" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-m"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-II</div>
-                      <div class="c-tabs__item-subtitle">3,5 — 4,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Дети развивают логическое мышление, совершенствуют свои умения, приобретают практически полезные навыки для жизни и учатся бесконфликтному общению со сверстниками.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_brown" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-r"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-III</div>
-                      <div class="c-tabs__item-subtitle">от 4,5 до 5,5 лет</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Внимательность и умение сосредоточиться — залог успеха в начальной школе. Дети учатся концентрироваться на поставленной в игре задаче и самостоятельно находить решения.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_gray" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-a"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-IV</div>
-                      <div class="c-tabs__item-subtitle">5,5 — 7 лет</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Старшие бэбиклубовцы бегло читают, с легкостью считают, интересны в общении. Они с радостью проявляют свою самостоятельность, так что в школе помогать с домашними заданиями им не придется.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_white" href="#!">Подробнее</a>
-                  </div>
-                </div>
+              <div class="c-tabs__item-info">
+                <div class="c-tabs__item-title">Развитие речи</div>
               </div>
-              <div class="c-tabs__tab">
-                <div class="c-tabs__tab-inner">
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-bottle"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИК-I</div>
-                      <div class="c-tabs__item-subtitle">8 мес. — 1,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Малыши учатся общаться с другими детьми, узнают новые слова, предметы и явления окружающего мира. Большой акцент делается на развитие речевого центра ребенка.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_darkblue" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-i"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИК-II</div>
-                      <div class="c-tabs__item-subtitle">1,5 — 2,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Дети приобретают социальные навыки, которые помогают им легко находить друзей, развивают координацию движений, учатся завязывать шнурки и «пробует» разразные материалы для творчества.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_green" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-z"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-I</div>
-                      <div class="c-tabs__item-subtitle">2,5 — 3,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>В игровых ситуациях дети развивают свою речь, приобретают первые навыки чтения, совершенствуют «послушносит» своих пальчиков и постоянно расширяют кругозор.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_orange" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-m"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-II</div>
-                      <div class="c-tabs__item-subtitle">3,5 — 4,5 года</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Дети развивают логическое мышление, совершенствуют свои умения, приобретают практически полезные навыки для жизни и учатся бесконфликтному общению со сверстниками.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_brown" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-r"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-III</div>
-                      <div class="c-tabs__item-subtitle">от 4,5 до 5,5 лет</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Внимательность и умение сосредоточиться — залог успеха в начальной школе. Дети учатся концентрироваться на поставленной в игре задаче и самостоятельно находить решения.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_gray" href="#!">Подробнее</a>
-                  </div>
-                  <div class="c-tabs__item">
-                    <div class="c-tabs__item-icon-wrap">
-                      <div class="c-tabs__item-icon icon-letter-a"></div>
-                    </div>
-                    <div class="c-tabs__item-info">
-                      <div class="c-tabs__item-title">БЭБИ-КЛАСС-IV</div>
-                      <div class="c-tabs__item-subtitle">5,5 — 7 лет</div>
-                    </div>
-                    <div class="c-tabs__item-descr">
-                      <p>Старшие бэбиклубовцы бегло читают, с легкостью считают, интересны в общении. Они с радостью проявляют свою самостоятельность, так что в школе помогать с домашними заданиями им не придется.</p>
-                    </div>
-                    <div class="c-tabs__item-price">
-                      <p>ОТ
-                        <span>5 200</span> РУБ. В МЕСЯЦ</p>
-                      <div class="c-tabs__item-price-info">
-                        <span>за 8 занятий</span>
-                      </div>
-                    </div>
-                    <a class="c-tabs__item-btn btn btn_white" href="#!">Подробнее</a>
-                  </div>
-                </div>
+              <div class="c-tabs__item-descr">
+                <p>Пополняем словарный запас и учим общаться с людьми любого возраста</p>
               </div>
+              <button class="c-tabs__item-btn btn c-tabs__item-btn_2" type="button">Подробнее</button>
+            </div>
+            <div class="c-tabs__item c-tabs__item_garden" data-anim-fast="">
+              <div class="c-tabs__item-icon-wrap">
+                <div class="c-tabs__item-icon icon-letter-m"></div>
+              </div>
+              <div class="c-tabs__item-info">
+                <div class="c-tabs__item-title">МАТЕМАТИКА</div>
+              </div>
+              <div class="c-tabs__item-descr">
+                <p>Знакомим с миром чисел, которые окружают нас повсюду</p>
+              </div>
+              <button class="c-tabs__item-btn btn c-tabs__item-btn_3" type="button">Подробнее</button>
+            </div>
+            <div class="c-tabs__item c-tabs__item_garden" data-anim-fast="">
+              <div class="c-tabs__item-icon-wrap">
+                <div class="c-tabs__item-icon icon-letter-o"></div>
+              </div>
+              <div class="c-tabs__item-info">
+                <div class="c-tabs__item-title">Окружающий мир</div>
+              </div>
+              <div class="c-tabs__item-descr">
+                <p>Узнаём об истории вещей, обитателях мира и событиях разных стран</p>
+              </div>
+              <button class="c-tabs__item-btn btn c-tabs__item-btn_4" type="button">Подробнее</button>
+            </div>
+            <div class="c-tabs__item c-tabs__item_garden" data-anim-fast="">
+              <div class="c-tabs__item-icon-wrap">
+                <div class="c-tabs__item-icon icon-letter-t"></div>
+              </div>
+              <div class="c-tabs__item-info">
+                <div class="c-tabs__item-title">Творчество</div>
+              </div>
+              <div class="c-tabs__item-descr">
+                <p>Работаем со всеми материалами для творчества</p>
+              </div>
+              <button class="c-tabs__item-btn btn c-tabs__item-btn_5" type="button">Подробнее</button>
             </div>
           </div>
+        </div>
+      </section>
+      <!--begin medical-->
+      <section class="medical section">
+        <div class="medical__container container" data-anim-slow="">
+          <h2 class="medical__title title">Медобслуживание</h2>
+          <div class="medical__inner">
+            <div class="medical__img">
+              <img src="static/img/content/medical_img.jpg" alt="image" title="" />
+            </div>
+            <div class="medical__list-wrap">
+              <div class="medical__list-title">У нас заключён договор с медицинским центром</div>
+              <ul class="medical__list berries-list">
+                <li>Каждую неделю в саду проводится День здоровья: педиатр проводит полный осмотр детей</li>
+                <li>Ведётся медицинская карта ребёнка</li>
+                <li>Ведётся «Лист здоровья» с рекомендациями для родителей</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--begin nutrition-->
+      <section class="nutrition section">
+        <div class="nutrition__container container" data-anim-slow="">
+          <h2 class="nutrition__title title">ПИТАНИЕ</h2>
+          <div class="nutrition__inner">
+            <div class="nutrition__list-wrap">
+              <ul class="nutrition__list berries-list">
+                <li>В детском саду работает квалифицированный повар.</li>
+                <li>Пятиразовое питание разнообразно и адаптировано под все особенности пищевых предпочтений наших маленьких клиентов.</li>
+                <li>Мы обеспечиваем индивидуальное питание для детей с пищевыми аллергиями и вегетарианцам.</li>
+                <li>В меню отсутствуют все виды колбасных изделий, консервы и соки!</li>
+              </ul>
+            </div>
+            <div class="nutrition__img">
+              <img src="static/img/content/nutrition_img.jpg" alt="image" title="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--begin news-->
+      <section class="news section">
+        <div class="news__container container">
+          <h2 class="news__title title" data-anim-title="">новости сети</h2>
+          <div class="news__inner">
+            <div class="news__item" data-anim-slow="">
+              <div class="news__item-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ohT9wvEQKaw?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+              </div>
+              <h6 class="news__item-title">Интеллектуальные игры — продолжаются!</h6>
+              <span class="news__item-date">14 сентября 2017, Москва</span>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства «Росмэн» на развитие разных видов интеллекта для детей 2-3 лет пополнилась еще пятью тетрадями для тех, кто постарше.</p>
+              <a class="news__item-btn btn btn_transp"
+                href="#!">ПОДРОБНЕЕ</a>
+            </div>
+            <div class="news__item" data-anim-slow="">
+              <div class="news__item-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ohT9wvEQKaw?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+              </div>
+              <h6 class="news__item-title">Интеллектуальные игры — продолжаются!</h6>
+              <span class="news__item-date">14 сентября 2017, Москва</span>
+              <p>Друзья! Интеллектуальные игры — продолжаются! Наша серия тетрадей «Бэби-клуб у вас дома» издательства «Росмэн» на развитие разных видов интеллекта для детей 2-3 лет пополнилась еще пятью тетрадями для тех, кто постарше.</p>
+              <a class="news__item-btn btn btn_transp"
+                href="#!">ПОДРОБНЕЕ</a>
+            </div>
+          </div>
+          <a class="news__all-btn btn btn_yellow" href="#!">Смотреть все новости</a>
         </div>
       </section>
       <!--begin schedule-->
@@ -1101,7 +955,7 @@
       <section class="why-us section" data-anchor="why-us">
         <div class="why-us__container container">
           <h2 class="why-us__title title title_black">почему каждый месяц</h2>
-          <h2 class="why-us__title title title_black">25 000 детей приходят в бэби-клуб</h2>
+          <h2 class="why-us__title title title_black">25 000 детей приходят в бэби-сад</h2>
           <div class="why-us__inner">
             <div class="why-us__item" data-anim-fast="">
               <div class="why-us__item-icon-wrap">
@@ -1170,7 +1024,7 @@
           </div>
         </div>
       </section>
-      <!--begin thanks-->
+      <begin>thanks</begin>
       <section class="thanks section" data-anchor="thanks">
         <div class="thanks__container container">
           <h2 class="thanks__title title">
@@ -1257,7 +1111,7 @@
             </div>
           </div>
         </section>
-        <!--begin subs-block-->
+        <begin>subs-block</begin>
         <section class="subs-block subs-block_yellow">
           <div class="subs-block__container container">
             <h3 class="subs-block__title title" data-anim-title="">запишитесь на презентацию клуба</h3>

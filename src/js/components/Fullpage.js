@@ -8,6 +8,7 @@ export default class Fullpage {
     this.$homeFullpage = $('.js-home-fullpage');
     this.$landFullpage = $('.js-landing-fullpage');
     this.$choiceFullpage = $('.js-choice-fullpage');
+    this.$gardenFullpage = $('.js-garden-fullpage');
 
     this.init();
   }
@@ -124,6 +125,61 @@ export default class Fullpage {
         if (direction === 'up') $header.removeClass(css.active);
       }
 
+    }));
+
+    if (this.$gardenFullpage.length) this.$gardenFullpage.fullpage($.extend({}, fullpageDefaults, {
+      paddingTop: 70,
+      menu: '.js-nav',
+      anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '20', '21', '22', '23', '24', '25'],
+      scrollOverflow: true,
+      scrollOverflowOptions: {
+        click: false,
+        preventDefaultException: {tagName: /.*/}
+      },
+      onLeave: function (index, nextIndex, direction) {
+        const nextSection = $(this).next();
+
+        if (direction === 'up') $nav.removeClass(css.active).addClass('is-float');
+        if (direction === 'up' && nextIndex === 2) {
+          $header.addClass(css.hidden);
+          $nav.addClass(css.hidden);
+        }
+
+        if (nextIndex > 0 && direction === 'down') {
+          $header.addClass(css.active);
+          $header.removeClass(css.hidden);
+          $nav.removeClass(css.hidden);
+          $nav.addClass('is-inner');
+        }
+        if (nextIndex === 1) {
+          initScreenVideo();
+          $header.removeClass(css.active);
+          $header.removeClass(css.hidden);
+          $nav.removeClass('is-inner is-float is-hidden');
+        }
+        if (direction === 'down') $nav.removeClass('is-float');
+
+        // if (nextIndex === 11 && direction === 'up') {
+        //   $nav.removeClass(css.hidden);
+        // }
+        //
+        // if (nextIndex === 12 && direction === 'up') {
+        //   $nav.addClass(css.hidden);
+        // }
+        //
+        // if (nextIndex === 15) {
+        //   $header.removeClass(css.hidden);
+        //   $nav.removeClass(css.hidden);
+        // }
+        //
+        // if (nextIndex === 16) {
+        //   $header.addClass(css.hidden);
+        //   $nav.addClass(css.hidden);
+        // }
+
+        initAnimation(nextSection);
+
+      }
     }));
 
     function initScreenVideo() {

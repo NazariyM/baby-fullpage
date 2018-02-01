@@ -1,0 +1,48 @@
+if timing ? timing : timing = []
+if timing.title ? timing.title : timing.title = 'Расписание дня'
+
+//begin timing
++b.SECTION.timing.section(class= timing.classMod ? timing.classMod : '')
+	+e.img._l(data-anim-slow='')
+		+e.IMG(src='static/img/bg/timing_bg-l.png' alt='image')
+	+e.img._r(data-anim-slow='')
+		+e.IMG(src='static/img/bg/timing_bg-r.png' alt='image')
+	+e.container.container(data-anim-slow='')
+		+e.H2.title.title= timing.title
+		+e.inner
+			+e.item
+				+e.SPAN.hour 8:00 – 9:00
+				+e.P.descr встреча друзей и свободные игры
+			+e.item
+				+e.SPAN.hour 9:00
+				+e.P.descr зарядка
+			+e.item
+				+e.SPAN.hour 9:30
+				+e.P.descr завтрак
+			+e.item
+				+e.SPAN.hour 10:00–10:40
+				+e.P.descr занятия по расписанию
+			+e.item
+				+e.SPAN.hour 11:00–12:30
+				+e.P.descr прогулка
+			+e.item
+				+e.SPAN.hour 13:00
+				+e.P.descr обед
+			+e.item
+				+e.SPAN.hour 13:30–15:00
+				+e.P.descr сон
+			+e.item
+				+e.SPAN.hour 15:00–15:15
+				+e.P.descr подъем, лечебная физкультура
+			+e.item
+				+e.SPAN.hour 15:30
+				+e.P.descr полдник
+			+e.item
+				+e.SPAN.hour 16:00–16:40
+				+e.P.descr занятия по расписанию
+			+e.item
+				+e.SPAN.hour 17:00
+				+e.P.descr ужин
+			+e.item
+				+e.SPAN.hour 17:30–19:00
+				+e.P.descr прогулка или свободные игры в помещении (зависит от погоды)

@@ -1,9 +1,10 @@
 if expert ? expert : expert = []
+if expert.title ? expert.title : expert.title = 'Знакомьтесь, специалисты бэби-клуба в Черемушках'
 
 //begin expert
 +b.SECTION.expert.section(class= expert.classMod ? expert.classMod : '')
 	+e.container.container
-		+e.H2.title.title Знакомьтесь, специалисты бэби-клуба в Черемушках
+		+e.H2.title.title= expert.title
 
 		+e.content.js-expert-slider(data-anim-slow='')
 			-count = 0
@@ -19,7 +20,10 @@ if expert ? expert : expert = []
 							+e.former
 								+e.P Самарский государственный университет
 								+e.P Специализация: педагог — психолог
+								if expert.addField
+									+e.P Должность: Владелец клуба/сада
 								+e.P Работает в Бэби-клубе с 2010 года
+
 							+e.quote
 								+e.P Каждый ребёнок - личность и задача педагога - развить лучшие качества каждого ребенка
 								+i('quote')

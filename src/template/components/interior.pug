@@ -1,5 +1,6 @@
+if interior ? interior : interior = []
 //begin interior
-+b.SECTION.interior.section
++b.SECTION.interior(class= interior.classMod ? interior.classMod : '').section
 	+e.slider.js-interior-slider
 		+e.slider-item
 			+e.H2.title.title(data-anim-title='') Интерьер
