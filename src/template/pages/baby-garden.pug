@@ -36,7 +36,7 @@ block variables
 	-footerClass = ['_landing']
 
 block main
-	-var screen = {title: 'бэби-сад', subTitle: 'в воскресенске на ленина', descr: 'развиваем детей от 8 месяцев до 7 лет', btn1: 'Бэби-клуб', btn2: 'Бэби-сад', video: 'babyvideo'}
+	-var screen = {classMod: '_garden', title: 'бэби-сад', subTitle: 'в воскресенске на ленина', descr: 'развиваем детей от 2 до 7 лет', btn1: 'Бэби-клуб', btn2: 'Бэби-сад', video: 'babyvideo'}
 	include ../components/screen
 
 		-subsBlock = {particles: true}
@@ -86,8 +86,8 @@ block main
 
 	-expert = {title: 'Знакомьтесь, наша команда', addField: true}
 	include ../components/expert
-	-specBlock = {classMod: '_garden', title: 'Специалист бэби-САДА 5 звёзд', specList: false, starsSlider: true, values: true}
 
+	-specBlock = {classMod: '_garden', title: 'Специалист бэби-САДА 5 звёзд', specList: false, starsSlider: true, values: true}
 	include ../components/spec-block
 
 	include ../components/learn
@@ -189,10 +189,10 @@ block main
 
 	include ../components/library
 
-	-whyUs = {title2: '25 000 детей приходят в бэби-сад'}
+	-whyUs = {title1: 'почему каждый день', title2: 'дети и родители выбирают Бэби-сад'}
 	include ../components/why-us
 
-	begin thanks
+	//begin thanks
 	+b.SECTION.thanks.section(data-anchor='thanks')
 		+e.container.container
 			+e.H2.title.title
@@ -248,7 +248,7 @@ block main
 		+b.SECTION.video-blog
 			+e.container.container
 
-				+e.H2.title.title(data-anim-title='') ВИДЕО-блог
+				+e.H2.title.title(data-anim-title='') ВИДЕОблог
 				+e.inner
 					+e.video(data-anim-slow='')
 						+e.video-text.js-video-text

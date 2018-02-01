@@ -90,7 +90,8 @@
 			width: 100%
 			height: auto
 			+cover-video
-			
+			@media (max-width: 1365px) and (min-height: 890px)
+				height: 100%
 	&_landing
 		padding-top: 170px !important
 	&_landing .screen__video
@@ -98,4 +99,6 @@
 	&_landing .screen__actions
 		+r(1599)
 			bottom: 35px
-		 
+	&_garden
+		.screen__text p
+			max-width: 480px
